@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="072u_talon.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:identity="urn:hl7-ru:identity" xmlns:address="urn:hl7-ru:address" xmlns:medService="urn:hl7-ru:medService" xmlns:fias="urn:hl7-ru:fias">
+	<!-- R [1..] Требуемый элемент. Элемент обязан иметь непустое наполнение, nullFlavor не разрешён -->
+    <!-- [1..] Обязательный элемент. Элемент обязан присутствовать, но может иметь пустое наполнение с указанием причины отсутствия информации через nullFlavor -->
+    <!-- [0..] Не обязательный элемент. Элемент может отсутствовать -->
+	<!-- R [1..1] Указание на область применения документа (РФ) -->
+	<realmCode code="RU"/>
+	<!-- R [1..1] Указание на тип структуры документа (CDA R2) -->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_MT000040"/>
+	<!-- R [1..1] Уникальный идентификатор руководства по реализации СЭМД "Обратный талон санаторно-курортной карты" Редакция 2 -->
+	<templateId root="1.2.643.5.1.13.13.14.357.9.2"/>
+	<!-- R [1..1] Уникальный идентификатор документа -->
+	<id root="1.2.643.5.1.13.13.12.2.26.17885.100.1.1.51" extension="156"/>
+	<!-- R [1..1] Вид медицинского документа -->
+	<code code="357" codeSystem="1.2.643.5.1.13.13.11.1522" codeSystemName="Виды медицинской документации" displayName="Обратный талон санаторно-курортной карты" codeSystemVersion="5.2"/>
+	<!-- R [1..1] Заголовок документа -->
+	<title>Обратный талон санаторно-курортной карты</title>
+	<!-- R [1..1] Дата создания документа -->
+	<effectiveTime value="20220325091530+0500"/>
+	<!-- R [1..1] Уровень конфиденциальности документа -->
+	<confidentialityCode code="N" codeSystem="1.2.643.5.1.13.13.99.2.285" codeSystemName="Уровень конфиденциальности медицинского документа" displayName="Обычный" codeSystemVersion="1.2"/>
+	<!-- R [1..1] Указание на язык документа -->
+	<languageCode code="ru-RU"/>
+	<!-- R [1..1] Уникальный идентификатор набора версий документа -->
+	<setId root="1.2.643.5.1.13.13.12.2.26.17885.100.1.1.50" extension="111"/>
+	<!-- R [1..1] Номер версии документа -->
+	<versionNumber value="1"/>
+	<!-- R [1..1] Сведения о пациенте -->
+	<recordTarget>
+		<!-- R [1..1]-->
+		<patientRole>
+			<!-- R [1..1] Уникальный идентификатор пациента в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.26.17885.100.1.1.10" extension="10"/>
+			<!-- R [1..1] СНИЛС пациента -->
+			<id root="1.2.643.100.3" extension="12345678900"/>
+			<!-- [1..1] Сведения о документе, удостоверяющем личность пациента -->
+			<identity:IdentityDoc nullFlavor="NI"/>
+			<!-- [1..1] Сведения о полисе ОМС пациента -->
+			<identity:InsurancePolicy nullFlavor="NI"/>
+			<!-- [1..2] Адрес пациента -->
+			<addr nullFlavor="NI"/>
+			<!-- R [1..1]-->
+			<patient>
+				<!-- R [1..1] ФИО пациента -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Страдальский</family>
+					<!-- R [1..1] Имя -->
+					<given>Игорь</given>
+					<!-- [0..1] Отчество -->
+					<identity:Patronymic>Сергеевич</identity:Patronymic>
+				</name>
+				<!-- [1..1] Пол пациента -->
+				<administrativeGenderCode nullFlavor="NI"/>
+				<!-- [1..1] Дата рождения пациента -->
+				<birthTime nullFlavor="NI"/>
+			</patient>
+			<!-- R [1..1] Сведения об организации, оказывающей медицинскую помощь -->
+			<providerOrganization>
+				<!-- R [1..1] Уникальный идентификатор медицинской организации и (при наличии) уникальный идентификатор структурного подразделения -->
+				<id root="1.2.643.5.1.13.13.12.2.26.17885"/>
+				<!-- [0..1] Сведения о лицензии на осуществление медицинской деятельности -->																														
+				<!-- R [1..1] Реквизиты организации -->
+				<identity:Props>
+					<!-- R [1..1] Код ОГРН -->
+					<identity:Ogrn>1027700036726</identity:Ogrn>
+					<!-- [0..1] Код ОКПО -->				
+					<!-- [0..1] Код ОКАТО -->						
+				</identity:Props>
+				<!-- R [1..1] Наименование медицинской организации или ФИО ИП -->
+				<name>Санаторий им. Г.К. Орджоникидзе - филиал ФГБУ «Федеральный медицинский центр» Росимущества</name>
+				<!-- [0..*] Контакты медицинской организации или ИП -->																			  
+				<!-- [0..1] Адрес медицинской организации или ИП -->					   
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<!-- R [1..1] Сведения об авторе документа -->
+	<author>
+		<!-- [1..1]-->
+		<time nullFlavor="NI"/>
+		<!-- R [1..1]-->
+		<assignedAuthor>
+			<!-- R [1..1] Уникальный идентификатор автора в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.26.17885.100.1.1.70" extension="71"/>
+			<!-- R [1..1] СНИЛС автора -->
+			<id root="1.2.643.100.3" extension="12345678971"/>
+			<!-- R [1..1] Код должности автора -->
+			<code code="109" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemName="Должности медицинских и фармацевтических работников" displayName="врач-терапевт" codeSystemVersion="7.6"/>
+			<!-- [0..1] Адрес места работы автора документа -->																		 
+			<!-- [0..*] Контакты автора -->
+			<!-- R [1..1]-->
+			<assignedPerson>
+				<!-- R [1..1] ФИО автора -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Дохлова</family>
+					<!-- R [1..1] Имя -->
+					<given>Антонина</given>
+					<!-- [0..1] Отчество -->
+					<identity:Patronymic>Владимировна</identity:Patronymic>
+				</name>
+			</assignedPerson>
+			<!-- [0..1] Сведения о медицинской организации, где работает автор -->																											
+		</assignedAuthor>
+	</author>
+	<!-- R [1..1] Сведения о владельце документа -->
+	<custodian>
+		<!-- R [1..1]-->
+		<assignedCustodian>
+			<!-- R [1..1] Сведения об организации-владельце документа -->
+			<representedCustodianOrganization classCode="ORG">
+				<!-- R [1..1] Уникальный идентификатор медицинской организации и (при наличии) уникальный идентификатор структурного подразделения -->
+				<id root="1.2.643.5.1.13.13.12.2.26.17885"/>
+				<!-- R [1..1] Наименование организации или ФИО ИП -->
+				<name>Санаторий им. Г.К. Орджоникидзе - филиал ФГБУ «Федеральный медицинский центр» Росимущества</name>
+				<!-- [0..1] Телефон медицинской организации или ИП -->																			
+				<!-- R [1..1] Адрес медицинской организации или ИП -->
+				<addr>
+					<!-- R [1..1] Адрес (текстом) -->
+					<streetAddressLine>Ставропольский край, г. Кисловодск, проспект Ленина, д. 25</streetAddressLine>
+					<!-- R [1..1] Код субъекта РФ -->
+					<address:stateCode code="26" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemName="Субъекты Российской Федерации" displayName="Ставропольский край" codeSystemVersion="6.3"/>
+					<!-- [1..1] Почтовый индекс -->
+					<postalCode nullFlavor="NI"/>
+					<!-- [1..1] Идентификатор адреса по ФИАС -->
+					<fias:Address nullFlavor="NI"/>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- R [1..1] Сведения о получателе документа [1] -->
+	<informationRecipient>
+		<!-- R [1..1]-->
+		<intendedRecipient>
+			<!-- R [1..1] Сведения об организации-получателе документа (РЭМД) -->
+			<receivedOrganization>
+				<!-- R [1..1] Уникальный идентификатор получающей организации -->
+				<id root="1.2.643.5.1.13"/>
+				<!-- R [1..1] Наименование получающей организации -->
+				<name>Министерство здравоохранения Российской Федерации</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<!-- [0..*] Сведения о получателе документа [2] -->																			
+	<!-- R [1..1] Сведения о лице, придавшем юридическую силу документу -->
+	<legalAuthenticator>
+		<!-- [1..1]-->
+		<time nullFlavor="NI"/>
+		<!-- [1..1]-->
+		<signatureCode nullFlavor="NI"/>
+		<!-- R [1..1]-->
+		<assignedEntity>
+			<!-- R [1..1] Уникальный идентификатор лица, придавшего юридическую силу документу, в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.26.17885.100.1.1.70" extension="72"/>
+			<!-- R [1..1] СНИЛС лица, придавшего юридическую силу документу -->
+			<id root="1.2.643.100.3" extension="12345678972"/>
+			<!-- R [1..1] Код должности лица, придавшего юридическую силу документу -->
+			<code code="334" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemName="Должности медицинских и фармацевтических работников" displayName="главный врач медицинской организации" codeSystemVersion="7.6"/>
+			<!-- [0..1] Адрес места работы лица, придавшего юридическую силу документу -->
+			<!-- [0..*] Контакты лица, придавшего юридическую силу документу -->			
+			<!-- R [1..1]-->
+			<assignedPerson>
+				<!-- R [1..1] ФИО лица, придавшего юридическую силу документу -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Басей</family>
+					<!-- R [1..1] Имя -->
+					<given>Николай</given>
+					<!-- [0..1] Отчество -->
+					<identity:Patronymic>Петрович</identity:Patronymic>
+				</name>
+			</assignedPerson>
+			<!-- [0..1] Сведения о медицинской организации, где работает лицо, придавшее юридическую силу документу -->																																												 
+		</assignedEntity>
+	</legalAuthenticator>
+	<!-- [0..1] Сведения об источнике оплаты -->
+	<!-- R [1..1] Тело документа -->
+	<component>
+		<!-- R [1..1] Структурированное тело документа -->
+		<structuredBody>
+			<!-- R [1..1] СЕКЦИЯ: "Сведения о документе" ("Общие сведения") -->
+			<component>
+				<!-- R [1..1]-->
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="DOCINFO" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemName="Секции электронных медицинских документов" displayName="Сведения о документе" codeSystemVersion="1.25"/>
+					<!-- R [1..1] Название секции -->
+					<title>Общие сведения</title>
+					<!-- R [1..1] Человекочитаемое наполнение секции -->
+					<text><table>
+					<tbody>
+						<tr><td><content styleCode="Bold">Период санаторно-курортного лечения:</content></td><td><content>с 14.03.2022 по 27.03.2022</content></td></tr>
+						<tr><td><content styleCode="Bold">Номер санаторно-курортной карты:</content></td><td><content>123</content></td></tr>
+					</tbody>
+					</table></text>
+					<!-- R [1..1] Период санаторно-курортного лечения -->
+					<entry>
+						<!-- R [1..1]-->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="9035" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Период санаторно-курортного лечения" codeSystemVersion="1.90"/>
+							<!-- R [1..1] Сроки санаторно-курортного лечения -->
+							<effectiveTime>
+								<!-- R [1..1] Дата начала санаторно-курортного лечения -->
+								<low value="20220314"/>
+								<!-- [1..1] Дата окончания санаторно-курортного лечения -->
+								<high value="20220327"/>
+							</effectiveTime>
+						</observation>
+					</entry>
+					<!-- R [1..1] Номер санаторно-курортной карты -->
+					<entry>
+						<!-- R [1..1]-->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="11003" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Номер документа" codeSystemVersion="1.90"/>
+							<!-- [1..1] Значение поля -->
+							<value xsi:type="ST">123</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] Ссылка на внешний документ (санаторно-курортную карту) -->
+					<entry>
+						<!-- R [1..1]-->
+						<act classCode="ACT" moodCode="EVN">
+							<!-- R [1..1] Код поля --> 
+							<code code="4070" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Внешний документ" codeSystemVersion="1.90"/>
+							<!-- R [1..1]-->
+							<reference typeCode="REFR">
+								<!-- R [1..1]-->
+								<externalDocument classCode="DOCCLIN" moodCode="EVN">
+									<!-- [1..1] Уникальный идентификатор документа в МИС -->
+									<id nullFlavor="NI"/>
+								</externalDocument>
+							</reference>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] СЕКЦИЯ: "Диагнозы" -->
+			<component>
+				<!-- R [1..1]-->
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="DGN" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemName="Секции электронных медицинских документов" displayName="Диагнозы" codeSystemVersion="1.25"/>
+					<!-- R [1..1] Название секции -->
+					<title>Диагнозы</title>
+					<!-- R [1..1] Человекочитаемое наполнение секции -->
+					<text><table width="100%"><col width="70%"/><col width="20%"/><col width="10%"/>
+					<tbody>
+						<tr><th>Диагноз, установленный направившей медицинской организацией</th><th/><th/></tr>
+						<tr><td colspan="3"><content styleCode="Bold">Основное заболевание</content></td></tr>
+						<tr><td><content>Псориаз артропатический</content></td><td><content styleCode="Bold">Код МКБ-10:</content></td><td><content>L40.5</content></td></tr>
+
+						<tr><td colspan="3"><br/><content styleCode="Bold">Сопутствующие заболевания</content></td></tr>
+						<tr><td><content>—</content></td><td><content styleCode="Bold">Код МКБ-10:</content></td><td><content>—</content></td></tr>
+						
+						<tr><td colspan="3"><br/><content styleCode="Bold">Заболевание, являющееся причиной инвалидности</content></td></tr>
+						<tr><td><content>—</content></td><td><content styleCode="Bold">Код МКБ-10:</content></td><td><content>—</content></td></tr>								
+					</tbody>
+					</table>
+					<br/>
+					<table width="100%"><col width="70%"/><col width="20%"/><col width="10%"/>
+					<tbody>
+						<tr><th>Диагноз при выписке из санаторно-курортной организации</th><th/><th/></tr>
+						<tr><td colspan="3"><content styleCode="Bold">Основное заболевание</content></td></tr>
+						<tr><td><content>Псориаз артропатический</content></td><td><content styleCode="Bold">Код МКБ-10:</content></td><td><content>L40.5</content></td></tr>
+
+						<tr><td colspan="3"><br/><content styleCode="Bold">Сопутствующие заболевания</content></td></tr>
+						<tr><td><content>—</content></td><td><content styleCode="Bold">Код МКБ-10:</content></td><td><content>—</content></td></tr>							
+					</tbody>
+					</table>
+					</text>
+					<!-- R [1..1] Диагноз, установленный направившей медицинской организацией -->
+					<entry>
+						<!-- R [1..1]-->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="9036" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Диагноз, установленный направившей медицинской организацией" codeSystemVersion="1.90"/>
+							<!-- R [1..1] Сведения об основном заболевании -->
+							<entryRelationship typeCode="COMP">
+								<!-- R [1..1]-->
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Код поля -->
+									<code code="9029" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Основное заболевание" codeSystemVersion="1.90"/>
+									<!-- [1..1] Врачебное описание диагноза -->
+									<text>Псориаз артропатический</text>
+									<!-- R [1..1] Код по МКБ-10 -->
+									<value xsi:type="CD" code="L40.5" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemName="Международная статистическая классификация болезней и проблем, связанных со здоровьем (10-й пересмотр)" displayName="Псориаз артропатический" codeSystemVersion="2.19"/>
+								</observation>
+							</entryRelationship>
+							<!-- R [1..*] Сведения о сопутствующем заболевании -->
+							<entryRelationship typeCode="COMP">
+								<!-- R [1..1]-->
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Код поля -->
+									<code code="9012" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Сопутствующие заболевания" codeSystemVersion="1.90"/>
+									<!-- [1..1] Врачебное описание диагноза -->
+									<text nullFlavor="NA"/>
+									<!-- [1..1] Код по МКБ-10 -->
+									<value xsi:type="CD" nullFlavor="NA"/>
+								</observation>
+							</entryRelationship>
+							<!-- R [1..1] Сведения о заболевании, являющемся причиной инвалидности -->
+							<entryRelationship typeCode="COMP">
+								<!-- R [1..1]-->
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Код поля -->
+									<code code="9011" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Заболевание, являющееся причиной инвалидности" codeSystemVersion="1.90"/>
+									<!-- [1..1] Врачебное описание диагноза -->
+									<text nullFlavor="NA"/>
+									<!-- [1..1] Код по МКБ-10 -->
+									<value xsi:type="CD" nullFlavor="NA"/>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<!-- R [1..1] Диагноз при выписке из санаторно-курортной организации -->
+					<entry>
+						<!-- R [1..1]-->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="9037" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Диагноз при выписке из санаторно-курортной организации" codeSystemVersion="1.90"/>
+							<!-- R [1..1] Сведения об основном заболевании -->
+							<entryRelationship typeCode="COMP">
+								<!-- R [1..1]-->
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Код поля -->
+									<code code="9029" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Основное заболевание" codeSystemVersion="1.90"/>
+									<!-- [1..1] Врачебное описание диагноза -->
+									<text>Псориаз артропатический (L40.5+)</text>
+									<!-- R [1..1] Код по МКБ-10 -->
+									<value xsi:type="CD" code="L40.5" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemName="Международная статистическая классификация болезней и проблем, связанных со здоровьем (10-й пересмотр)" displayName="Псориаз артропатический" codeSystemVersion="2.19"/>
+								</observation>
+							</entryRelationship>
+							<!-- R [1..*] Сведения о сопутствующем заболевании -->
+							<entryRelationship typeCode="COMP">
+								<!-- R [1..1]-->
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Код поля -->
+									<code code="9012" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Сопутствующие заболевания" codeSystemVersion="1.90"/>
+									<!-- [1..1] Врачебное описание диагноза -->
+									<text nullFlavor="NA"/>
+									<!-- [1..1] Код по МКБ-10 -->
+									<value xsi:type="CD" nullFlavor="NA"/>
+								</observation>
+							</entryRelationship>
+							<!-- R [1..*] Сведения о сопутствующем заболевании -->																  
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] СЕКЦИЯ: "Информация о лечении" -->
+			<component>
+				<!-- R [1..1]-->
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="SUM" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemName="Секции электронных медицинских документов" displayName="Информация о лечении" codeSystemVersion="1.25"/>
+					<!-- R [1..1] Название секции -->
+					<title>Информация о лечении</title>
+					<!-- R [1..1] Человекочитаемое наполнение секции -->
+					<text>
+						<table><tbody>
+							<tr><td><content styleCode="Bold">Проведено лечение</content></td></tr>
+							<tr><td><content>
+							Климатотерапия, диетотерапия (стол №4), ЛФК (№8), радоновые ванны (6), сероводородные ванны (6), циркулярный душ (4), душ Шарко (4), 
+							магнитотерапия (4), музыкотерапия (6), групповая психотерапия (8), терренкур (10), баротерапия (8), гипокситерапия (2) и озонотерапия (2). 
+							Побочных эффектов не наблюдалось.</content></td></tr>							
+						</tbody></table>
+						<br/>
+						<table><tbody>
+							<tr><td><content styleCode="Bold">Эпикриз</content></td></tr>
+							<tr><td><content>Выписывается в удовлетворительном состоянии</content></td></tr>							
+						</tbody></table>
+						<br/>
+						<table><tbody>
+							<tr><td><content styleCode="Bold">Результаты лечения:</content></td><td><content>улучшение</content></td></tr>						
+						</tbody></table>
+						<br/>
+						<table><tbody>
+							<tr><td><content styleCode="Bold">Наличие обострений, потребовавших отмену процедур:</content></td><td><content>нет</content></td></tr>							
+						</tbody></table>
+					</text>
+					<!-- R [1..1] Сведения о проведенном лечении -->
+					<entry>
+						<!-- R [1..1]-->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="9038" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Проведенное лечение" codeSystemVersion="1.90"/>
+							<!-- R [1..1] Виды лечения, количество процедур, их переносимость (текстом) -->
+							<value xsi:type="ST">Климатотерапия, диетотерапия (стол №4), ЛФК (№8), радоновые ванны (6), сероводородные ванны (6), циркулярный душ (4), душ Шарко (4), магнитотерапия (4), музыкотерапия (6), групповая психотерапия (8), терренкур (10), баротерапия (8), гипокситерапия (2) и озонотерапия (2). Побочных эффектов не наблюдалось.</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] Эпикриз -->
+					<entry>
+						<!-- R [1..1]-->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="9041" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Эпикриз" codeSystemVersion="1.90"/>
+							<!-- R [1..1] Эпикриз, включая данные обследования (текстом) -->
+							<value xsi:type="ST">Выписывается в удовлетворительном состоянии</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] Сведения о результатах лечения -->
+					<entry>
+						<!-- R [1..1]-->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="9039" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Результаты лечения" codeSystemVersion="1.90"/>
+							<!-- R [1..1] Результаты лечения -->
+							<value xsi:type="CD" code="2" codeSystem="1.2.643.5.1.13.13.99.2.921" codeSystemName="Результаты санаторно-курортного лечения" displayName="улучшение" codeSystemVersion="1.1"/>
+						</observation>
+					</entry>
+					<!-- R [1..1] Сведения о наличии обострений, потребовавших отмену процедур -->
+					<entry>
+						<!-- R [1..1]-->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="9040" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Наличие обострений" codeSystemVersion="1.90"/>
+							<!-- R [1..1] Признак наличия обострений, потребовавших отмену процедур -->
+							<!-- value/@value="true" - отмечены обострения, value/@value="false" - не отмечено обострений -->
+							<value xsi:type="BL" value="false"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] СЕКЦИЯ: "Рекомендованное лечение" ("Рекомендации по дальнейшему лечению") -->
+			<component>
+				<!-- R [1..1]-->
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="RECTREAT" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemName="Секции электронных медицинских документов" displayName="Рекомендованное лечение" codeSystemVersion="1.25"/>
+					<!-- R [1..1] Название секции -->
+					<title>Рекомендации по дальнейшему лечению</title>
+					<!-- R [1..1] Человекочитаемое наполнение секции -->
+					<text>Наблюдение участкового терапевта. Повторный курс санаторно-курортного лечения через 12-18 мес.</text>
+					<!-- R [1..1] Рекомендации по дальнейшему лечению -->
+					<entry>
+						<!-- R [1..1]-->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="807" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" displayName="Рекомендации" codeSystemVersion="1.90"/>
+							<!-- R [1..1] Рекомендации (текстом) -->
+							<value xsi:type="ST">Наблюдение участкового терапевта. Повторный курс санаторно-курортного лечения через 12-18 мес.</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

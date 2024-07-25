@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Electronic_prescription.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fias="urn:hl7-ru:fias" xmlns:identity="urn:hl7-ru:identity" xmlns:address="urn:hl7-ru:address" xmlns:medService="urn:hl7-ru:medService">
+	<!-- ЗАГОЛОВОК ДОКУМЕНТА "Льготный рецепт на лекарственный препарат, изделие медицинского назначения и специализированный продукт лечебного питания" -->
+	<!---->
+	<!-- R [1..] Требуемый элемент. Элемент обязан иметь непустое наполнение, nullFlavor не разрешён -->
+	<!-- [1..] Обязательный элемент. Элемент обязан присутствовать, но может иметь пустое наполнение с указанием причины отсутствия информации через nullFlavor -->
+	<!-- [0..] Не обязательный элемент. Элемент может отсутствовать -->
+	<!---->
+	<!-- R [1..1] Область применения документа (Страна) -->
+	<realmCode code="RU"/>
+	<!-- R [1..1] Указатель на использование CDA R2 -->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_MT000040"/>
+	<!-- R [1..1] Уникальный идентификатор документа "Руководство по реализации CDA (Release 2) уровень 3 Льготный рецепт на лекарственный препарат, изделие медицинского назначения и специализированный продукт лечебного питания" Редакция 3 -->
+	<!-- по справочнику "Реестр руководств по реализации и протоколов информационного взаимодействия структурированных электронных медицинских документов" (OID: 1.2.643.5.1.13.13.99.2.638) -->
+	<templateId root="1.2.643.5.1.13.13.14.37.9.3"/>
+	<!-- R [1..1] Уникальный идентификатор документа -->
+	<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.51 extension = идентификатор документа -->
+	<id root="1.2.643.5.1.13.13.12.2.61.6228.100.1.1.51" extension="7854321"/>
+	<!-- R [1..1] Тип документа -->
+	<code code="37" codeSystem="1.2.643.5.1.13.13.11.1522" codeSystemVersion="4.45" codeSystemName="Виды медицинской документации" displayName="Льготный рецепт на лекарственный препарат, изделие медицинского назначения и специализированный продукт лечебного питания"/>
+	<!-- R [1..1] Заголовок документа -->
+	<title>Льготный рецепт на лекарственный препарат, изделие медицинского назначения и специализированный продукт лечебного питания</title>
+	<!-- R [1..1] Дата создания документа (Должен быть с точностью до дня, но следует быть с точностью до минут)-->
+	<!-- (= дата выдачи документа = дата получения документа получателем) -->
+	<effectiveTime value="202005261610+0300"/>
+	<!-- R [1..1] Уровень конфиденциальности медицинского документа -->
+	<confidentialityCode code="N" codeSystem="1.2.643.5.1.13.13.99.2.285" codeSystemVersion="1.2" codeSystemName="Уровень конфиденциальности медицинского документа" displayName="Обычный"/>
+	<!-- R [1..1] Язык документа -->
+	<languageCode code="ru-RU"/>
+	<!-- R [1..1] Уникальный идентификатор документа -->
+	<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.50 extension = идентификатор набора версий документа -->
+	<setId root="1.2.643.5.1.13.13.12.2.61.6228.100.1.1.50" extension="9633"/>
+	<!-- R [1..1] Номер версии данного документа -->
+	<versionNumber value="2"/>
+	<!-- R [1..1] ДАННЫЕ О ПАЦИЕНТЕ-->
+	<recordTarget>
+		<!-- R [1..1] Пациент (роль) -->
+		<patientRole>
+			<!-- R [1..1] Уникальный идентификатор пациента в МИС -->
+			<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.10 extension = идентификатор пациента -->
+			<id root="1.2.643.5.1.13.13.12.2.61.6228.100.1.1.10" extension="735486"/>
+			<!-- R [1..1] СНИЛС пациента -->
+			<id root="1.2.643.100.3" extension="25463625426"/>
+			<!-- [1..1] Документ, удостоверяющий личность получателя, серия, номер, кем выдан. -->
+			<identity:IdentityDoc>
+				<!-- R [1..1] Тип документа -->
+				<identity:IdentityCardType code="1" codeSystem="1.2.643.5.1.13.13.99.2.48" codeSystemVersion="5.1" codeSystemName="Документы, удостоверяющие личность" displayName="Паспорт гражданина Российской Федерации"/>
+				<!-- [1..1] Серия документа -->
+				<identity:Series>4507</identity:Series>
+				<!-- R [1..1] Номер документа -->
+				<identity:Number>691154</identity:Number>
+				<!-- [1..1] Кем выдан документ -->
+				<identity:IssueOrgName>ОВД "Гольяново" гор. Москвы.</identity:IssueOrgName>
+				<!-- [1..1] Кем выдан документ, код подразделения -->
+				<identity:IssueOrgCode>772-050</identity:IssueOrgCode>
+				<!-- R [1..1] Дата выдачи документа -->
+				<identity:IssueDate value="19980404"/>
+			</identity:IdentityDoc>
+			<!-- [1..1] Полис ОМС -->
+			<identity:InsurancePolicy>
+				<!-- R [1..1] Тип полиса ОМС -->
+				<identity:InsurancePolicyType code="2" codeSystem="1.2.643.5.1.13.13.11.1035" codeSystemVersion="1.3" codeSystemName="Виды полиса обязательного медицинского страхования" displayName="Полис ОМС единого образца, бессрочный"/>
+				<!-- [0..1] Серия полиса ОМС-->
+				<identity:Series nullFlavor="NI"/>
+				<!-- R [1..1] Номер полиса ОМС -->
+				<identity:Number>7712958452351689</identity:Number>
+			</identity:InsurancePolicy> 
+			<!-- [1..2] Адрес постоянной регистрации пациента -->
+			<addr>
+				<!-- R [1..1] Тип адреса пациента -->
+				<address:Type code="1" codeSystem="1.2.643.5.1.13.13.11.1504" codeSystemVersion="1.3" codeSystemName="Тип адреса пациента" displayName="Адрес по месту жительства (постоянной регистрации)"/>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>Ростовская область, город Ростов-на-Дону, улица Социалистическая, дом 133, квартира 5</streetAddressLine>
+				<!-- R [1..1] Кодирование субъекта РФ (Код региона в ФНС по справочнику "Субъекты Российской Федерации" (OID:1.2.643.5.1.13.13.99.2.206)) -->
+				<address:stateCode code="61" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemVersion="6.3" codeSystemName="Субъекты Российской Федерации" displayName="Ростовская область"/>       
+				<!--   [1..1] почтовый индекс -->
+				<postalCode>344006</postalCode>                
+				<!-- [1..1] Кодирование адреса по ФИАС -->
+				<fias:Address>
+					<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта  -->
+					<fias:AOGUID>440c699e-d14f-4174-ae89-939bece0cef0</fias:AOGUID>
+					<!-- [1..1] Глобальный уникальный идентификатор дома  -->
+					<fias:HOUSEGUID>849de80b-e0cd-45c6-bcd7-b2f5e50bd578</fias:HOUSEGUID>
+				</fias:Address>
+			</addr>
+			<!-- [1..2] Адрес фактического места жительства пациента -->
+			<addr>
+				<!-- R [1..1] Тип адреса пациента -->
+				<address:Type code="3" codeSystem="1.2.643.5.1.13.13.11.1504" codeSystemVersion="1.3" codeSystemName="Тип адреса пациента" displayName="Адрес фактического проживания (пребывания)"/>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>Ростовская область, город Ростов-на-Дону, улица Социалистическая, дом 133, квартира 5</streetAddressLine>
+				<!-- R [1..1] Кодирование субъекта РФ (Код региона в ФНС по справочнику "Субъекты Российской Федерации" (OID:1.2.643.5.1.13.13.99.2.206)) -->
+				<address:stateCode code="61" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemVersion="6.3" codeSystemName="Субъекты Российской Федерации" displayName="Ростовская область"/>       
+				<!--   [1..1] почтовый индекс -->
+				<postalCode>344006</postalCode>                
+				<!-- [1..1] Кодирование адреса по ФИАС -->
+				<fias:Address>
+					<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта  -->
+					<fias:AOGUID>440c699e-d14f-4174-ae89-939bece0cef0</fias:AOGUID>
+					<!-- [1..1] Глобальный уникальный идентификатор дома  -->
+					<fias:HOUSEGUID>849de80b-e0cd-45c6-bcd7-b2f5e50bd578</fias:HOUSEGUID>
+				</fias:Address>
+			</addr>
+			<!-- [0..1] Контакты пациента (телефон) -->
+			<telecom value="tel:+78631953745"/>
+			<!-- [0..*] Контакты пациента (мобильный телефон) -->
+			<telecom value="tel:+79034752364" use="MC"/>
+			<!-- [0..*] Контакты пациента (электронная почта) -->
+			<telecom value="mailto: novosel.m.v@mail.ru"/>
+			<!-- R [1..1] Пациент (человек) -->
+			<patient>
+				<!-- R [1..1] ФИО пациента -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Новосельцев</family>
+					<!-- R [1..1] Имя -->
+					<given>Михаил</given>
+					<!-- [0..1] Отчество -->
+					<identity:Patronymic>Владимирович</identity:Patronymic>
+				</name>
+				<!-- [1..1] Пол пациента -->
+				<administrativeGenderCode code="1" codeSystem="1.2.643.5.1.13.13.11.1040" codeSystemVersion="2.1" codeSystemName="Пол пациента" displayName="Мужской"/>
+				<!-- R [1..1] Дата рождения пациента -->
+				<birthTime value="19900125"/>
+			</patient>
+			<!-- R [1..1] Медицинская организация, оформившая рецепт -->
+			<providerOrganization>
+				<!-- R [1..1] Уникальный идентификатор организации -->
+				<!-- организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.61.6228"/>
+				<!-- [0..1] Номер лицензии на осуществление медицинской деятельности. Обязательно указывать при внесении данных о индивидуальном предпринимателе -->
+				<id root="1.2.643.5.1.13.2.1.1.1504.101" extension="ЛО-61-01-006816" assigningAuthorityName="Министерство здравоохранения Ростовской области. Дата регистрации: 21.11.2018"/>
+				<!-- R [1..1] Реквизиты организации -->
+				<identity:Props>
+					<!-- [1..1]Код ОГРН -->
+					<identity:Ogrn>1037734008575</identity:Ogrn>
+					<!-- [1..1]Код ОГРНИП -->
+					<identity:Ogrnip nullFlavor="NA"/>
+					<!-- [0..1]Код ОКПО -->
+					<!-- [0..1]Код ОКАТО -->
+					<identity:Okato>60401368</identity:Okato>
+				</identity:Props>
+				<!-- R [1..1] Наименование медицинской организации или ФИО Индивидуального предпринимателя -->
+				<name>МБУЗ «Городская Поликлиника № 10» города Ростова-на-Дону</name>
+				<!-- [0..*] Телефон организации -->
+				<!-- Должен быть указан для ИП -->
+				<!-- Должен быть указан, если не указан номер медицинского работника, выписавшего рецепт-->
+				<telecom value="tel:+78632633171" use="WP"/>
+				<!-- R [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>Ростовская область, город Ростов-на-Дону, улица Большая Садовая, дом 106/46</streetAddressLine>
+					<!-- R [1..1] Кодирование субъекта РФ (Код региона в ФНС по справочнику "Субъекты Российской Федерации" (OID:1.2.643.5.1.13.13.99.2.206)) -->
+					<address:stateCode code="61" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemVersion="6.3" codeSystemName="Субъекты Российской Федерации" displayName="Ростовская область"/>       
+					<!--   [1..1] почтовый индекс -->
+					<postalCode>344007</postalCode>                
+					<!-- [1..1] Кодирование адреса по ФИАС -->
+					<fias:Address>
+						<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта  -->
+						<fias:AOGUID>61a9c88c-51e7-4996-888a-ca425a8d78ba</fias:AOGUID>
+						<!-- [1..1] Глобальный уникальный идентификатор дома  -->
+						<fias:HOUSEGUID>ef405420-fef7-4391-9c0c-cc47196520e6</fias:HOUSEGUID>
+					</fias:Address>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<!-- R [1..1] ДАННЫЕ ОБ АВТОРЕ ДОКУМЕНТА -->
+	<author>
+		<time nullFlavor="NI"/>
+		<!-- R [1..1] АВТОР (роль) -->
+		<assignedAuthor>
+			<!-- R [1..1] Уникальный идентификатор автора в МИС -->
+			<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.70 extension = идентификатор персонала -->
+			<id root="1.2.643.5.1.13.13.12.2.61.6228.100.1.1.70" extension="542177"/>
+			<!-- R [1..1] СНИЛС автора -->
+			<id root="1.2.643.100.3" extension="52415377312"/>
+			<!-- R [1..1] Код должности автора-->
+			<code code="109" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="7.5" codeSystemName="Должности медицинских и фармацевтических работников" displayName="врач-терапевт"/>
+			<!-- [0..1] Адрес автора документа -->
+			<addr>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>Ростовская область, город Ростов-на-Дону, улица Большая Садовая, дом 106/46</streetAddressLine>
+				<!-- R [1..1] Кодирование субъекта РФ (Код региона в ФНС по справочнику "Субъекты Российской Федерации" (OID:1.2.643.5.1.13.13.99.2.206)) -->
+				<address:stateCode code="61" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemVersion="6.3" codeSystemName="Субъекты Российской Федерации" displayName="Ростовская область"/>       
+				<!--   [1..1] почтовый индекс -->
+				<postalCode>344007</postalCode>                
+				<!-- [1..1] Кодирование адреса по ФИАС -->
+				<fias:Address>
+					<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта  -->
+					<fias:AOGUID>61a9c88c-51e7-4996-888a-ca425a8d78ba</fias:AOGUID>
+					<!-- [1..1] Глобальный уникальный идентификатор дома  -->
+					<fias:HOUSEGUID>ef405420-fef7-4391-9c0c-cc47196520e6</fias:HOUSEGUID>
+				</fias:Address>
+			</addr>
+			<!-- [0..1] Контакты автора (телефон) -->
+			<telecom value="tel:+78632633175" use="WP"/>
+			<!-- [0..*] Контакты автора (мобильный телефон) -->
+			<telecom value="tel:+79267352628"/>
+			<!-- [0..*] Контакты автора (электронная почта) -->
+			<telecom value="mailto:smirnovа.a.i@rambler.ru"/>
+			<!-- R [1..1] АВТОР (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество автора -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Смирнова</family>
+					<!-- R [1..1] Имя -->
+					<given>Александра</given>
+					<!-- [0..1] Отчество -->
+					<identity:Patronymic>Ивановна</identity:Patronymic>
+				</name>
+			</assignedPerson>
+			<!-- [1..1] Место работы автора -->
+			<representedOrganization classCode="ORG">
+				<!-- R [1..1] Уникальный идентификатор организации -->
+				<!-- организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.61.6228"/>
+				<!-- R [1..1] Наименование медицинской организации или ФИО Индивидуального предпринимателя -->
+				<name>МБУЗ «Городская Поликлиника № 10» города Ростова-на-Дону</name>
+				<!-- [0..*] Телефон организации -->
+				<telecom value="tel:+78632633171" use="WP"/>
+				<!-- R [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>Ростовская область, город Ростов-на-Дону, улица Большая Садовая, дом 106/46</streetAddressLine>
+					<!-- R [1..1] Кодирование субъекта РФ (Код региона в ФНС по справочнику "Субъекты Российской Федерации" (OID:1.2.643.5.1.13.13.99.2.206)) -->
+					<address:stateCode code="61" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemVersion="6.3" codeSystemName="Субъекты Российской Федерации" displayName="Ростовская область"/>       
+					<!--   [1..1] почтовый индекс -->
+					<postalCode>344007</postalCode>                
+					<!-- [1..1] Кодирование адреса по ФИАС -->
+					<fias:Address>
+						<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта  -->
+						<fias:AOGUID>61a9c88c-51e7-4996-888a-ca425a8d78ba</fias:AOGUID>
+						<!-- [1..1] Глобальный уникальный идентификатор дома  -->
+						<fias:HOUSEGUID>ef405420-fef7-4391-9c0c-cc47196520e6</fias:HOUSEGUID>
+					</fias:Address>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<!-- R [1..1] ДАННЫЕ ОБ ОРГАНИЗАЦИИ-ВЛАДЕЛЬЦЕ ДОКУМЕНТА -->
+	<custodian>
+		<!-- R [1..1] Организация-владелец документа (роль) -->
+		<assignedCustodian>
+			<!-- R [1..1] Организация-владелец документа (организация) -->
+			<representedCustodianOrganization classCode="ORG">
+				<!-- R [1..1] Уникальный идентификатор организации -->
+				<!-- организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.61.6228"/>
+				<!-- R [1..1] Наименование организации-владельца документа -->
+				<name>МБУЗ «Городская Поликлиника № 10» города Ростова-на-Дону</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+78632633171" use="WP"/>
+				<!-- R [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>Ростовская область, город Ростов-на-Дону, улица Большая Садовая, дом 106/46</streetAddressLine>
+					<!-- R [1..1] Кодирование субъекта РФ (Код региона в ФНС по справочнику "Субъекты Российской Федерации" (OID:1.2.643.5.1.13.13.99.2.206)) -->
+					<address:stateCode code="61" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemVersion="6.3" codeSystemName="Субъекты Российской Федерации" displayName="Ростовская область"/>       
+					<!--   [1..1] почтовый индекс -->
+					<postalCode>344007</postalCode>                
+					<!-- [1..1] Кодирование адреса по ФИАС -->
+					<fias:Address>
+						<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта  -->
+						<fias:AOGUID>61a9c88c-51e7-4996-888a-ca425a8d78ba</fias:AOGUID>
+						<!-- [1..1] Глобальный уникальный идентификатор дома  -->
+						<fias:HOUSEGUID>ef405420-fef7-4391-9c0c-cc47196520e6</fias:HOUSEGUID>
+					</fias:Address>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- R [1..1] ДАННЫЕ О ПОЛУЧАТЕЛЕ ДОКУМЕНТА МЗ РФ-->
+	<informationRecipient>
+		<!-- R [1..1] Получатель документа (роль) -->
+		<intendedRecipient>
+			<!-- R [1..1] Получатель документа (организация) -->
+			<receivedOrganization>
+				<!-- R [1..1] Идентификатор получающей организации-->
+				<id root="1.2.643.5.1.13"/>
+				<!-- R [1..1] Наименование получающей организации-->
+				<name>Министерство здравоохранения Российской Федерации</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<!-- [0..*] ДАННЫЕ О ПОЛУЧАТЕЛЕ ДОКУМЕНТА -->
+	<!-- R [1..1] ДАННЫЕ О ЛИЦЕ, ПРИДАВШЕМ ЮРИДИЧЕСКУЮ СИЛУ ДОКУМЕНТУ -->
+	<legalAuthenticator>
+		<time nullFlavor="NI"/>
+		<signatureCode nullFlavor="NI"/>
+		<!-- R [1..1] Лицо, придавшее юридическую силу документу (роль) -->
+		<assignedEntity>
+			<!-- R [1..1] Уникальный идентификатор лица, придавшего юридическую силу документу в МИС -->
+			<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.70 extension = идентификатор персонала -->
+			<id root="1.2.643.5.1.13.13.12.2.61.6228.100.1.1.70" extension="542177"/>
+			<!-- R [1..1] СНИЛС лица, придавшего юридическую силу документу -->
+			<id root="1.2.643.100.3" extension="52415377312"/>
+			<!-- R [1..1] Код должности лица, придавшего юридическую силу документу-->
+			<code code="430" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="7.5" codeSystemName="Должности медицинских и фармацевтических работников" displayName="заведующий отделением медицинской организации"/>
+			<!-- [0..1] Адрес лица, придавшего юридическую силу документу -->
+			<addr>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>Ростовская область, город Ростов-на-Дону, улица Большая Садовая, дом 106/46</streetAddressLine>
+				<!-- R [1..1] Кодирование субъекта РФ (Код региона в ФНС по справочнику "Субъекты Российской Федерации" (OID:1.2.643.5.1.13.13.99.2.206)) -->
+				<address:stateCode code="61" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemVersion="6.3" codeSystemName="Субъекты Российской Федерации" displayName="Ростовская область"/>       
+				<!--   [1..1] почтовый индекс -->
+				<postalCode>344007</postalCode>                
+				<!-- [1..1] Кодирование адреса по ФИАС -->
+				<fias:Address>
+					<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта  -->
+					<fias:AOGUID>61a9c88c-51e7-4996-888a-ca425a8d78ba</fias:AOGUID>
+					<!-- [1..1] Глобальный уникальный идентификатор дома  -->
+					<fias:HOUSEGUID>ef405420-fef7-4391-9c0c-cc47196520e6</fias:HOUSEGUID>
+				</fias:Address>
+			</addr>
+			<!-- [0..1] Контакты лица, придавшего юридическую силу документу (телефон) -->
+			<telecom value="tel:+78632633176" use="WP"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (мобильный телефон) -->
+			<telecom value="tel:+79267354628"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (электронная почта) -->
+			<telecom value="mailto:elfimov@gmail.com"/>
+			<!-- R [1..1] Лицо, придавшее юридическую силу документу (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество лица, придавшего юридическую силу документу -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Елфимов</family>
+					<!-- R [1..1] Имя -->
+					<given>Александр</given>
+					<!-- [0..1] Отчество -->
+					<identity:Patronymic>Иванович</identity:Patronymic>
+				</name>
+			</assignedPerson>
+			<!-- [1..1] Место работы лица, придавшего юридическую силу -->
+			<representedOrganization classCode="ORG">
+				<!-- R [1..1] Уникальный идентификатор организации -->
+				<!-- организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.61.6228"/>
+				<!-- R [1..1] Наименование медицинской организации или ФИО Индивидуального предпринимателя -->
+				<name>МБУЗ «Городская Поликлиника № 10» города Ростова-на-Дону</name>
+				<!-- [0..*] Телефон организации -->
+				<telecom value="tel:+78632633171" use="WP"/>
+				<!-- R [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>Ростовская область, город Ростов-на-Дону, улица Большая Садовая, дом 106/46</streetAddressLine>
+					<!-- R [1..1] Кодирование субъекта РФ (Код региона в ФНС по справочнику "Субъекты Российской Федерации" (OID:1.2.643.5.1.13.13.99.2.206)) -->
+					<address:stateCode code="61" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemVersion="6.3" codeSystemName="Субъекты Российской Федерации" displayName="Ростовская область"/>       
+					<!--   [1..1] почтовый индекс -->
+					<postalCode>344007</postalCode>                
+					<!-- [1..1] Кодирование адреса по ФИАС -->
+					<fias:Address>
+						<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта  -->
+						<fias:AOGUID>61a9c88c-51e7-4996-888a-ca425a8d78ba</fias:AOGUID>
+						<!-- [1..1] Глобальный уникальный идентификатор дома  -->
+						<fias:HOUSEGUID>ef405420-fef7-4391-9c0c-cc47196520e6</fias:HOUSEGUID>
+					</fias:Address>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<!-- R [1..1] СВЕДЕНИЯ О СЛУЧАЕ ОКАЗАНИЯ МЕДИЦИНСКОЙ ПОМОЩИ -->
+	<componentOf>
+		<!-- R [1..1] Случай оказания медицинской помощи -->
+		<encompassingEncounter>
+			<!-- R [1..1] Уникальный идентификатор случая оказания медицинской помощи -->
+			<id root="1.2.643.5.1.13.13.12.2.61.6228.100.1.1.15" extension="908964234678"/>
+			<!-- R [1..1] Идентификатор случая оказания медицинской помощи (номер медицинской карты) -->
+			<id root="1.2.643.5.1.13.13.12.2.61.6228.100.1.1.16" extension="7890\17"/>
+			<!-- [0..1] Тип медицинской карты -->
+			<!-- [0..1] Вид медицинской карты -->
+			<!-- R [1..1] Даты начала и окончания случая -->
+			<effectiveTime>
+				<!-- R [1..1] Дата начала случая -->
+				<low value="202005261600+0300"/>
+				<!-- [0..1] Дата окончания случая --> 
+				<high value="202005261610+0300"/>
+			</effectiveTime>
+		</encompassingEncounter>
+	</componentOf>
+	<!-- R [1..1] ТЕЛО ДОКУМЕНТА -->
+	<component>
+		<!-- R [1..1] Структурированное тело документа -->
+		<structuredBody>
+			<!-- R [1..1] СЕКЦИЯ: СВЕДЕНИЯ О ДОКУМЕНТЕ-->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="DOCINFO" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.19" codeSystemName="Секции электронных медицинских документов" displayName="Сведения о документе"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>Сведения об электронном рецепте</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Приоритет исполнения рецепта</content>
+									</td>
+									<td>
+										<content>Cito</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Серия рецепта</content>
+									</td>
+									<td>
+										<content>77АА</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Номер рецепта</content>
+									</td>
+									<td>
+										<content>123456</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Срок действия рецепта</content>
+									</td>
+									<td>
+										<content>15 дней</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Дата окончания действия рецепта</content>
+									</td>
+									<td>
+										<content>10.06.2020</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>По специальному назначению (Отметка)</content>
+									</td>
+									<td>
+										<content>Имеется</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Код заболевания по МКБ-10</content>
+									</td>
+									<td>
+										<content>R13 (Дисфагия)</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- [0..1] Приоритет исполнения рецепта -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="6000" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Приоритет исполнения рецепта"/>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.609" codeSystemVersion="1.1" codeSystemName="Приоритет исполнения рецепта" displayName="Cito"/>
+						</observation>
+					</entry>
+					<!-- R [1..1] Серия рецепта -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="6001" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Серия рецепта"/>
+							<value xsi:type="ST">77АА</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] Номер рецепта -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="6002" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Номер рецепта"/>
+							<value xsi:type="ST">123456</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] Срок действия рецепта -->
+					<!-- Доступные сроки действия рецепта на лекарственный препарат или специализированный продукт лечебного питания: 15 дней, 30 дней и 90 дней -->
+					<!-- Доступные сроки действия рецепта на медицинское изделие: 1 месяц, 3 месяца -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="6004" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Срок действия рецепта"/>
+							<value xsi:type="CD" code="7" codeSystem="1.2.643.5.1.13.13.99.2.608" codeSystemVersion="1.2" codeSystemName="Срок действия рецепта" displayName="3 месяца"/>
+						</observation>
+					</entry>
+					<!-- R [1..1] Дата окончания действия рецепта -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="6005" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Дата окончания действия рецепта"/>
+							<value xsi:type="TS" value="20200610"/>
+						</observation>
+					</entry>
+					<!-- R [1..1] По специальному назначению (Отметка) (Имеется\Отсутствует) -->
+					<!-- Данная отметка может иметь значение true в случае назначения лекарственного препарата или специализированного продукта лечебного питания-->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="6006" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="По специальному назначению (Отметка)"/>
+							<value xsi:type="BL" value="true"/>
+						</observation>
+					</entry>
+					<!-- R [1..1] Наличие хронических заболеваний (Отметка) (Имеется\Отсутствует) -->
+					<!-- Данная отметка может иметь значение true в случае назначения медицинского изделия-->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="11001" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Наличие хронических заболеваний"/>
+							<value xsi:type="BL" value="false"/>
+						</observation>
+					</entry>
+					<!-- R [1..1] Кодирование диагноза -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Кодируемое поле -->
+							<code code="809" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Шифр по МКБ-10"/>
+							<!-- R [1..1] Диагноз -->
+							<value xsi:type="CD" code="R13" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemVersion="2.19" codeSystemName="Международная статистическая классификация болезней и проблем, связанных со здоровьем (10-й пересмотр)" displayName="Дисфагия"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] СЕКЦИЯ: Коды льгот (с кодированными элементами) -->
+			<component>
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="BENEFITS" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.19" codeSystemName="Секции электронных медицинских документов" displayName="Льготы"/>
+					<!-- R [1..1] Заголовок секции -->
+					<title>Коды льгот</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Льготная категория</content>
+									</td>
+									<td>
+										<content>Неработающие инвалиды II группы</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Источник финансирования</content>
+									</td>
+									<td>
+										<content>Бюджет субъекта РФ</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Размер льготы</content>
+									</td>
+									<td>
+										<content>100%</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..*] Кодирование льгот -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="811" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Льготная категория"/>
+
+							<value xsi:type="CD" code="1.00000.0031" codeSystem="1.2.643.5.1.13.13.99.2.541" codeSystemVersion="6.14" codeSystemName="Льготные категории граждан" displayName="Неработающие инвалиды II группы, Бюджет субъекта РФ"/>
+						</observation>
+					</entry>
+					<!-- R [1..1] Размер льготы (код) -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="6009" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Размер льготы (код)"/>
+							<value xsi:type="CD" code="102" codeSystem="1.2.643.5.1.13.13.99.2.605" codeSystemVersion="3.2" codeSystemName="Виды предоставляемых льгот" displayName="100"/>
+						</observation>
+					</entry>
+					<!-- R [1..1] Размер льготы (значение в процентах) -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="6010" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Размер льготы (значение в процентах)"/>
+							<value xsi:type="PQ" value="100" unit="%">
+								<translation value="100" code="53" codeSystem="1.2.643.5.1.13.13.11.1358" codeSystemVersion="3.2" codeSystemName="Единицы измерения" displayName="%"/>
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] СЕКЦИЯ: НАЗНАЧЕНИЕ ЛЕКАРСТВЕННОГО ПРЕПАРАТА\СПЕЦИАЛИЗИРОВАННОГО ПРОДУКТА ЛЕЧЕБНОГО ПИТАНИЯ -->
+			<component>
+				<section>
+					<code code="RECIPE" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.19" codeSystemName="Секции электронных медицинских документов" displayName="Рецепт"/>
+					<!-- R [1..1] Название секции-->
+					<title>Назначение лекарственного препарата\специализированного продукта лечебного питания</title>
+					<!-- R [1..1] Наполнение секции -->
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Назначено</th>
+									<th>Прием</th>
+									<th>Особые указания</th>
+									<th>Количество назначеных доз</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Специализированный продукт для диетического лечебного питания - сухая полноценная низколактозная смесь Нутризон эдванст Нутридринк сухая смесь</td>
+									<td>75 гр 3 раза в день в течение 30 дней</td>
+									<td>Перед приемом смесь необходимо развести в соотношении 75 гр смеси на 85 мл воды</td>
+									<td>90</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] Кодирование льготного рецепта -->
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="RQO">
+							<!-- R [1..1] Кодирование типов назначений льготного рецепта -->
+							<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.651" codeSystemVersion="1.2" codeSystemName="Тип назначений льготного рецепта" displayName="Рецепт на специализированный продукт лечебного питания"/>
+							<!-- [1..1] Общая длительность приема препарата-->
+							<effectiveTime xsi:type="IVL_TS">
+								<width value="30" unit="d">
+									<translation code="24" codeSystem="1.2.643.5.1.13.13.11.1358" codeSystemVersion="3.2" codeSystemName="Единицы измерения" displayName="сут"/> 
+								</width>
+							</effectiveTime>
+							<!-- [1..1] Путь введения препарата -->
+							<routeCode code="2" codeSystem="1.2.643.5.1.13.13.11.1468" codeSystemVersion="2.1" displayName="Для приема внутрь" codeSystemName="Пути введения лекарственных препаратов, в том числе для льготного обеспечения граждан лекарственными средствами"/>
+							<!-- R [1..1] Назначенный препарат\специализированный продукт лечебного питания -->
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<!-- [1..1] Кодирование назначенного лекарственного препарата\специализированного продукта лечебного питания-->
+										<code code="00075" codeSystem="1.2.643.5.1.13.13.99.2.603" codeSystemVersion="1.2" codeSystemName="ФРЛЛО. Справочник специализированного питания" displayName="Специализированный продукт для диетического лечебного питания - сухая полноценная низколактозная смесь Нутризон эдванст Нутридринк сухая смесь"/>
+										<!-- [0..1] Указание торгового наименования лекарственного препарата -->
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<!-- [0..*] Инструкция по применению препарата -->
+							<entryRelationship typeCode="COMP">
+								<substanceAdministration classCode="SBADM" moodCode="RQO">
+									<!-- [1..1] Длительность приема препарата -->
+									<effectiveTime xsi:type="IVL_TS" nullFlavor="NI"/>
+									<!-- [1..1] Кратность приема препарата-->
+									<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false">
+										<!-- Прием осуществляется 3 раза в день -->
+										<period value="0.3333" unit="d">
+											<translation value="0.3333" code="24" displayName="сут" codeSystem="1.2.643.5.1.13.13.11.1358" codeSystemVersion="3.2" codeSystemName="Единицы измерения"/>
+										</period>
+									</effectiveTime>
+									<!-- R [1..1] Разовая доза -->
+									<doseQuantity xsi:type="IVL_PQ" value="75" unit="g">
+										<translation value="75" code="8" codeSystem="1.2.643.5.1.13.13.11.1358" codeSystemVersion="3.2" codeSystemName="Единицы измерения" displayName="г"/>
+									</doseQuantity>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor="NA"/>
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+							<!-- R [1..1] Количество назначенных доз -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="6011" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Количество назначенных доз"/>
+									<value xsi:type="PQ" value="90" unit="U">
+										<translation value="90" code="128" displayName="Единица" codeSystem="1.2.643.5.1.13.13.11.1358" codeSystemVersion="3.2" codeSystemName="Единицы измерения"/>
+									</value>
+							</observation>
+							</entryRelationship>
+							<!-- [0..*] Особые указания-->
+							<precondition typeCode="PRCN">
+								<criterion>
+									<!-- R [1..1] Кодирование особых указаний -->
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+									<!-- R [1..1] Особые указания -->
+									<value xsi:type="ST">Перед приемом смесь необходимо развести в соотношении 75 гр смеси на 85 мл воды</value>
+								</criterion>
+							</precondition>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<!-- [0..1] СЕКЦИЯ: СВЯЗАННЫЕ ДОКУМЕНТЫ  -->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="LINKDOCS" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.19" codeSystemName="Секции электронных медицинских документов" displayName="Связанные документы"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>Связанные документы</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>
+										<content>Протокол врачебной комиссии</content>
+									</th>
+									<td>
+										<content>№ 123 от 26.05.2020 16:10</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] Протокол врачебной комиссии (Кодирование даты и номера протокола) -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<code code="87" codeSystem="1.2.643.5.1.13.13.11.1522" codeSystemVersion="4.45" codeSystemName="Виды медицинской документации" displayName="Протокол врачебной комиссии"/>
+							<text>Протокол врачебной комиссии</text>
+							<!-- R [1..1] Дата и время проведения врачебной комиссии-->
+							<effectiveTime value="202005061610+0300"/>
+							<!-- [0..1] Серия протокола врачебной комиссии -->
+							<!-- [0..1] Номер протокола врачебной комиссии -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="11003" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.75" codeSystemName="Кодируемые поля CDA документов" displayName="Номер документа"/>
+									<value xsi:type="ST">123</value>
+								</observation>
+							</entryRelationship>
+							<!-- R [1..1] Ссылка на протокол врачебной комиссии документ -->
+							<reference typeCode="REFR">
+								<externalDocument classCode="DOCCLIN" moodCode="EVN"> 
+									<!-- [1..1] Уникальный идентификатор документа в МИС -->
+									<id root="1.2.643.5.1.13.13.12.2.61.6228.100.1.1.51" extension="8754871"/>
+								</externalDocument>
+							</reference>
+						</act>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

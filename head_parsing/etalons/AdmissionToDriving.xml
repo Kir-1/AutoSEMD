@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://tech-iemc-test.rosminzdrav.ru/tech/download/XSLT/8/MBC.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 http://tech-iemc-test.rosminzdrav.ru/tech/download/infrastructure/8/CDA.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- ЗАГОЛОВОК ДОКУМЕНТА "Медицинская справка о допуске к управлению транспортным средством" -->
+	<!---->
+	<!-- R [1..] Требуемый элемент. Элемент обязан иметь непустое наполнение, nullFlavor не разрешён -->
+	<!-- [1..] Обязательный элемент. Элемент обязан присутствовать, но может иметь пустое наполнение с указанием причины отсутствия информации через nullFlavor -->
+	<!-- [0..] Не обязательный элемент. Элемент может отсутствовать -->
+	<!---->
+	<!-- R [1..1] Область применения документа (Страна) -->
+	<realmCode code="RU"/>
+	<!-- R [1..1] Указатель на использование CDA R2 -->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- R [1..1] Идентификатор Шаблона документа "Медицинская справка о допуске к управлению транспортным средством третий уровень формализации" -->
+	<!-- по справочнику "Справочник шаблонов документов" (OID: 1.2.643.5.1.13.2.1.1.1504.1) -->
+	<templateId root="1.2.643.5.1.13.2.7.5.1.8.3"/>
+	<!-- R [1..1] Уникальный идентификатор документа -->
+	<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.51 extension = идентификатор документа -->
+	<id root="1.2.643.5.1.13.3.25.77.173.100.1.1.51" extension="4895354"/>
+	<!-- R [1..1] Тип документа -->
+	<code code="8" codeSystem="1.2.643.5.1.13.2.1.1.646" codeSystemName="Система электронных медицинских документов" displayName="Медицинская справка о допуске к управлению транспортным средством"/>
+	<!-- R [1..1] Заголовок документа -->
+	<title>Медицинская справка о допуске к управлению транспортным средством</title>
+	<!-- R [1..1] Дата создания документа (с точностью до дня)-->
+	<!-- (= дата выдачи документа = дата получения документа получателем)  -->
+	<effectiveTime value="20150905"/>
+	<!-- R [1..1] Уровень конфиденциальности документа -->
+	<confidentialityCode code="N" codeSystem="1.2.643.5.1.13.2.1.1.1504.9" codeSystemName="Уровень конфиденциальности документа" displayName="Обычный"/>
+	<!-- R [1..1] Язык документа -->
+	<languageCode code="ru-RU"/>
+	<!-- R [1..1] Уникальный идентификатор набора версий документа -->
+	<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.50 extension = идентификатор набора версий документа -->
+	<setId root="1.2.643.5.1.13.3.25.77.173.100.1.1.50" extension="123"/>
+	<!-- R [1..1] Номер версии данного документа -->
+	<versionNumber value="1"/>
+	<!-- R [1..1] ДАННЫЕ О ВОДИТЕЛЕ (КАНДИДАТЕ В ВОДИТЕЛИ) (Далее "ВОДИТЕЛЬ")-->
+	<recordTarget>
+		<!-- R [1..1] ВОДИТЕЛЬ (роль) -->
+		<patientRole>
+			<!-- R [1..1] Уникальный идентификатор водителя в МИС -->
+			<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.10 extension = идентификатор пациента -->
+			<id root="1.2.643.5.1.13.3.25.77.173.100.1.1.10" extension="555666"/>
+			<!-- [1..1] СНИЛС водителя -->
+			<id root="1.2.643.100.3" extension="845-345-154 65"/>
+			<!-- R [1..1] Документ, удостоверяющий личность водителя, серия, номер, кем выдан. -->
+			<id root="1.2.643.5.1.13.13.11.1011.1" extension="4510 483589" assigningAuthorityName='ОВД "Коньково" гор. Москвы. Код подразделения: 770-095. Дата выдачи: 08.10.2008'/>
+			<!-- R [1..1] Адрес постоянной регистрации водителя -->
+			<addr use="H">
+				<!-- R [1..1] Адрес текстом -->
+				<streetAddressLine> 117997, Россия, Москва, ул. Островитянова, д. 9, кв.13 </streetAddressLine>
+				<!-- R [1..1] Регион РФ (республика, край, область)-->
+				<state>77</state>
+			</addr>
+			<!-- R [1..1] Адрес фактического места жительства водителя -->
+			<addr use="HP">
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine> 117997, Россия, Москва, ул. Островитянова, д. 9, кв. 13.</streetAddressLine>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+			</addr>
+			<!-- [0..1] Телефон водителя -->
+			<telecom value="tel:+79061112233"/>
+			<!-- [0..*] Прочие контакты водителя (мобильный телефон) -->
+			<telecom use="MC" value="tel:+79036669999"/>
+			<!-- [0..*] Прочие контакты водителя (электронная почта) -->
+			<telecom value="mailto: SaveliyBez@yandex.ru"/>
+			<patient>
+				<!-- R [1..1] ФИО водителя -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Безаварийный</family>
+					<!-- R [1..1] Имя -->
+					<given>Савелий</given>
+					<!-- [0..1] Отчество -->
+					<given>Петрович</given>
+				</name>
+				<!-- R [1..1] Пол водителя -->
+				<administrativeGenderCode code="1" codeSystem="1.2.643.5.1.13.2.1.1.156" codeSystemName="Классификатор половой принадлежности" displayName="Мужской"/>
+				<!-- R [1..1] Дата рождения водителя -->
+				<birthTime value="19800217"/>
+			</patient>
+			<!-- R [1..1] Организация, оформившая медицинскую справку о допуске к управлению ТС -->
+			<providerOrganization>
+				<!-- [1..1] Идентификатор организации -->
+				<!-- Организации - по справочнику «Регистр медицинских организаций Российской Федерации. Версия 2» (OID: 1.2.643.5.1.13.2.1.1.178) -->
+				<!-- индивидуальные предприниматели - указание на отсутствие кода, nullFlavor="NI" -->
+				<id root="1.2.643.5.1.13.3.25.77.173"/>
+				<!-- R [1..1] ОГРН -->
+				<id root="1.2.643.100.1" extension="1037728053956"/>
+				<!-- R [1..1] Номер лицензии на осуществление медицинской деятельности -->
+				<id root="1.2.643.5.1.13.2.1.1.1504.101" extension="ЛО-77-02-084514" assigningAuthorityName="Федеральная служба по надзору в сфере здравоохранения (Росздравнадзор). Дата регистрации: 10.03.2013."/>
+				<!-- R [1..1] Наименование организации -->
+				<name> ГБУЗ "Городская поликлиника № 74 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: dgp74@mosgorzdrav.ru"/>
+				<!-- R [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine> 117342, Россия, Москва, ул. Введенского, д.14 "А"</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<!-- R [1..1] ДАННЫЕ ОБ АВТОРЕ ДОКУМЕНТА - ВРАЧ-ТЕРАПЕВТ -->
+	<author>
+		<!-- R [1..1] Дата подписи документа автором – врач-терапевт -->
+		<time value="201509051600+0300"/>
+		<!-- R [1..1] АВТОР (роль) -->
+		<assignedAuthor>
+			<!-- R [1..1] Уникальный идентификатор автора в МИС -->
+			<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.70 extension = идентификатор персонала -->
+			<id root="1.2.643.5.1.13.3.25.77.173.100.1.1.70" extension="118"/>
+			<!-- [0..1] СНИЛС автора -->
+			<id root="1.2.643.100.3" extension="524-153-723 12"/>
+			<!-- [0..1] Идентификатор автора по Федеральному Регистру Медицинских Работников -->
+			<id root="1.2.643.5.1.13.2.1.1.1504.100" extension="485148"/>
+			<!-- R [1..1] Код должности автора-->
+			<code code="109" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="Врач-терапевт"/>
+			<!-- [0..1] Адрес автора документа -->
+			<addr>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine> 119334, Россия, Москва, ул. Косыгина, д.13, кв.33 </streetAddressLine>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+			</addr>
+			<!-- [0..1] Телефон автора -->
+			<telecom value="tel:+74959876543"/>
+			<!-- [0..*] Прочие контакты автора (мобильный телефон) -->
+			<telecom use="MC" value="tel:+790112345678"/>
+			<!-- [0..*] Прочие контакты автора (электронная почта) -->
+			<telecom value="mailto:olga1977@ya.ru"/>
+			<!-- R [1..1] АВТОР (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество автора -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Порядкова</family>
+					<!-- R [1..1] Имя -->
+					<given>Ольга</given>
+					<!-- [0..1] Отчество -->
+					<given>Петровна</given>
+				</name>
+			</assignedPerson>
+			<!-- [0..1] Место работы автора  -->
+			<representedOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- организации - по справочнику «Регистр медицинских организаций Российской Федерации. Версия 2» (OID: 1.2.643.5.1.13.2.1.1.178) -->
+				<!-- индивидуальные предприниматели - указание на отсутствие кода, nullFlavor="NI" -->
+				<id root="1.2.643.5.1.13.3.25.77.173"/>
+				<!-- R [1..1] Наименование организации -->
+				<name>ГБУЗ "Городская поликлиника № 74 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp74@mosgorzdrav.ru"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine> 117342, Россия, Москва, ул. Введенского, д.14 "А"</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<!-- R [1..1] ДАННЫЕ ОБ ОРГАНИЗАЦИИ-ВЛАДЕЛЬЦЕ ДОКУМЕНТА -->
+	<custodian>
+		<!-- R [1..1] Организация-владелец документа (роль) -->
+		<assignedCustodian>
+			<!-- R [1..1] Организация-владелец документа (организация) -->
+			<representedCustodianOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- организации - по справочнику «Регистр медицинских организаций Российской Федерации. Версия 2» (OID: 1.2.643.5.1.13.2.1.1.178) -->
+				<!-- индивидуальные предприниматели - указание на отсутствие кода, nullFlavor="NI" -->
+				<id root="1.2.643.5.1.13.3.25.77.173"/>
+				<!-- R [1..1] Наименование организации-владельца документа -->
+				<name>ГБУЗ "Городская поликлиника № 74 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine> 117342, Россия, Москва, ул. Введенского, д.14 "А"</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- R [1..1] ДАННЫЕ О ПОЛУЧАТЕЛЕ ДОКУМЕНТА - ИЭМК \ МЗ РФ-->
+	<informationRecipient>
+		<!-- R [1..1] Получатель документа (роль) -->
+		<intendedRecipient>
+			<!-- R [1..1] Получатель документа (организация) -->
+			<receivedOrganization>
+				<!-- R [1..1] Идентификатор получающей организации-->
+				<id root="1.2.643.5.1.13"/>
+				<!-- R [1..1] Наименование получающей организации-->
+				<name>Министерство здравоохранения Российской Федерации (ИЭМК)</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<!-- R [1..1] ДАННЫЕ О ЛИЦЕ, ПРИДАВШЕМ ЮРИДИЧЕСКУЮ СИЛУ ДОКУМЕНТУ – ВРАЧ-ТЕРАПЕВТ -->
+	<legalAuthenticator>
+		<!-- R [1..1] Дата подписи документа лицом, придавшем юридическую силу документу -->
+		<time value="201509051630+0300"/>
+		<!-- R [1..1] Факт наличия подписи на документе -->
+		<signatureCode code="S"/>
+		<!-- R [1..1] Лицо, придавшее юридическую силу документу (роль) -->
+		<assignedEntity>
+			<!-- R [1..1] Уникальный идентификатор лица, придавшего юридическую силу документу в МИС -->
+			<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.70 extension = идентификатор персонала -->
+			<id root="1.2.643.5.1.13.3.25.77.173.100.1.1.70" extension="118"/>
+			<!-- [0..1] СНИЛС лица, придавшего юридическую силу документу -->
+			<id root="1.2.643.100.3" extension="524-153-723 12"/>
+			<!-- [0..1] Идентификатор лица, придавшего юридическую силу документу, по Федеральному Регистру Медицинских Работников -->
+			<id root="1.2.643.5.1.13.2.1.1.1504.100" extension="485148"/>
+			<!-- R [1..1] Код должности лица, придавшего юридическую силу документу -->
+			<code code="109" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="Врач-терапевт"/>
+			<!-- [0..1] Адрес лица, придавшего юридическую силу документу -->
+			<addr>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine> 119334, Россия, Москва, ул. Косыгина, д.13, кв.33 </streetAddressLine>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+			</addr>
+			<!-- [0..1] Телефон лица, придавшего юридическую силу документу -->
+			<telecom value="tel:+74959876543"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (мобильный телефон) -->
+			<telecom use="MC" value="tel:+790112345678"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (электронная почта) -->
+			<telecom value="mailto:olga1977@ya.ru"/>
+			<!-- R [1..1] Лицо, придавшее юридическую силу документу (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество автора -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Порядкова</family>
+					<!-- R [1..1] Имя -->
+					<given>Ольга</given>
+					<!-- [0..1] Отчество -->
+					<given>Петровна</given>
+				</name>
+			</assignedPerson>
+			<!-- [0..1] Место работы лица, придавшего юридическую силу документу -->
+			<representedOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- организации - по справочнику «Регистр медицинских организаций Российской Федерации. Версия 2» (OID: 1.2.643.5.1.13.2.1.1.178) -->
+				<!-- индивидуальные предприниматели - указание на отсутствие кода, nullFlavor="NI" -->
+				<id root="1.2.643.5.1.13.3.25.77.173"/>
+				<!-- R [1..1] Наименование организации -->
+				<name>ГБУЗ "Городская поликлиника № 74 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp74@mosgorzdrav.ru"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine> 117342, Россия, Москва, ул. Введенского, д.14 "А"</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<!-- ТЕЛО ДОКУМЕНТА -->
+	<component>
+		<!-- R [1..1] Структурированное тело документа -->
+		<structuredBody>
+			<!-- R [1..1] СЕКЦИЯ: Документ-->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="DOCINFO" codeSystem="1.2.643.5.1.13.2.1.1.1504.23" codeSystemName="Справочник секций документов" displayName="Сведения о документе"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>Информация о документе</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Серия и номер документа</content>
+									</td>
+									<td>
+										<content>77УФ 486251</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Дата выдачи</content>
+									</td>
+									<td>
+										<content>5 сентября 2015 года</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] кодирование ... Серия и номер медицинской справки о допуске к управлению транспортным средством-->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="103" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Серия и номер медицинской справки о допуске к управлению транспортным средством">
+							</code>
+							<value xsi:type="II" root="1.2.643.5.1.13.2.1.1.1504.144.3" extension="77УФ 486251"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] СЕКЦИЯ: Категории и подкатегории ТС, на которые предоставляется право управления ТС -->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="CATINFO" codeSystem="1.2.643.5.1.13.2.1.1.1504.23" codeSystemName="Справочник секций документов" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС врачей-специалистов"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>Категории и подкатегории ТС, на которые предоставляется право управления ТС</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>
+										<content>"A"</content>
+									</th>
+									<th>
+										<content>"B"</content>
+									</th>
+									<th>
+										<content>"C"</content>
+									</th>
+									<th>
+										<content>"D"</content>
+									</th>
+									<th>
+										<content>"BE"</content>
+									</th>
+									<th>
+										<content>"CE"</content>
+									</th>
+									<th>
+										<content>"DE"</content>
+									</th>
+									<th>
+										<content>"Tm"</content>
+									</th>
+									<th>
+										<content>"Tb"</content>
+									</th>
+									<th>
+										<content>"M"</content>
+									</th>
+									<th>
+										<content>"A1"</content>
+									</th>
+									<th>
+										<content>"B1"</content>
+									</th>
+									<th>
+										<content>"C1"</content>
+									</th>
+									<th>
+										<content>"D1"</content>
+									</th>
+									<th>
+										<content>"C1E"</content>
+									</th>
+									<th>
+										<content>"D1E"</content>
+									</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID="CAT_1">V</content>
+									</td>
+									<td>
+										<content ID="CAT_2">V</content>
+									</td>
+									<td>
+										<content ID="CAT_3">Z</content>
+									</td>
+									<td>
+										<content ID="CAT_4">Z</content>
+									</td>
+									<td>
+										<content ID="CAT_5">Z</content>
+									</td>
+									<td>
+										<content ID="CAT_6">Z</content>
+									</td>
+									<td>
+										<content ID="CAT_7">Z</content>
+									</td>
+									<td>
+										<content ID="CAT_8">Z</content>
+									</td>
+									<td>
+										<content ID="CAT_9">Z</content>
+									</td>
+									<td>
+										<content ID="CAT_10">V</content>
+									</td>
+									<td>
+									    <content ID="CAT_11">V</content>
+									</td>
+									<td>
+										<content ID="CAT_12">V</content>
+									</td>
+										<td>
+										<content ID="CAT_13">Z</content>
+									</td>
+									<td>
+										<content ID="CAT_14">Z</content>
+									</td>
+									<td>
+										<content ID="CAT_15">Z</content>
+									</td>
+									<td>
+										<content ID="CAT_16">Z</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] кодирование ... Категория "A" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="A">
+								<originalText>
+									<reference value="#CAT_1"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "B" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="2" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="B">
+								<originalText>
+									<reference value="#CAT_2"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "C" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="3" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="C">
+								<originalText>
+									<reference value="#CAT_3"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "D" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="4" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="D">
+								<originalText>
+									<reference value="#CAT_4"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "BE" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="5" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="BE">
+								<originalText>
+									<reference value="#CAT_5"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "CE" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="6" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="CE">
+								<originalText>
+									<reference value="#CAT_6"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "DE" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="7" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="DE">
+								<originalText>
+									<reference value="#CAT_7"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "Tm" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="8" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="Tm">
+								<originalText>
+									<reference value="#CAT_8"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "Tb" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="9" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="Tb">
+								<originalText>
+									<reference value="#CAT_9"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "M" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="10" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="M">
+								<originalText>
+									<reference value="#CAT_10"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "A1" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="11" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="A1">
+								<originalText>
+									<reference value="#CAT_11"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "B1" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="12" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="B1">
+								<originalText>
+									<reference value="#CAT_12"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "C1" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="13" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="C1">
+								<originalText>
+									<reference value="#CAT_13"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "D1" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="14" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="D1">
+								<originalText>
+									<reference value="#CAT_14"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "C1E" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="15" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="C1E">
+								<originalText>
+									<reference value="#CAT_15"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Категория "D1E" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">
+							<code code="701" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Категории и подкатегории ТС, на которые предоставляется право управления ТС">
+							</code>
+							<value xsi:type="CD" code="16" codeSystem="1.2.643.5.1.13.2.1.1.1504.74" codeSystemName="Справочник категорий и подкатегорий ТС" displayName="D1E">
+								<originalText>
+									<reference value="#CAT_16"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>					
+				</section>
+			</component>
+			<!-- R [1..1] СЕКЦИЯ: Заключение врача-терапевта-->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="RESINFO" codeSystem="1.2.643.5.1.13.2.1.1.1504.23" codeSystemName="Справочник секций документов" displayName="Заключение врача-терапевта"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>Заключение</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+	                    Медицинские ограничения к управлению транспортными средствами
+						<table>
+							<tbody>
+								<tr>
+									<th>
+										<content>Медицинские ограничения</content>
+									</th>
+									<th>
+										<content>Наличие</content>
+									</th>
+								</tr>
+								<tr>
+									<td>
+										<content>1) Категории "A" или "M", подкатегории "A1" или "B1" с мотоциклетной посадкой или рулем мотоциклетного типа</content>
+									</td>
+									<td>
+										<content ID="RES_1_1">Z</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>2) Категории "B" "BE"; подкатегории "B1" (кроме транспортных средств с мотоциклетной посадкой или рулем мотоциклетного типа)</content>
+									</td>
+									<td>
+										<content ID="RES_1_2">Z</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>3) Категории "C", "CE", "D", "DE", "Tm" или "Tb"; подкатегории "C1", "D1", "C1E" или "D1E"</content>
+									</td>
+									<td>
+										<content ID="RES_1_3">V</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						Медицинские показания к управлению транспортными средствами
+						<table>
+							<tbody>
+								<tr>
+									<th>
+										<content>Медицинские показания</content>
+									</th>
+									<th>
+										<content>Наличие</content>
+									</th>
+								</tr>
+								<tr>
+									<td>
+										<content>С ручным управлением</content>
+									</td>
+									<td>
+										<content ID="RES_2_1">V</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>С автоматической трансмиссией</content>
+									</td>
+									<td>
+										<content ID="RES_2_2">V</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Оборудованным акустической парковочной системой</content>
+									</td>
+									<td>
+										<content ID="RES_2_3">Z</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>С использованием водителем транспортного средства медицинских изделий для коррекции зрения</content>
+									</td>
+									<td>
+										<content ID="RES_2_4">V</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>С использованием водителем транспортного средства медицинских изделий для компенсации потери слуха</content>
+									</td>
+									<td>
+										<content ID="RES_2_5">Z</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						Медицинское заключение: 
+						<content ID="RES_3_1">противопоказания к управлению ТС отсутствуют</content>,
+                        <content ID="RES_3_2">показания к управлению ТС имеются</content>,
+                        <content ID="RES_3_3">ограничения к управлению ТС имеются</content>.
+					</text>
+					<!-- R [1..1] кодирование ... Медицинские ограничения к управлению ТС -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">						
+							<code code="702" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Медицинские ограничения к управлению ТС">
+							</code>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.2.1.1.1504.71" codeSystemName="Справочник медицинских ограничений к управлению ТС" displayName="Категории A или M, подкатегории A1 или B1 с мотоциклетной посадкой или рулем мотоциклетного типа">
+								<originalText>
+									<reference value="#RES_1_1"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Медицинские ограничения к управлению ТС -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">						
+							<code code="702" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Медицинские ограничения к управлению ТС">
+							</code>
+							<value xsi:type="CD" code="2" codeSystem="1.2.643.5.1.13.2.1.1.1504.71" codeSystemName="Справочник медицинских ограничений к управлению ТС" displayName="Категории B или BE; подкатегории B1 (кроме транспортных средств с мотоциклетной посадкой или рулем мотоциклетного типа)">
+								<originalText>
+									<reference value="#RES_1_2"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Медицинские ограничения к управлению ТС -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">						
+							<code code="702" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Медицинские ограничения к управлению ТС">
+							</code>
+							<value xsi:type="CD" code="3" codeSystem="1.2.643.5.1.13.2.1.1.1504.71" codeSystemName="Справочник медицинских ограничений к управлению ТС" displayName="Категории C, CE, D, DE, Tm или Tb; подкатегории C1, D1, C1E или D1E">
+								<originalText>
+									<reference value="#RES_1_3"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Медицинские показания к управлению ТС -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">						
+							<code code="703" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Медицинские показания к управлению ТС">
+							</code>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.2.1.1.1504.72" codeSystemName="Справочник медицинских показаний к управлению ТС" displayName="С ручным управлением">
+								<originalText>
+									<reference value="#RES_2_1"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Медицинские показания к управлению ТС -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">						
+							<code code="703" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Медицинские показания к управлению ТС">
+							</code>
+							<value xsi:type="CD" code="2" codeSystem="1.2.643.5.1.13.2.1.1.1504.72" codeSystemName="Справочник медицинских показаний к управлению ТС" displayName="С автоматической трансмиссией">
+								<originalText>
+									<reference value="#RES_2_2"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Медицинские показания к управлению ТС -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">						
+							<code code="703" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Медицинские показания к управлению ТС">
+							</code>
+							<value xsi:type="CD" code="3" codeSystem="1.2.643.5.1.13.2.1.1.1504.72" codeSystemName="Справочник медицинских показаний к управлению ТС" displayName="Оборудованным акустической парковочной системой">
+								<originalText>
+									<reference value="#RES_2_3"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Медицинские показания к управлению ТС -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">						
+							<code code="703" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Медицинские показания к управлению ТС">
+							</code>
+							<value xsi:type="CD" code="4" codeSystem="1.2.643.5.1.13.2.1.1.1504.72" codeSystemName="Справочник медицинских показаний к управлению ТС" displayName="С использованием водителем транспортного средства медицинских изделий для коррекции зрения">
+								<originalText>
+									<reference value="#RES_2_4"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Медицинские показания к управлению ТС -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN" negationInd="true">						
+							<code code="703" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Медицинские показания к управлению ТС">
+							</code>
+							<value xsi:type="CD" code="5" codeSystem="1.2.643.5.1.13.2.1.1.1504.72" codeSystemName="Справочник медицинских показаний к управлению ТС" displayName="С использованием водителем транспортного средства медицинских изделий для компенсации потери слуха">
+								<originalText>
+									<reference value="#RES_2_5"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Медицинское заключение - наличие противопокзаний -->
+					<!-- Необходимо указывать только одно значение из пары значений справочника: либо "противопоказания имеются" либо "противопоказания отсутствуют" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">						
+							<code code="704" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Медицинское заключение">
+							</code>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.2.1.1.1504.73" codeSystemName="Справочник наличия медицинских показаний, ограничений и противопоказаний к управлению ТС" displayName="противопоказаний отсутствуют">
+								<originalText>
+									<reference value="#RES_3_1"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Медицинское заключение - наличие ограничений -->
+					<!-- Необходимо указывать только одно значение из пары значений справочника: либо "ограничения имеются" либо "ограничения отсутствуют" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">						
+							<code code="704" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Медицинское заключение">
+							</code>
+							<value xsi:type="CD" code="4" codeSystem="1.2.643.5.1.13.2.1.1.1504.73" codeSystemName="Справочник наличия медицинских показаний, ограничений и противопоказаний к управлению ТС" displayName="ограничения имеются">
+								<originalText>
+									<reference value="#RES_3_2"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Медицинское заключение - наличие показания -->
+					<!-- Необходимо указывать только одно значение из пары значений справочника: либо "показания имеются" либо "показания отсутствуют" -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">						
+							<code code="704" codeSystem="1.2.643.5.1.13.2.1.1.1504.41" codeSystemName="Справочник кодируемых полей" displayName="Медицинское заключение">
+							</code>
+							<value xsi:type="CD" code="6" codeSystem="1.2.643.5.1.13.2.1.1.1504.73" codeSystemName="Справочник наличия медицинских показаний, ограничений и противопоказаний к управлению ТС" displayName="показания имеются">
+								<originalText>
+									<reference value="#RES_3_3"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

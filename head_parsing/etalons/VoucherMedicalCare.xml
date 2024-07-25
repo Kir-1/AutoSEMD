@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Shema.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:address="urn:hl7-ru:address" xmlns:fias="urn:hl7-ru:fias" xmlns:identity="urn:hl7-ru:identity" xmlns:medService="urn:hl7-ru:medService" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- R [1..1] Указание на область применения документа (РФ) -->
+	<realmCode code="RU"/>
+	<!-- R [1..1] Указание на тип структуры документа (CDA R2) -->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_MT000040"/>
+	<!-- R [1..1] Уникальный идентификатор руководства по реализации "Талон на оказание высокотехнологичной медицинской помощи" -->
+	<templateId root="1.2.643.5.1.13.13.14.80.9.1"/>
+	<!-- R [1..1] Уникальный идентификатор документа -->
+	<id root="1.2.643.5.1.13.13.12.2.50.4784.100.1.1.51" extension="7134"/>
+	<!-- R [1..1] Вид медицинского документа -->
+	<code code="80" codeSystem="1.2.643.5.1.13.13.11.1522" codeSystemName="Виды медицинской документации" codeSystemVersion="4.48" displayName="Талон на оказание высокотехнологичной медицинской помощи"/>
+	<!-- R [1..1] Заголовок документа -->
+	<title>Талон на оказание высокотехнологичной медицинской помощи</title>
+	<!-- R [1..1] Дата создания документа -->
+	<effectiveTime value="202112121800+0300"/>
+	<!-- R [1..1] Уровень конфиденциальности документа -->
+	<confidentialityCode code="N" codeSystem="1.2.643.5.1.13.13.99.2.285" codeSystemName="Уровень конфиденциальности медицинского документа" codeSystemVersion="1.2" displayName="Обычный"/>
+	<!-- R [1..1] Указание на язык документа -->
+	<languageCode code="ru-RU"/>
+	<!-- R [1..1] Уникальный идентификатор набора версий документа -->
+	<setId root="1.2.643.5.1.13.13.12.2.50.4784.100.1.1.50" extension="555"/>
+	<!-- R [1..1] Номер версии документа -->
+	<versionNumber value="1"/>
+	<!-- R [1..1] Сведения о пациенте -->
+	<recordTarget>
+		<!-- R [1..1] -->
+		<patientRole>
+			<!-- R [1..1] Уникальный идентификатор пациента в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.50.4784.100.1.1.10" extension="735486"/>
+			<!-- R [1..1] СНИЛС пациента -->
+			<id root="1.2.643.100.3" extension="25463625427"/>
+			<!-- R [1..1] Сведения о документе, удостоверяющем личность пациента -->
+			<identity:IdentityDoc>
+				<!-- R [1..1] Тип документа -->
+				<identity:IdentityCardType code="1" codeSystem="1.2.643.5.1.13.13.99.2.48" codeSystemName="Документы, удостоверяющие личность" codeSystemVersion="6.2" displayName="Паспорт гражданина Российской Федерации"/>
+				<!-- [1..1] Серия документа -->
+				<identity:Series>2863</identity:Series>
+				<!-- R [1..1] Номер документа -->
+				<identity:Number>462884</identity:Number>
+				<!-- [1..1] Сведения о том, кем выдан документ -->
+				<identity:IssueOrgName>ОУФМС РОССИИ ПО НИЖЕГОРОДСКОЙ ОБЛ. В КАНАВИНСКОМ Р-НЕ Г. НИЖНЕГО НОВГОРОДА</identity:IssueOrgName>
+				<!-- [1..1] Сведения о том, кем выдан документ (код подразделения) -->
+				<identity:IssueOrgCode>520-002</identity:IssueOrgCode>
+				<!-- R [1..1] Дата выдачи документа -->
+				<identity:IssueDate value="20170404"/>
+			</identity:IdentityDoc>
+			<!-- [1..1] Сведения о полисе ОМС пациента -->
+			<identity:InsurancePolicy>
+				<!-- R [1..1] Тип полиса ОМС -->
+				<identity:InsurancePolicyType code="2" codeSystem="1.2.643.5.1.13.13.11.1035" codeSystemName="Виды полиса обязательного медицинского страхования" codeSystemVersion="1.3" displayName="Полис ОМС единого образца, бессрочный"/>
+				<!-- [0..1] Серия полиса ОМС -->
+				<!-- R [1..1] Номер полиса ОМС -->
+				<identity:Number>7712958452351689</identity:Number>
+			</identity:InsurancePolicy>
+			<!-- R [1..1] Адрес пациента -->
+			<addr>
+				<!-- R [1..1] Тип адреса -->
+				<address:Type code="1" codeSystem="1.2.643.5.1.13.13.11.1504" codeSystemName="Тип адреса пациента" codeSystemVersion="1.3" displayName="Адрес по месту жительства (постоянной регистрации)"/>
+				<!-- R [1..1] Адрес (текстом) -->
+				<streetAddressLine>г Новосибирск, ул Лескова, д 69, кв 9</streetAddressLine>
+				<!-- R [1..1] Код субъекта РФ -->
+				<address:stateCode code="54" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemName="Субъекты Российской Федерации" codeSystemVersion="6.3" displayName="Новосибирская область"/>
+				<!-- R [1..1] Признак жителя города или села -->
+				<address:residentCode code="1" codeSystem="1.2.643.5.1.13.13.11.1042" codeSystemName="Вид места жительства" codeSystemVersion="3.2" displayName="Город"/>
+				<!-- [1..1] Почтовый индекс -->
+				<postalCode>630008</postalCode>
+				<!-- [1..1] Идентификатор адреса по ФИАС -->
+				<fias:Address>
+					<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта -->
+					<fias:AOGUID>77c7b6cc-7e3d-4442-a50b-4c8d71ed3a4b</fias:AOGUID>
+					<!-- [1..1] Глобальный уникальный идентификатор дома -->
+					<fias:HOUSEGUID>5f5072c7-4fbd-418c-840e-978ee0f62bd4</fias:HOUSEGUID>
+				</fias:Address>
+			</addr>
+			<!-- R [1..*] Контакты пациента -->
+			<telecom value="mailto:petroff.pi@mail.ru"/>
+			<!-- R [1..*] Контакты пациента -->
+			<telecom value="tel:+74998971377"/>
+			<!-- R [1..1] -->
+			<patient>
+				<!-- R [1..1] ФИО пациента -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Петрова</family>
+					<!-- R [1..1] Имя -->
+					<given>Пелагея</given>
+					<!-- [0..1] Отчество -->
+					<identity:Patronymic>Игоревна</identity:Patronymic>
+				</name>
+				<!-- R [1..1] Пол пациента -->
+				<administrativeGenderCode code="2" codeSystem="1.2.643.5.1.13.13.11.1040" codeSystemName="Пол пациента" codeSystemVersion="2.1" displayName="Женский"/>
+				<!-- R [1..1] Дата рождения пациента -->
+				<birthTime value="20000913"/>
+				<!-- [0..1] Сведения о законном (уполномоченном) представителе гражданина -->
+				<guardian classCode="GUARD">
+					<!-- [0..1] СНИЛС представителя -->
+					<id root="1.2.643.100.3" extension="44578444510"/>
+					<!-- [0..1] Сведения о документе, удостоверяющем личность представителя -->
+					<identity:IdentityDoc>
+						<!-- R [1..1] Тип документа -->
+						<identity:IdentityCardType code="1" codeSystem="1.2.643.5.1.13.13.99.2.48" codeSystemName="Документы, удостоверяющие личность" codeSystemVersion="6.2" displayName="Паспорт гражданина Российской Федерации"/>
+						<!-- [1..1] Серия документа -->
+						<identity:Series>4509</identity:Series>
+						<!-- R [1..1] Номер документа -->
+						<identity:Number>356432</identity:Number>
+						<!-- [1..1] Сведения о том, кем выдан документ -->
+						<identity:IssueOrgName>ОВД "Твардовское" ОУФМС России по городу Москве</identity:IssueOrgName>
+						<!-- [1..1] Сведения о том, кем выдан документ (код подразделения) -->
+						<identity:IssueOrgCode>770-095</identity:IssueOrgCode>
+						<!-- R [1..1] Дата выдачи документа -->
+						<identity:IssueDate value="19920218"/>
+					</identity:IdentityDoc>
+					<!-- [0..1] Сведения о документе, удостоверяющем полномочия представителя -->
+					<identity:AuthorityDoc>
+						<!-- R [1..1] Тип документа -->
+						<identity:IdentityCardType code="2" codeSystem="1.2.643.5.1.13.13.99.2.313" codeSystemName="Документы, удостоверяющие полномочия законного представителя" codeSystemVersion="1.2" displayName="Решение о назначении лица опекуном"/>
+						<!-- [1..1] Серия документа -->
+						<identity:Series>1122</identity:Series>
+						<!-- R [1..1] Номер документа -->
+						<identity:Number>334455</identity:Number>
+						<!-- [1..1] Сведения о том, кем выдан документ -->
+						<identity:IssueOrgName>Орган опеки и попечительства</identity:IssueOrgName>
+						<!-- R [1..1] Дата выдачи документа -->
+						<identity:IssueDate value="20000218"/>
+					</identity:AuthorityDoc>
+					<!-- [0..1] Тип связи между представителем (физическое лицо) и гражданином -->
+					<code code="1" codeSystem="1.2.643.5.1.13.13.99.2.14" codeSystemName="Родственные и иные связи" codeSystemVersion="1.1" displayName="Мать"/>
+					<!-- [0..1] Адрес фактического места жительства представителя -->
+					<addr >
+						<!-- R [1..1] Адрес (текстом) -->
+						<streetAddressLine>г Москва, ул Исаковского, д 28 к 2, кв 589</streetAddressLine>
+						<!-- R [1..1] Код субъекта РФ -->
+						<address:stateCode code="77" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemName="Субъекты Российской Федерации" codeSystemVersion="6.3" displayName="г. Москва"/>
+						<!-- [1..1] Почтовый индекс -->
+						<postalCode>123181</postalCode>
+						<!-- [1..1] Идентификатор адреса по ФИАС -->
+						<fias:Address>
+							<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта -->
+							<fias:AOGUID>d1c8d6db-f1b9-49db-895e-c3a93997da77</fias:AOGUID>
+							<!-- [1..1] Глобальный уникальный идентификатор дома -->
+							<fias:HOUSEGUID>6e9eda8d-22d9-481a-bb4f-a5c221c194a4</fias:HOUSEGUID>
+						</fias:Address>
+					</addr>
+					<!-- [0..*] Контакты представителя -->
+					<telecom value="tel:+74954243201"/>
+					<!-- [0..*] Контакты представителя -->
+					<telecom use="MC" value="tel:+79161234576"/>
+					<!-- [0..*] Контакты представителя -->
+					<telecom value="mailto:bogelen@mail.ru"/>
+					<!-- [0..1] Сведения о законном представителе (физическом лице) -->
+					<guardianPerson>
+						<!-- R [1..1] ФИО законного представителя -->
+						<name>
+							<!-- R [1..1] Фамилия -->
+							<family>Богатырева</family>
+							<!-- R [1..1] Имя -->
+							<given>Елена </given>
+							<!-- [0..1] Отчество -->
+							<identity:Patronymic>Николаевна</identity:Patronymic>
+						</name>
+					</guardianPerson>
+					<!-- [0..1] Сведения о законном представителе (юридическом лице) -->
+				</guardian>
+			</patient>
+			<!-- R [1..1] Сведения об ОУЗ или МО-ОМС, формирующее документ -->
+			<providerOrganization>
+				<!-- R [1..1] Уникальный идентификатор ОУЗ или МО-ОМС -->
+				<id root="1.2.643.5.1.13.13.12.2.50.4784" extension="1.2.643.5.1.13.13.12.2.50.4784.0.179061"/>
+				<!-- [0..1] Сведения о лицензии на осуществление медицинской деятельности (номер лицензии, выдавший лицензию орган, дата регистрации) -->
+				<id root="1.2.643.5.1.13.2.1.1.1504.101" extension="ЛО-77-01-020547" assigningAuthorityName="Департамент здравоохранения г. Москвы ДАТА ВЫДАЧИ 9.10.2020 г"/>
+				<!-- R [1..1] Реквизиты ОУЗ или МО-ОМС -->
+				<identity:Props>
+					<!-- [0..1] Код ОГРН -->
+					<identity:Ogrn>1037739023200</identity:Ogrn>
+					<!-- R [1..1] Код ОКПО -->
+					<identity:Okpo>01966638</identity:Okpo>
+					<!-- R [1..1] Код ОКАТО -->
+					<identity:Okato>45286570000</identity:Okato>
+				</identity:Props>
+				<!-- R [1..1] Наименование ОУЗ или МО-ОМС -->
+				<name>ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ МОСКОВСКОЙ ОБЛАСТИ "МОСКОВСКИЙ ОБЛАСТНОЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ КЛИНИЧЕСКИЙ ИНСТИТУТ ИМ. М.Ф.ВЛАДИМИРСКОГО"</name>
+				<!-- R [1..1] Адрес электронной почты ОУЗ или МО-ОМС -->
+				<telecom value="mailto:moniki@monikiweb.ru"/>
+				<!-- [0..*] Прочие контакты ОУЗ или МО-ОМС -->
+				<telecom value="tel:+74996740709"/>
+				<!-- R [1..1] Адрес ОУЗ или МО-ОМС -->
+				<addr>
+					<!-- R [1..1] Адрес (текстом) -->
+					<streetAddressLine>г Москва, ул Щепкина, д 61/2</streetAddressLine>
+					<!-- R [1..1] Код субъекта РФ -->
+					<address:stateCode code="77" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemName="Субъекты Российской Федерации" codeSystemVersion="6.3" displayName="г. Москва"/>
+					<!-- R [1..1] Почтовый индекс -->
+					<postalCode>129110</postalCode>
+					<!-- [1..1] Идентификатор адреса по ФИАС -->
+					<fias:Address>
+						<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта -->
+						<fias:AOGUID>52b67c53-d0a5-4ad9-b3f1-294c5dd7a41f</fias:AOGUID>
+						<!-- [1..1] Глобальный уникальный идентификатор дома -->
+						<fias:HOUSEGUID>8312f1e3-dd53-47d6-809e-c96534a5fb0a</fias:HOUSEGUID>
+					</fias:Address>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<!-- R [1..1] Сведения об авторе документа -->
+	<author>
+		<!-- [1..1] -->
+		<time nullFlavor="NI"/>
+		<!-- R [1..1] -->
+		<assignedAuthor>
+			<!-- R [1..1] Уникальный идентификатор автора в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.50.4784.100.1.1.70" extension="75394"/>
+			<!-- R [1..1] СНИЛС автора -->
+			<id root="1.2.643.100.3" extension="22000000000"/>
+			<!-- R [1..1] Код должности автора -->
+			<code code="109" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemName="Должности медицинских и фармацевтических работников" codeSystemVersion="7.5" displayName="врач-терапевт"/>
+			<!-- [0..1] Адрес места работы автора документа -->
+			<addr >
+				<!-- R [1..1] Адрес (текстом) -->
+				<streetAddressLine>г Москва, ул Щепкина, д 61/2</streetAddressLine>
+				<!-- R [1..1] Код субъекта РФ -->
+				<address:stateCode code="77" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemName="Субъекты Российской Федерации" codeSystemVersion="6.3" displayName="г. Москва"/>
+				<!-- [1..1] Почтовый индекс -->
+				<postalCode>129110</postalCode>
+				<!-- [1..1] Идентификатор адреса по ФИАС -->
+				<fias:Address>
+					<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта -->
+					<fias:AOGUID>52b67c53-d0a5-4ad9-b3f1-294c5dd7a41f</fias:AOGUID>
+					<!-- [1..1] Глобальный уникальный идентификатор дома -->
+					<fias:HOUSEGUID>8312f1e3-dd53-47d6-809e-c96534a5fb0a</fias:HOUSEGUID>
+				</fias:Address>
+			</addr>
+			<!-- R [2..2] Контакты автора -->
+			<telecom use="WP" value="tel:+74998971377"/>
+			<!-- R [2..2] Контакты автора -->
+			<telecom use="WP" value="mailto:ivanoff.ae@mail.ru"/>
+			<!-- R [1..1] -->
+			<assignedPerson>
+				<!-- R [1..1] ФИО автора -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Иванов</family>
+					<!-- R [1..1] Имя -->
+					<given>Александр</given>
+					<!-- [0..1] Отчество -->
+					<identity:Patronymic>Евгеньевич</identity:Patronymic>
+				</name>
+			</assignedPerson>
+			<!-- [0..1] Сведения о ОУЗ или МО-ОМС, где работает автор -->
+			<representedOrganization classCode="ORG">
+				<!-- R [1..1] Уникальный идентификатор ОУЗ или МО-ОМС -->
+				<id root="1.2.643.5.1.13.13.12.2.50.4784" extension="1.2.643.5.1.13.13.12.2.50.4784.0.179061"/>
+				<!-- R [1..1] Наименование ОУЗ или МО-ОМС -->
+				<name>ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ МОСКОВСКОЙ ОБЛАСТИ "МОСКОВСКИЙ ОБЛАСТНОЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ КЛИНИЧЕСКИЙ ИНСТИТУТ ИМ. М.Ф.ВЛАДИМИРСКОГО"</name>
+				<!-- [0..*] Контакты ОУЗ или МО-ОМС -->
+				<telecom value="mailto:moniki@monikiweb.ru"/>
+				<!-- [0..*] Контакты ОУЗ или МО-ОМС -->
+				<telecom value="tel:+74996740709"/>
+				<!-- [0..1] Адрес ОУЗ или МО-ОМС -->
+				<addr>
+					<!-- R [1..1] Адрес (текстом) -->
+					<streetAddressLine>г Москва, ул Щепкина, д 61/2</streetAddressLine>
+					<!-- R [1..1] Код субъекта РФ -->
+					<address:stateCode code="77" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemName="Субъекты Российской Федерации" codeSystemVersion="6.3" displayName="г. Москва"/>
+					<!-- R [1..1] Почтовый индекс -->
+					<postalCode>129110</postalCode>
+					<!-- [1..1] Идентификатор адреса по ФИАС -->
+					<fias:Address>
+						<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта -->
+						<fias:AOGUID>52b67c53-d0a5-4ad9-b3f1-294c5dd7a41f</fias:AOGUID>
+						<!-- [1..1] Глобальный уникальный идентификатор дома -->
+						<fias:HOUSEGUID>8312f1e3-dd53-47d6-809e-c96534a5fb0a</fias:HOUSEGUID>
+					</fias:Address>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<!-- R [1..1] Сведения о владельце документа -->
+	<custodian>
+		<!-- R [1..1] -->
+		<assignedCustodian>
+			<!-- R [1..1] -->
+			<representedCustodianOrganization classCode="ORG">
+				<!-- R [1..1] Уникальный идентификатор ОУЗ или МО-ОМС -->
+				<id root="1.2.643.5.1.13.13.12.2.50.4784" extension="1.2.643.5.1.13.13.12.2.50.4784.0.179061"/>
+				<!-- R [1..1] Наименование ОУЗ или МО-ОМС -->
+				<name>ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ МОСКОВСКОЙ ОБЛАСТИ "МОСКОВСКИЙ ОБЛАСТНОЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ КЛИНИЧЕСКИЙ ИНСТИТУТ ИМ. М.Ф.ВЛАДИМИРСКОГО"</name>
+				<!-- [0..1] Контакты ОУЗ или МО-ОМС -->
+				<telecom value="tel:+74996740709"/>
+				<!-- R [1..1] Адрес ОУЗ или МО-ОМС -->
+				<addr>
+					<!-- R [1..1] Адрес (текстом) -->
+					<streetAddressLine>г Москва, ул Щепкина, д 61/2</streetAddressLine>
+					<!-- R [1..1] Код субъекта РФ -->
+					<address:stateCode code="77" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemName="Субъекты Российской Федерации" codeSystemVersion="6.3" displayName="г. Москва"/>
+					<!-- [1..1] Почтовый индекс -->
+					<postalCode>129110</postalCode>
+					<!-- [1..1] Идентификатор адреса по ФИАС -->
+					<fias:Address>
+						<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта -->
+						<fias:AOGUID>52b67c53-d0a5-4ad9-b3f1-294c5dd7a41f</fias:AOGUID>
+						<!-- [1..1] Глобальный уникальный идентификатор дома -->
+						<fias:HOUSEGUID>8312f1e3-dd53-47d6-809e-c96534a5fb0a</fias:HOUSEGUID>
+					</fias:Address>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- R [1..1] Сведения о получателе документа [1] -->
+	<informationRecipient>
+		<!-- R [1..1] -->
+		<intendedRecipient>
+			<!-- R [1..1] Сведения об организации-получателе документа (РЭМД) -->
+			<receivedOrganization>
+				<!-- R [1..1] Идентификатор получающей организации -->
+				<id root="1.2.643.5.1.13"/>
+				<!-- R [1..1] Наименование получающей организации -->
+				<name>Министерство здравоохранения Российской Федерации</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<!-- [0..*] Сведения о получателе документа [2] -->
+	<!-- R [1..1] Сведения о лице, придавшем юридическую силу документу -->
+	<legalAuthenticator>
+		<!-- [1..1] -->
+		<time nullFlavor="NI"/>
+		<!-- [1..1] -->
+		<signatureCode nullFlavor="NI"/>
+		<!-- R [1..1] -->
+		<assignedEntity>
+			<!-- R [1..1] Уникальный идентификатор лица, придавшего юридическую силу документу, в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.50.4784.100.1.1.70" extension="25417"/>
+			<!-- R [1..1] СНИЛС лица, придавшего юридическую силу документу -->
+			<id root="1.2.643.100.3" extension="00000000003"/>
+			<!-- R [1..1] Код должности лица, придавшего юридическую силу документу -->
+			<code code="334" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemName="Должности медицинских и фармацевтических работников" codeSystemVersion="7.5" displayName="главный врач медицинской организации"/>
+			<!-- [0..1] Адрес места работы лица, придавшего юридическую силу документу -->
+			<addr >
+				<!-- R [1..1] Адрес (текстом) -->
+				<streetAddressLine>г Москва, ул Щепкина, д 61/2</streetAddressLine>
+				<!-- R [1..1] Код субъекта РФ -->
+				<address:stateCode code="77" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemName="Субъекты Российской Федерации" codeSystemVersion="6.3" displayName="г. Москва"/>
+				<!-- [1..1] Почтовый индекс -->
+				<postalCode>129110</postalCode>
+				<!-- [1..1] Идентификатор адреса по ФИАС -->
+				<fias:Address>
+					<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта -->
+					<fias:AOGUID>52b67c53-d0a5-4ad9-b3f1-294c5dd7a41f</fias:AOGUID>
+					<!-- [1..1] Глобальный уникальный идентификатор дома -->
+					<fias:HOUSEGUID>8312f1e3-dd53-47d6-809e-c96534a5fb0a</fias:HOUSEGUID>
+				</fias:Address>
+			</addr>
+			<!-- R [2..2] Контакты лица, придавшего юридическую силу документу -->
+			<telecom use="WP" value="mailto:raz.z.z@monikiweb.ru"/>
+			<!-- R [2..2] Контакты лица, придавшего юридическую силу документу -->
+			<telecom use="WP" value="tel:+74996740709"/>
+			<!-- R [1..1] -->
+			<assignedPerson>
+				<!-- R [1..1] ФИО лица, придавшего юридическую силу документу -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Разводилов</family>
+					<!-- R [1..1] Имя -->
+					<given>Захар</given>
+					<!-- [0..1] Отчество -->
+					<identity:Patronymic>Захарович</identity:Patronymic>
+				</name>
+			</assignedPerson>
+			<!-- [0..1] Сведения о ОУЗ или МО-ОМС, где работает лицо, придавшее юридическую силу документу -->
+			<representedOrganization classCode="ORG">
+				<!-- R [1..1] Уникальный идентификатор ОУЗ или МО-ОМС -->
+				<id root="1.2.643.5.1.13.13.12.2.50.4784" extension="1.2.643.5.1.13.13.12.2.50.4784.0.179061"/>
+				<!-- R [1..1] Наименование ОУЗ или МО-ОМС -->
+				<name>ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ МОСКОВСКОЙ ОБЛАСТИ "МОСКОВСКИЙ ОБЛАСТНОЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ КЛИНИЧЕСКИЙ ИНСТИТУТ ИМ. М.Ф.ВЛАДИМИРСКОГО"</name>
+				<!-- [0..*] Контакты ОУЗ или МО-ОМС -->
+				<telecom value="tel:+74996740709"/>
+				<!-- [0..1] Адрес ОУЗ или МО-ОМС -->
+				<addr>
+					<!-- R [1..1] Адрес (текстом) -->
+					<streetAddressLine>г Москва, ул Щепкина, д 61/2</streetAddressLine>
+					<!-- R [1..1] Код субъекта РФ -->
+					<address:stateCode code="77" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemName="Субъекты Российской Федерации" codeSystemVersion="6.3" displayName="г. Москва"/>
+					<!-- R [1..1] Почтовый индекс -->
+					<postalCode>129110</postalCode>
+					<!-- [1..1] Идентификатор адреса по ФИАС -->
+					<fias:Address>
+						<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта -->
+						<fias:AOGUID>52b67c53-d0a5-4ad9-b3f1-294c5dd7a41f</fias:AOGUID>
+						<!-- [1..1] Глобальный уникальный идентификатор дома -->
+						<fias:HOUSEGUID>8312f1e3-dd53-47d6-809e-c96534a5fb0a</fias:HOUSEGUID>
+					</fias:Address>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<!-- R [1..1] Сведения об источнике оплаты -->
+	<participant typeCode="IND">
+		<!-- R [1..1] -->
+		<associatedEntity classCode="GUAR">
+			<!-- R [1..1] Тип источника оплаты -->
+			<code code="1" codeSystem="1.2.643.5.1.13.13.11.1039" codeSystemName="Источники оплаты медицинской помощи" codeSystemVersion="5.2" displayName="ОМС"/>
+			<!-- [1..1] Сведения о документе-основании -->
+			<identity:DocInfo>
+				<!-- R [1..1] Тип документа-основания -->
+				<identity:IdentityDocType code="1" codeSystem="1.2.643.5.1.13.13.99.2.724" codeSystemName="Типы документов оснований" codeSystemVersion="1.1" displayName="Полис ОМС"/>
+				<!-- [1..1] Вид полиса ОМС -->
+				<identity:InsurancePolicyType codeSystem="1.2.643.5.1.13.13.11.1035" codeSystemName="Виды полиса обязательного медицинского страхования" code="2" codeSystemVersion="1.3" displayName="Полис ОМС единого образца, бессрочный"/>
+				<!-- [1..1] Серия документа-основания -->
+				<identity:Series nullFlavor="NA"/>
+				<!-- [1..1] Номер документа-основания -->
+				<identity:Number>7712958452351689</identity:Number>
+				<!-- [1..1] ИНН организации или физического лица -->
+				<identity:INN>5256048032</identity:INN>
+				<!-- [1..1] Срок действия документа-основания -->
+				<identity:effectiveTime>
+					<!-- R [1..1] Дата начала действия -->
+					<identity:low value="20200511"/>
+					<!-- [1..1] Дата окончания действия -->
+					<identity:high nullFlavor="NAV"/>
+				</identity:effectiveTime>
+			</identity:DocInfo>
+			<!-- [0..1] Сведения об организации (страховой компании или юридическом лице) -->
+			<scopingOrganization>
+				<!-- [1..1] Уникальный идентификатор страховой компании или юридического лица -->
+				<id root="1.2.643.5.1.13.13.99.2.183" extension="77013"/>
+				<!-- R [1..1] Наименование страховой компании -->
+				<name>ООО "СК "ИНГОССТРАХ-М"</name>
+				<!-- [1..*] Контакты страховой компании или юридического лица -->
+				<telecom use="WP" value="tel:+74957295571"/>
+				<!-- [1..1] Адрес страховой компании или юридического лица -->
+				<addr>
+					<!-- R [1..1] Адрес (текстом) -->
+					<streetAddressLine>г Москва, ул Рочдельская, д 15 стр 35</streetAddressLine>
+					<!-- R [1..1] Код субъекта РФ -->
+					<address:stateCode code="77" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemName="Субъекты Российской Федерации" codeSystemVersion="6.3" displayName="г. Москва"/>
+					<!-- [1..1] Почтовый индекс -->
+					<postalCode>123376</postalCode>
+					<!-- [1..1] Идентификатор адреса по ФИАС -->
+					<fias:Address>
+						<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта -->
+						<fias:AOGUID>6bfbfcbb-87a7-4674-a8e5-bf5f1bbfbf92</fias:AOGUID>
+						<!-- [1..1] Глобальный уникальный идентификатор дома -->
+						<fias:HOUSEGUID>0b33a0e1-3427-409a-a3b7-e57716819f38</fias:HOUSEGUID>
+					</fias:Address>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!-- R [1..1] Сведения о случае оказания медицинской помощи -->
+	<componentOf>
+		<!-- R [1..1] -->
+		<encompassingEncounter>
+			<!-- R [1..1] Уникальный идентификатор случая оказания медицинской помощи в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.50.4784.100.1.1.15" extension="1000000000"/>
+			<!-- [0..1] Уникальный идентификатор случая оказания медицинской помощи (номер стационарной карты) -->
+			<id root="1.2.643.5.1.13.13.12.2.50.4784.100.1.1.16" extension="465433-18"/>
+			<!-- [0..1] Тип медицинской карты -->
+			<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.723" codeSystemName="Типы медицинских карт" codeSystemVersion="1.1" displayName="Стационарная медицинская карта"/>
+			<!-- [0..1] Вид медицинской карты -->
+			<medService:DocType code="41" codeSystem="1.2.643.5.1.13.13.11.1522" codeSystemName="Виды медицинской документации" codeSystemVersion="4.48" displayName="Медицинская карта пациента, получающего медицинскую помощь в амбулаторных условиях"/>
+			<!-- [0..1] Даты случая -->
+			<effectiveTime>
+				<!-- R [1..1] Дата начала случая -->
+				<low value="202112121000+0300"/>
+				<!-- [0..1] Дата окончания случая -->
+				<high value="202112121600+0300"/>
+			</effectiveTime>
+		</encompassingEncounter>
+	</componentOf>
+	<!-- R [1..1] Тело документа -->
+	<component>
+		<!-- R [1..1] Структурированное тело документа -->
+		<structuredBody>
+			<!-- R [1..1] СЕКЦИЯ: "Сведения о документе" -->
+			<component>
+				<!-- R [1..1] -->
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="DOCINFO" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemName="Секции электронных медицинских документов" codeSystemVersion="1.18" displayName="Сведения о документе"/>
+					<!-- R [1..1] Название секции -->
+					<title>Сведения о документе</title>
+					<!-- R [1..1] Человекочитаемое наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Номер документа</content>
+									</td>
+									<td>
+										<content>54.0000.40973.215</content>
+									</td>
+								</tr>								
+								<tr>
+									<td>
+										<content>Комментарий</content>
+									</td>
+									<td>
+										<content>-</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Занятость</content>
+									</td>
+									<td>
+										<content>Преподаватель в РНИМУ им. Н.И. Пирогова</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Источник оказания ВМП</content>
+									</td>
+									<td>
+										<content>Субсидии из бюджета ФОМС</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Код и наименование вида ВМП</content>
+									</td>
+									<td>
+										<content>Код: 13<br/>Наименование: Комплексное лечение больных тяжелыми распространенными формами псориаза, атопического дерматита, истинной пузырчатки, локализованной склеродермии, лучевого дерматита</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Код и наименование профиля ВМП</content>
+									</td>
+									<td>
+										<content>Код: 8<br/>Наименование: Дерматовенерология</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Код и наименование модели пациента</content>
+									</td>
+									<td>
+										<content>Код: 21037<br/>Наименование: Тяжелые распространенные формы псориаза без поражения суставов при отсутствии эффективности ранее проводимых методов системного и физиотерапевтического лечения</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Код и наименование метода лечения</content>
+									</td>
+									<td>
+										<content>Код: 238<br/>Наименование: Лечение с применением узкополосной средневолновой фототерапии, в том числе локальной, комбинированной локальной и общей фотохимиотерапии, общей бальнеофотохимиотерапии, плазмафереза в сочетании с цитостатическими и иммуносупрессивными лекарственными препаратами и синтетическими производными витамина A</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Номер группы ВМП</content>
+									</td>
+									<td>
+										<content>9</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Наименование МО-ВМП</content>
+									</td>
+									<td>
+										<content>ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ МОСКОВСКОЙ ОБЛАСТИ "МОСКОВСКИЙ ОБЛАСТНОЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ КЛИНИЧЕСКИЙ ИНСТИТУТ ИМ. М.Ф.ВЛАДИМИРСКОГО"</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Дата направления документов в ФГУ или МО субъекта Российской Федерации</content>
+									</td>
+									<td>
+										<content>12.12.2021</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Наименование страховой медицинской организации</content>
+									</td>
+									<td>
+										<content>ООО "СК "ИНГОССТРАХ-М"</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] Номер документа -->
+					<entry>
+						<!-- R [1..1] -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="11003" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" codeSystemVersion="2.6" displayName="Номер документа"/>
+							<!-- R [1..1] Номер документа -->
+							<value xsi:type="ST">54.0000.40973.215</value>
+						</observation>
+					</entry>					
+					<!-- [0..1] Комментарий -->
+					<entry>
+						<!-- R [1..1] -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="10000" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" codeSystemVersion="2.6" displayName="Комментарий"/>
+							<!-- R [1..1] Комментарий -->
+							<value xsi:type="ST">-</value>
+						</observation>
+					</entry>
+					<!-- R [1..2] Сведения о занятости -->
+					<entry>
+						<!-- R [1..1] -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="12524" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" codeSystemVersion="2.6" displayName="Занятость"/>
+							<!-- [0..1] Описание занятости (место и должность работы) -->
+							<text>Библиотека в РНИМУ им. Н.И. Пирогова</text>
+							<!-- R [1..1] Занятость -->
+							<value code="5" codeSystem="1.2.643.5.1.13.13.11.1038" codeSystemName="Социальные группы населения в учетной медицинской документации" codeSystemVersion="9.1" displayName="Работающий" xsi:type="CD"/>
+						</observation>
+					</entry>
+					<!-- R [1..1] Источник оказания ВМП -->
+					<entry>
+						<!-- R [1..1] -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="7020" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" codeSystemVersion="2.6" displayName="Источник оказания ВМП"/>
+							<!-- R [1..1] Источник оказания ВМП -->
+							<value code="1" codeSystem="1.2.643.5.1.13.13.99.2.864" codeSystemName="ВМП. Формы финансирования" codeSystemVersion="1.1" displayName="Субсидии из бюджета ФОМС" xsi:type="CD"/>
+						</observation>
+					</entry>
+					<!-- R [1..1] Наименование вида (метода) ВМП -->
+					<entry>
+						<!-- R [1..1] -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="12129" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" codeSystemVersion="2.6" displayName="Код и наименование вида и профиля ВМП, модели пациента и метода лечения, номер группы ВМП"/>
+							<!-- R [1..1] Наименование вида (метода) ВМП -->
+							<value code="55935" codeSystem="1.2.643.5.1.13.13.11.1493" codeSystemName="Виды высокотехнологичной медицинской помощи" codeSystemVersion="2.9" displayName="13 Комплексное лечение больных тяжелыми распространенными формами псориаза, атопического дерматита, истинной пузырчатки, локализованной склеродермии, лучевого дерматита 8 Дерматовенерология 21037 Тяжелые распространенные формы псориаза без поражения суставов при отсутствии эффективности ранее проводимых методов системного и физиотерапевтического лечения 238 Лечение с применением узкополосной средневолновой фототерапии, в том числе локальной, комбинированной локальной и общей фотохимиотерапии, общей бальнеофотохимиотерапии, плазмафереза в сочетании с цитостатическими и иммуносупрессивными лекарственными препаратами и синтетическими производными витамина A 9" xsi:type="CD"/>
+						</observation>
+					</entry>
+					<!-- R [1..1] Наименование МО-ВМП -->
+					<entry>
+						<!-- R [1..1] -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="7016" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" codeSystemVersion="2.6" displayName="Наименование МО-ВМП"/>
+							<!-- R [1..1] Сведения о МО-ВМП -->
+							<participant typeCode="LOC">
+								<!-- R [1..1] -->
+								<participantRole classCode="SDLOC">
+									<!-- R [1..1] Уникальный идентификатор МО-ВМП -->
+									<id root="1.2.643.5.1.13.13.12.2.50.4784" extension="1.2.643.5.1.13.13.12.2.50.4784.0.179061"/>
+									<!-- [1..1] Адрес МО-ВМП -->
+									<addr >
+										<!-- R [1..1] Адрес (текстом) -->
+										<streetAddressLine>г Москва, ул Щепкина, д 61/2</streetAddressLine>
+										<!-- R [1..1] Код субъекта РФ -->
+										<address:stateCode code="77" codeSystem="1.2.643.5.1.13.13.99.2.206" codeSystemName="Субъекты Российской Федерации" codeSystemVersion="6.3" displayName="г. Москва"/>
+										<!-- [1..1] Почтовый индекс -->
+										<postalCode>129110</postalCode>
+										<!-- [1..1] Идентификатор адреса по ФИАС -->
+										<fias:Address>
+											<!-- R [1..1] Глобальный уникальный идентификатор адресного объекта -->
+											<fias:AOGUID>52b67c53-d0a5-4ad9-b3f1-294c5dd7a41f</fias:AOGUID>
+											<!-- [1..1] Глобальный уникальный идентификатор дома -->
+											<fias:HOUSEGUID>8312f1e3-dd53-47d6-809e-c96534a5fb0a</fias:HOUSEGUID>
+										</fias:Address>
+									</addr>
+									<!-- [0..*] Контакты МО-ВМП -->
+									<telecom use="WP" value="tel:+74996740709"/>
+									<!-- R [1..1] -->
+									<playingEntity>
+										<!-- [1..1] Реквизиты МО-ВМП -->
+										<identity:Props>
+											<!-- [0..1] Код ОГРН -->
+											<identity:Ogrn>1037739023200</identity:Ogrn>
+											<!-- [0..1] Код ОКПО -->
+											<identity:Okpo>01966638</identity:Okpo>
+											<!-- [0..1] Код ОКАТО -->
+											<identity:Okato>45286570000</identity:Okato>
+										</identity:Props>
+										<!-- R [1..1] Наименование МО-ВМП -->
+										<name>ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ МОСКОВСКОЙ ОБЛАСТИ "МОСКОВСКИЙ ОБЛАСТНОЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ КЛИНИЧЕСКИЙ ИНСТИТУТ ИМ. М.Ф.ВЛАДИМИРСКОГО"</name>
+									</playingEntity>
+								</participantRole>
+							</participant>
+						</observation>
+					</entry>
+					<!-- R [1..1] Дата направления документов в ФГУ или МО субъекта Российской Федерации -->
+					<entry>
+						<!-- R [1..1] -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="7017" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" codeSystemVersion="2.6" displayName="Дата направления документов в ФГУ или МО субъекта Российской Федерации"/>
+							<!-- [1..1] Дата -->
+							<effectiveTime value="20211212"/>
+						</observation>
+					</entry>
+					<!-- [0..1] Сведения о страховой медицинской организации -->
+				</section>
+			</component>
+			<!-- [0..1] СЕКЦИЯ: "Льготы" -->
+			<component>
+				<!-- R [1..1] -->
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="BENEFITS" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemName="Секции электронных медицинских документов" codeSystemVersion="1.18" displayName="Льготы"/>
+					<!-- R [1..1] Название секции -->
+					<title>Льготы</title>
+					<!-- R [1..1] Человекочитаемое наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Льготная категория</content>
+									</td>
+									<td>
+										<content>Инвалиды</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] Сведения о льготной категории -->
+					<entry>
+						<!-- R [1..1] -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="811" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" codeSystemVersion="2.6" displayName="Льготная категория"/>
+							<!-- R [1..1] Льготная категория -->
+							<value code="8" codeSystem="1.2.643.5.1.13.13.99.2.713" codeSystemName="Сопоставление кодов льгот с льготными категориями граждан" codeSystemVersion="3.5" displayName="Инвалиды" xsi:type="CD"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] СЕКЦИЯ: "Диагнозы" -->
+			<component>
+				<!-- R [1..1] -->
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="DGN" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemName="Секции электронных медицинских документов" codeSystemVersion="1.18" displayName="Диагнозы"/>
+					<!-- R [1..1] Название секции -->
+					<title>Диагнозы</title>
+					<!-- R [1..1] Человекочитаемое наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Основное заболевание</content>
+									</td>
+									<td>
+										<content>L40.0 Псориаз обыкновенный</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] Сведения о диагнозе -->
+					<entry>
+						<!-- R [1..1] -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Вид нозологической единицы диагноза -->
+							<code code="1" codeSystem="1.2.643.5.1.13.13.11.1077" codeSystemName="Виды нозологических единиц диагноза" codeSystemVersion="1.3" displayName="Основное заболевание"/>
+							<!-- R [1..1] Код по МКБ-10 -->
+							<value code="L40.0" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemName="Международная статистическая классификация болезней и проблем, связанных со здоровьем (10-й пересмотр)" codeSystemVersion="2.19" displayName="Псориаз обыкновенный" xsi:type="CD"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] СЕКЦИЯ: "Согласия" -->
+			<component>
+				<!-- R [1..1] -->
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="CONSENT" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemName="Секции электронных медицинских документов" codeSystemVersion="1.18" displayName="Согласия"/>
+					<!-- R [1..1] Название секции -->
+					<title>Согласия</title>
+					<!-- R [1..1] Человекочитаемое наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Дата согласия</content>
+									</td>
+									<td>
+										<content>12.12.2021</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Согласен(а) на использование персональных данных для организации ВМП</content>
+									</td>
+									<td>
+										<content>Да</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] Сведения о согласии или отказе на использование персональных данных для организации ВМП -->
+					<entry>
+						<!-- R [1..1] -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Код поля -->
+							<code code="7021" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" codeSystemVersion="2.6" displayName="Согласие на использование персональных данных для организации ВМП"/>
+							<!-- R [1..1] Дата согласия или отказа -->
+							<effectiveTime value="20211212"/>
+							<!-- R [1..1] Признак согласия или отказа -->
+							<value value="true" xsi:type="BL"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- [0..1] СЕКЦИЯ: "Связанные документы" -->
+			<component>
+				<!-- R [1..1] -->
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="LINKDOCS" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemName="Секции электронных медицинских документов" codeSystemVersion="1.18" displayName="Связанные документы"/>
+					<!-- R [1..1] Название секции -->
+					<title>Связанные документы</title>
+					<!-- R [1..1] Человекочитаемое наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Результаты лабораторных исследований</content>
+									</td>
+									<td>
+										<content>SARS-CoV-2(COVID-19) ПЦР - отрицательный</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..*] Сведения о связанном документе -->
+					<entry>
+						<!-- R [1..1] -->
+						<act classCode="ACT" moodCode="EVN">
+							<!-- R [1..1] Вид документа -->
+							<code code="7" codeSystem="1.2.643.5.1.13.13.11.1522" codeSystemName="Виды медицинской документации" codeSystemVersion="4.48" displayName="Протокол лабораторного исследования"/>
+							<!-- [0..1] Примечание к документу -->
+							<text>-</text>
+							<!-- R [1..1] Дата выдачи документа -->
+							<effectiveTime value="20211203"/>
+							<!-- [0..1] Серия документа -->
+							<!-- [0..1] Номер документа -->
+							<entryRelationship typeCode="COMP">
+								<!-- R [1..1] -->
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Код поля -->
+									<code code="11003" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemName="Кодируемые поля CDA документов" codeSystemVersion="2.6" displayName="Номер документа"/>
+									<!-- R [1..1] Номер документа -->
+									<value xsi:type="ST">1</value>
+								</observation>
+							</entryRelationship>
+							<!-- R [1..1] Ссылка на внешний документ -->
+							<reference typeCode="REFR">
+								<!-- R [1..1] -->
+								<externalDocument classCode="DOCCLIN" moodCode="EVN">
+									<!-- [1..1] Уникальный идентификатор документа в МИС -->
+									<id root="1.2.643.5.1.13.13.12.2.77.7823.100.1.1.51" extension="35689564"/>
+								</externalDocument>
+							</reference>
+						</act>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

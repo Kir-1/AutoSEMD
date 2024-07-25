@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="MBC(0).xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- ЗАГОЛОВОК ДОКУМЕНТА "Протокол консультации" -->
+	<!---->
+	<!-- R [1..] Требуемый элемент. Элемент обязан иметь непустое наполнение, nullFlavor не разрешён -->
+	<!-- [1..] Обязательный элемент. Элемент обязан присутствовать, но может иметь пустое наполнение с указанием причины отсутствия информации через nullFlavor -->
+	<!-- [0..] Не обязательный элемент. Элемент может отсутствовать -->
+	<!---->
+	<!-- R [1..1] Область применения документа (Страна) -->
+	<realmCode code="RU"/>
+	<!-- R [1..1] Указатель на использование CDA R2 -->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- R [1..1] Идентификатор Шаблона документа "Протокол консультации третий уровень формализации" -->
+	<!-- по справочнику "Шаблоны CDA документов" (OID: 1.2.643.5.1.13.13.11.1118) -->
+	<templateId root="1.2.643.5.1.13.2.7.5.1.5.3"/>
+	<!-- R [1..1] Уникальный идентификатор документа -->
+	<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.51 extension = идентификатор документа -->
+	<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.51" extension="144632"/>
+	<!-- R [1..1] Тип документа -->
+	<code code="5" codeSystem="1.2.643.5.1.13.13.11.1115"  codeSystemVersion="2.1"  codeSystemName="Система электронных медицинских документов" displayName="Протокол консультации"/>
+	<!-- R [1..1] Заголовок документа -->
+	<title>Консультация кардиолога</title>
+	<!-- R [1..1] Дата создания документа-->
+	<effectiveTime value="201709251600+0300"/>
+	<!-- R [1..1] Уровень конфиденциальности документа -->
+	<confidentialityCode code="N" codeSystem="1.2.643.5.1.13.13.11.1116"  codeSystemVersion="1.1" codeSystemName="Уровень конфиденциальности документа" displayName="Обычный"/>
+	<!-- R [1..1] Язык документа -->
+	<languageCode code="ru-RU"/>
+	<!-- R [1..1] Уникальный идентификатор набора версий документа -->
+	<!-- по псравилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.50 extension = идентификатор набора версий документа -->
+	<setId root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.50" extension="163725"/>
+	<!-- R [1..1] Номер версии данного документа -->
+	<versionNumber value="1"/>
+	<!-- R [1..1] ДАННЫЕ О ПАЦИЕНТЕ-->
+	<recordTarget>
+		<!-- R [1..1] пАЦИЕНТ (роль) -->
+		<patientRole>
+			<!-- R [1..1] Уникальный идентификатор пациента в МИС -->
+			<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.10 extension = идентификатор пациента -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.10" extension="735486"/>
+			<!-- R [1..1] СНИЛС пациента -->
+			<id root="1.2.643.100.3" extension="254-636-254 26"/>
+			<!-- [1..1] Документ, удостоверяющий личность пациента, серия, номер, кем выдан. -->
+			<id root="1.2.643.5.1.13.13.11.1011.1" extension="4509 395643" assigningAuthorityName='ОВД "Твардовское" ОУФМС России по гор. Москве. Код подразделения: 770-095. Дата выдачи: 18.02.2005'/>
+			<!-- [1..1] Адрес постоянной регистрации пациента -->
+			<addr use="H">
+				<!-- [1..1] Адрес текстом -->
+				<streetAddressLine>123592, Россия, г. Москва, ул. Твардовского, д. 5, кв. 42</streetAddressLine>
+				<!-- [1..1] Регион РФ (республика, край, область)-->
+				<state>77</state>
+			</addr>
+			<!-- R [1..1] Адрес фактического места жительства пациента -->
+			<addr use="HP">
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>123592, Россия, г. Москва, ул. Твардовского, д. 5, кв. 42</streetAddressLine>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+			</addr>
+			<!-- [0..1] Телефон пациента -->
+			<telecom value="tel:+74951953745"/>
+			<!-- [0..*] Прочие контакты пациента (мобильный телефон) -->
+			<telecom use="MC" value="tel:+790347523647"/>
+			<!-- [0..*] Прочие контакты пациента (электронная почта) -->
+			<telecom value="mailto: selchen.m.v@mail.ru"/>
+			<!-- R [1..1] Пациент (человек)  -->
+			<patient>
+				<!-- R [1..1] ФИО пациента -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Сельченков</family>
+					<!-- R [1..1] Имя -->
+					<given>Михаил</given>
+					<!-- [0..1] Отчество -->
+					<given>Владимирович</given>
+				</name>
+				<!-- R [1..1] Пол пациента -->
+				<administrativeGenderCode code="1" codeSystem="1.2.643.5.1.13.2.1.1.156" codeSystemVersion="2.1" codeSystemName="Классификатор половой принадлежности" displayName="Мужской"/>
+				<!-- R [1..1] Дата рождения пациента -->
+				<birthTime value="19800217"/>
+			</patient>
+			<!-- R [1..1] Медицинская организация, оформившая протокол консультации -->
+			<providerOrganization>
+				<!-- [1..1] Идентификатор медицинской организации ... Код по регистру МО -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование медицинской организации -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953754826" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- R [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<!-- R [1..1] ДАННЫЕ ОБ АВТОРЕ ДОКУМЕНТА - ВРАЧ-КАРДИОЛОГ -->
+	<author>
+		<!-- R [1..1] Специальность автора -->
+		<functionCode code="118" codeSystem="1.2.643.5.1.13.13.11.1066" codeSystemVersion="4.1" codeSystemName="Номенклатура специальностей специалистов со средним, высшим и послевузовским медицинским и фармацевтическим образованием в сфере здравоохранения" displayName="Кардиология"/>
+		<!-- R [1..1] Дата подписи документа автором – врач-кардиолог -->
+		<time value="201709251600+0300"/>
+		<!-- R [1..1] АВТОР (роль) -->
+		<assignedAuthor>
+			<!-- R [1..1] Уникальный идентификатор автора в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.70" extension="542174"/>
+			<!-- [0..1] СНИЛС автора -->
+			<id root="1.2.643.100.3" extension="524-153-723 12"/>
+			<!-- R [1..1] Код должности автора-->
+			<code code="34" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="2.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="Врач-кардиолог"/>
+			<!-- [0..1] Адрес автора документа -->
+			<addr>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>119334, Россия, г. Москва, ул. Косыгина, д. 13, кв. 33</streetAddressLine>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+			</addr>
+			<!-- [0..1] Телефон автора -->
+			<telecom value="tel:+74957443256"/>
+			<!-- [0..*] Прочие контакты автора (мобильный телефон) -->
+			<telecom use="MC" value="tel:+79267352628"/>
+			<!-- [0..*] Прочие контакты автора (электронная почта) -->
+			<telecom value="mailto:smirnov.a.i@rambler.ru"/>
+			<!-- R [1..1] АВТОР (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество автора -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Смирнов</family>
+					<!-- R [1..1] Имя -->
+					<given>Александр</given>
+					<!-- [0..1] Отчество -->
+					<given>Игоревич</given>
+				</name>
+			</assignedPerson>
+			<!-- [0..1] Место работы автора  -->
+			<representedOrganization>
+				<!-- [1..1] Идентификатор организации -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование организации -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<!-- R [1..1] ДАННЫЕ ОБ ОРГАНИЗАЦИИ-ВЛАДЕЛЬЦЕ ДОКУМЕНТА -->
+	<custodian>
+		<!-- R [1..1] Организация-владелец документа (роль) -->
+		<assignedCustodian>
+			<!-- R [1..1] Организация-владелец документа (организация) -->
+			<representedCustodianOrganization>
+				<!-- [1..1] Идентификатор организации -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование организации-владельца документа -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- R [1..1] ДАННЫЕ О ПОЛУЧАТЕЛЕ ДОКУМЕНТА - ИЭМК / МЗ РФ-->
+	<informationRecipient>
+		<!-- R [1..1] Получатель документа (роль) -->
+		<intendedRecipient>
+			<!-- R [1..1] Получатель документа (организация) -->
+			<receivedOrganization>
+				<!-- R [1..1] Идентификатор получающей организации-->
+				<id root="1.2.643.5.1.13"/>
+				<!-- R [1..1] Наименование получающей организации-->
+				<name>Министерство здравоохранения Российской Федерации (ИЭМК)</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<!-- R [1..1] ДАННЫЕ О ЛИЦЕ, ПРИДАВШЕМ ЮРИДИЧЕСКУЮ СИЛУ ДОКУМЕНТУ – ВРАЧ-КАРДИОЛОГ -->
+	<legalAuthenticator>
+		<!-- R [1..1] Дата подписи документа лицом, придавшем юридическую силу документу -->
+		<time value="201709251600+0300"/>
+		<!-- R [1..1] Факт наличия подписи на документе -->
+		<signatureCode code="S"/>
+		<!-- R [1..1] Лицо, придавшее юридическую силу документу (роль) -->
+		<assignedEntity>
+			<!-- R [1..1] Уникальный идентификатор лица, придавшего юридическую силу документу в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.70" extension="542174"/>
+			<!-- [0..1] СНИЛС лица, придавшего юридическую силу документу -->
+			<id root="1.2.643.100.3" extension="524-153-723 12"/>
+			<!-- R [1..1] Код должности лица, придавшего юридическую силу документу -->
+			<code code="34" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="2.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="Врач-кардиолог"/>
+			<!-- [0..1] Адрес лица, придавшего юридическую силу документу -->
+			<addr>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine> 119334, Россия, г. Москва, ул. Косыгина, д.13, кв.33 </streetAddressLine>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+			</addr>
+			<!-- [0..1] Телефон лица, придавшего юридическую силу документу -->
+			<telecom value="tel:+74957443256"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (мобильный телефон) -->
+			<telecom use="MC" value="tel:+79267352628"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (электронная почта) -->
+			<telecom value="mailto:smirnov.a.i@rambler.ru"/>
+			<!-- R [1..1] Лицо, придавшее юридическую силу документу (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество лица, придавшего юридическую силу документу -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Смирнов</family>
+					<!-- R [1..1] Имя -->
+					<given>Александр</given>
+					<!-- [0..1] Отчество -->
+					<given>Игоревич</given>
+				</name>
+			</assignedPerson>
+			<!-- [0..1] Место работы лица, придавшего юридическую силу документу -->
+			<representedOrganization>
+				<!-- [1..1] Идентификатор организации -->
+				<!-- организации - по справочнику «Регистр медицинских организаций Российской Федерации. Версия 2» (OID: 1.2.643.5.1.13.2.1.1.178) -->
+				<!-- индивидуальные предприниматели - указание на отсутствие кода, nullFlavor="NI" -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование организации -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<!-- [0..1] СВЕДЕНИЯ О СТРАХОВОМ ПОЛИСЕ ОМС -->
+	<participant typeCode='HLD'>
+		<!-- R [1..1] Полис ОМС -->
+		<associatedEntity classCode='POLHOLD'>
+			<!-- R [1..1] Полис ОМС (нового образца) пациента -->
+			<id root="1.2.643.5.1.13.2.7.100.2" extension="7712958452351689"/>
+			<!-- R [1..1] Указание, что держателем полиса является сам пациент -->
+			<code code='SELF' codeSystem='2.16.840.1.113883.5.111'/>
+			<scopingOrganization>
+				<!-- R [1..1] Уникальный идентификатор страховой компании -->
+				<id root="1.2.643.5.1.13.2.1.1.635" extension="112"/>
+				<!-- R [1..1] Наименование страховой компании -->
+				<name>ООО "РОСНО-МС"</name>
+				<!-- R [1..1] Телефон страховой компании -->
+				<telecom nullFlavor="NI"/>
+				<!-- R [1..1] Адрес страховой компании -->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>129090, Россия, г. Москва, Протопоповский переулок, д. 9</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!-- [0..1] СВЕДЕНИЯ О НАПРАВИВШЕМ ЛИЦЕ И ОРГАНИЗАЦИИ -->
+	<participant typeCode="REF">
+		<associatedEntity classCode='PROV'>
+			<!-- R [1..1] Уникальный идентификатор направившего лица -->
+			<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.70" extension="183640"/>
+			<!-- [1..1] СНИЛС направившего лица -->
+			<id root="1.2.643.100.3" extension="000-000-000 00"/>
+			<!-- R [1..1] Код должности направившего лица -->
+			<code code="109" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="2.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="Врач-терапевт"/>
+			<!-- [1..1] Адрес направившего лица -->
+			<addr>
+				<!-- [1..1] адрес текстом -->
+				<streetAddressLine nullFlavor="UNK"/>
+				<!-- [1..1] Регион РФ -->
+				<state nullFlavor="UNK"/>
+			</addr>
+			<!-- [0..1] Телефон направившего лица -->
+			<telecom value='tel:+79065184597' use='WP'/>
+			<!-- R [1..1] Направивший врач (человек) -->
+			<associatedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество направившего врача -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Кузнецов</family>
+					<!-- R [1..1] Имя -->
+					<given>Дмитрий</given>
+					<!-- [0..1] Отчество -->
+					<given>Олегович</given>
+				</name>
+			</associatedPerson>
+			<!-- [0..1] Место работы направившего врача -->
+			<scopingOrganization>
+				<!-- [1..1] Уникальный идентификатор направившего учреждения -->
+				<id root="1.2.643.5.1.13.3.25.77.50"/>
+				<!-- R [1..1] Наименование направившего учреждения -->
+				<name>ГБУЗ "Городская поликлиника № 25 Департамента здравоохранения города Москвы"</name>
+				<!-- R [1..1] Телефон направившего учреждения -->
+				<telecom nullFlavor="NI"/>
+				<!-- R [1..1] Адрес направившего учреждения -->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>117198, Россия, г. Москва, ул. Миклухо-Маклая, д. 10</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!-- [1..1] СВЕДЕНИЯ О НАПРАВЛЕНИИ -->
+	<inFulfillmentOf>
+		<!-- R [1..1] Направление -->
+		<order>
+			<!-- R [1..1] Уникальный идентификатор направления на проведение консультации -->
+			<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.59" extension="659481548"/>
+		</order>
+	</inFulfillmentOf>
+	<!-- R [1..1] СВЕДЕНИЯ О ДОКУМЕНТИРУЕМОМ СОБЫТИИ - ПРОВЕДЕННОЙ КОНСУЛЬТАЦИИ -->
+	<documentationOf>
+		<!-- R [1..1] Проведенная консультация -->
+		<serviceEvent>
+			<!-- R [1..1] Код услуги - по справочнику "Типы консультаций" -->
+			<code code="11" codeSystem="1.2.643.5.1.13.13.99.2.29" codeSystemVersion="1.2" codeSystemName="Типы консультаций" displayName="Консультация кардиолога"/>
+			<!-- R [1..1] Дата консультации -->
+			<effectiveTime>
+				<!-- R [1..1] Дата начала консультации -->
+				<low value="201709251530+0300"/>
+				<!-- R [1..1] Дата окончания консультации -->
+				<high value="201709251600+0300"/>
+			</effectiveTime>
+			<!-- [0..1] СВЕДЕНИЯ ОБ ИСПОЛНИТЕЛЕ КОНСУЛЬТАЦИИ -->
+			<performer typeCode="SPRF">
+				<assignedEntity>
+					<!-- R [1..1] Уникальный идентификатор исполнителя -->
+					<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.70" extension="183903"/>
+					<!-- [1..1] СНИЛС исполнителя -->
+					<id root="1.2.643.100.3" extension="000-000-000 00"/>
+					<!-- R [1..1] Должность исполнителя -->
+					<code code="159" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="2.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="Медицинская сестра"/>
+					<!-- [0..1] Адрес исполнителя -->
+					<addr>
+						<!-- [0..1] адрес текстом -->
+						<streetAddressLine nullFlavor="UNK"/>
+						<!-- [0..1] Регион РФ -->
+						<state nullFlavor="UNK"/>
+					</addr>
+					<!-- [0..1] Телефон исполнителя -->
+					<telecom nullFlavor="NI"/>
+					<assignedPerson>
+						<!-- R [1..1] Фамилия, Имя, Отчество исполнителя -->
+						<name>
+							<!-- R [1..1] Фамилия -->
+							<family>Иванова</family>
+							<!-- R [1..1] Имя -->
+							<given>Татьяна</given>
+							<!-- [0..1] Отчество -->
+							<given>Михайловна</given>
+						</name>
+					</assignedPerson>
+					<!-- R [1..1] Место работы исполнителя -->
+					<representedOrganization>
+						<!-- [1..1] Идентификатор организации исполнителя -->
+						<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+						<!-- R [1..1] Наименование организации исполнителя -->
+						<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+						<!-- R [1..1] Телефон организации исполнителя -->
+						<telecom value='tel:+74951564895' use='WP'/>
+						<!-- R [1..1] Адрес организации исполнителя -->
+						<addr>
+							<!-- R [1..1] адрес текстом -->
+							<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+							<!-- R [1..1] Регион РФ -->
+							<state>77</state>
+						</addr>
+					</representedOrganization>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<!-- R [1..1] СВЕДЕНИЯ О СЛУЧАЕ ОКАЗАНИЯ МЕДИЦИНСКОЙ ПОМОЩИ -->
+	<componentOf>
+		<!-- R [1..1] Случай оказания медицинской помощи -->
+		<encompassingEncounter>
+			<!-- R [1..1] Уникальный идентификатор случая оказания медицинской помощи -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.15" extension="5469-16"/>
+			<!-- R [1..1] Даты случая -->
+			<effectiveTime>
+				<!-- R [1..1] Дата начала случая -->
+				<low value="201709251530+0300"/>
+			</effectiveTime>
+		</encompassingEncounter>
+	</componentOf>
+	<!-- ТЕЛО ДОКУМЕНТА -->
+	<component>
+		<!-- R [1..1] Структурированное тело документа -->
+		<structuredBody>
+			<!-- R [1..1] СЕКЦИЯ: Документ-->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="DOCINFO" codeSystem="1.2.643.5.1.13.13.11.1379" codeSystemVersion="1.1" codeSystemName="Секции CDA документов" displayName="Сведения о документе"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>Сведеиня о консультации</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Обращение</content>
+									</td>
+									<td>
+										<content ID="DOC_1">Первичное</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Место проведения</content>
+									</td>
+									<td>
+										<content ID="DOC_2">Амбулаторно-поликлиническое учреждение</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Дополнительные манипуляции</content>
+									</td>
+									<td>
+										<content ID="DOC_3">Измерение АД</content>, <content ID="DOC_4">Измерение ЧСС</content>, <content ID="DOC_5">Измерение ЧД</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] кодирование ... Вид обращения -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="800" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Обращение">
+							</code>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.11.1007" codeSystemVersion="2.1" codeSystemName="Порядок случаев госпитализации или обращения" displayName="Первичный">
+								<originalText>
+									<reference value="#DOC_1"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Место оказания медицинской помощи -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="801" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Место проведения">
+							</code>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.11.1008" codeSystemName="Место оказания медицинской помощи " displayName="Амбулаторно-поликлиническое учреждение">
+								<originalText>
+									<reference value="#DOC_2"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- [0..*] кодирование ... Дополнительные манипуляции -->
+					<!-- Манипуляция - Измерение артериального давления -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="802" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Дополнительные манипуляции">
+							</code>
+							<value xsi:type="CD" code="A02.12.002" codeSystem="1.2.643.5.1.13.2.1.1.473" codeSystemVersion="2.2" codeSystemName="Номенклатура медицинских услуг" displayName="Измерение артериального давления на периферических артериях">
+								<originalText>
+									<reference value="#DOC_3"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- [0..*] кодирование ... Дополнительные манипуляции -->
+					<!-- Манипуляция - Измерение частоты сердечных сокращений -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="802" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Дополнительные манипуляции">
+							</code>
+							<value xsi:type="CD" code="A02.10.002" codeSystem="1.2.643.5.1.13.2.1.1.473" codeSystemVersion="2.2" codeSystemName="Номенклатура медицинских услуг" displayName="Измерение частоты сердцебиения">
+								<originalText>
+									<reference value="#DOC_4"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- [0..*] кодирование ... Дополнительные манипуляции -->
+					<!-- Манипуляция - Измерение частоты дыхания -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="802" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Дополнительные манипуляции">
+							</code>
+							<value xsi:type="CD" code="A02.09.001" codeSystem="1.2.643.5.1.13.2.1.1.473" codeSystemVersion="2.2" codeSystemName="Номенклатура медицинских услуг" displayName="Измерение частоты дыхания">
+								<originalText>
+									<reference value="#DOC_5"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- [0..1] СЕКЦИЯ: Витальные параметры-->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="VITALPARAM" codeSystem="1.2.643.5.1.13.13.11.1379" codeSystemVersion="1.1" codeSystemName="Секции CDA документов" displayName="Витальные параметры"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>Витальные параметры</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Артериальное давление</content>
+									</td>
+									<td>
+										<content ID="VIT_1">135</content> / <content ID="VIT_2">85</content> мм.рт.ст.
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Частота сердечных сокращений</content>
+									</td>
+									<td>
+										<content ID="VIT_3">77</content> / мин
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Частота дыхания</content>
+									</td>
+									<td>
+										<content ID="VIT_4">23</content> / мин
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [0..*] кодирование ... Витальные параметры -->
+					<entry>
+						<!-- R [1..1] кодирование ... Артериальное давление -->
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<!-- R [1..1] Статус измерения - выполнено -->
+							<statusCode code="completed"/>
+							<!-- R [1..1] Дата измерения -->
+							<effectiveTime value="20170925"/>
+							<!-- R [1..2] кодирование витального параметра -->
+							<component typeCode="COMP">
+								<!-- [1..1] кодирование ... Систолическое давление -->
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="3" codeSystem="1.2.643.5.1.13.13.11.1010" codeSystemVersion="1.1" codeSystemName="Витальные параметры" displayName="Артериальное давление систолическое">
+										<originalText>
+											<reference value="#VIT_1"/>
+										</originalText>
+									</code>
+									<value xsi:type="PQ" value="135" unit="мм.рт.ст."/>
+								</observation>
+							</component>
+							<!-- R [1..2] кодирование витального параметра -->
+							<component typeCode="COMP">
+								<!-- [1..1] кодирование ... Диастолическое давление -->
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="2" codeSystem="1.2.643.5.1.13.13.11.1010" codeSystemVersion="1.1" codeSystemName="Витальные параметры" displayName="Артериальное давление диастолическое">
+										<originalText>
+											<reference value="#VIT_2"/>
+										</originalText>
+									</code>
+									<value xsi:type="PQ" value="85" unit="мм.рт.ст."/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<!-- R [0..*] кодирование ... Витальные параметры -->
+					<entry>
+						<!-- [1..1] кодирование ... Частота сердечных сокращений -->
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<!-- R [1..1] Статус измерения - выполнено -->
+							<statusCode code="completed"/>
+							<!-- R [1..1] Дата измерения -->
+							<effectiveTime value="20170925"/>
+							<!-- R [1..2] кодирование витального параметра -->
+							<component typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="4" codeSystem="1.2.643.5.1.13.13.11.1010" codeSystemVersion="1.1" codeSystemName="Витальные параметры" displayName="Частота сердечных сокращений">
+										<originalText>
+											<reference value="#VIT_3"/>
+										</originalText>
+									</code>
+									<value xsi:type="PQ" value="77" unit="1/мин"/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<!-- R [0..*] кодирование ... Витальные параметры -->
+					<entry>
+						<!-- [1..1] кодирование ... Частота дыхания -->
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<!-- R [1..1] Статус измерения - выполнено -->
+							<statusCode code="completed"/>
+							<!-- R [1..1] Дата измерения -->
+							<effectiveTime value="20170925"/>
+							<!-- R [1..2] кодирование витального параметра -->
+							<component typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="7" codeSystem="1.2.643.5.1.13.13.11.1010" codeSystemVersion="1.1" codeSystemName="Витальные параметры" displayName="Частота дыхания">
+										<originalText>
+											<reference value="#VIT_4"/>
+										</originalText>
+									</code>
+									<value xsi:type="PQ" value="23" unit="1/мин"/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] СЕКЦИЯ: Заключение врача-специалиста-->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="RESINFO" codeSystem="1.2.643.5.1.13.13.11.1379" codeSystemVersion="1.1" codeSystemName="Секции CDA документов" displayName="Заключение"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>Заключение</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Состояние</content>
+									</td>
+									<td>
+										<content ID="RES_1">Удовлетворительное</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Протокол</content>
+									</td>
+									<td>
+										<content ID="RES_2">Состояние удовлетворительное. Сознание ясное. Контакт доступен. Кожные покровы и видимые слизистые обычной окраски, достаточной влажности. Кожные высыпания. Питание:повыш. Щитовидная железа пальпаторно не определяется. Периферические лимфоузлы не увеличены. Костно-мышечная система без видимых изменений. Грудная клетка правильной формы. Голосовое дрожание не изменено. Перкуторно над легкими легочный звук. При аускультации в легких дыхание везикулярное, хрипов нет. При осмотре области сердца и крупных кровеносных сосудов б/о. Пальпаторно - верхушечный толчок в пятом межреберье; перкуторно: левая граница относительной тупости сердца по срединно-ключичной линии, правая – по правому краю грудины, верхняя – 3 ребро. При аускультации – тоны сердца достаточной звучности, ритм сердечных сокращений правильный, дефицита пульса нет.</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Заключение</content>
+									</td>
+									<td>
+										<content ID="RES_3">Предварительный диагноз: Гипертоническая болезнь 2 ст., ст. АГ1, риск ССО4. ИБС:стенокардия фк2, постинфарктный кардиосклероз (оим нижней локализации в 2013 г), желудочковая экстрасистолия.. ЧКВ::тламп со стентированием интермедиальной артерии и оа в 2014г, пка и пна в 2013 г . атеросклероз аорты, сонных артерий с дислипидемией 2а тип. Сахарный диабет 2 тип, неинсулинпотребный, послеоперационный гипотиреоз.</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Рекомендации</content>
+									</td>
+									<td>
+										<content ID="RES_4">Рекомендовано: продолжить прием бисопролола(конкор) 5 мг/сут, аторвастатина 20 мг/сут, кардиомагнила 75 мг на ночь.</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Выявленные патологии</content>
+									</td>
+									<td>
+										<content ID="RES_5">R00.0 Тахикардия неуточненная</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Шифр по МКБ-10</content>
+									</td>
+									<td>
+										<content ID="RES_6">I11.9 Гипертоническая болезнь сердца</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Результат консультации</content>
+									</td>
+									<td>
+										<content ID="RES_7">Направлен на плановую госпитализацию в стационар</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] кодирование ... Состояние пациента -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="804" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Состояние пациента">
+							</code>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.11.1006" codeSystemVersion="2.1" codeSystemName="Степень тяжести состояния пациента" displayName="Удовлетворительное">
+								<originalText>
+									<reference value="#RES_1"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Протокол консультации -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="805" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Протокол консультации"/>
+							<text><reference value="#RES_2"/></text>
+							<value xsi:type="ST">Произвольный текст протокола</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Заключение -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="806" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Заключение консультации"/>
+							<text><reference value="#RES_3"/></text>
+							<value xsi:type="ST">Произвольный текст заключения</value>
+						</observation>
+					</entry>
+					<!-- [0..1] кодирование ... Рекомендации -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="807" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Рекомендации"/>
+							<text><reference value="#RES_4"/></text>
+							<value xsi:type="ST">Произвольный текст рекомендаций</value>
+						</observation>
+					</entry>
+					<!-- [0..1] кодирование ... Выявленные патологии -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="808" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Выявленные патологии">
+							</code>
+							<value xsi:type="CD" code="R00.0" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemVersion="2.5" codeSystemName="Справочник международной классификации болезней и состояний, связанных со здоровьем, десятого пересмотра, версии 4 (МКБ-10)" displayName="Тахикардия неуточненная">
+								<originalText>
+									<reference value="#RES_5"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Шифр по МКБ-10 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="809" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Шифр по МКБ-10">
+							</code>
+							<value xsi:type="CD" code="I11.9" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemVersion="2.5" codeSystemName="Справочник международной классификации болезней и состояний, связанных со здоровьем, десятого пересмотра, версии 4 (МКБ-10)" displayName="Гипертоническая болезнь сердца">
+								<originalText>
+									<reference value="#RES_6"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- [0..1] кодирование ... Результат консультации -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="810" codeSystem="1.2.643.5.1.13.13.11.1380" codeSystemVersion="1.1" codeSystemName="Кодируемые поля CDA документов" displayName="Результат консультации">
+							</code>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.11.1009" codeSystemName="Виды медицинских направлений" displayName="На плановую госпитализацию">
+								<originalText>
+									<reference value="#RES_7"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
