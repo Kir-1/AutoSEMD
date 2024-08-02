@@ -9,6 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from app.database import engine
 from app.models import SemdProperty, SemdPropertyType, Semd, Semd_SemdProperty
 from config.settings import semd_paths, headers_base_value, namespaces, xpath_comment
+from head_parsing.utils import timer
 
 
 class Type:
@@ -153,30 +154,28 @@ class SEMD:
                 comment = self._get_first_or_none(
                     root.xpath(header_key + xpath_comment, namespaces=namespaces),
                 )
+                comment = {"text": comment.text if comment is not None else header_value["comment"]}
+                del header_value["comment"]
+
                 if comment is not None:
                     header_value = {
                         key: {
                             **value,
                             "@req": (
-                                re.search(r"\[\d+\.\.\d+\]", comment.text).group(0)
-                                if re.search(r"\[\d+\.\.\d+\]", comment.text)
+                                re.search(r"\[\d+\.\.\d+\]", comment["text"]).group(0)
+                                if re.search(r"\[\d+\.\.\d+\]", comment["text"])
                                 else "[0..0]"
                             ),
-                        }
-                        for key, value in header_value.items()
-                    }
-                    header_value = {
-                        key: {
-                            **value,
                             "@alias": (
-                                re.search(r"\[\d+\.\.[1\*]\] (.*)", comment.text).group(
+                                re.search(r"\[\d+\.\.[1\*]\] (.*)", comment["text"]).group(
                                     1
                                 )
                                 + " -> "
                                 + key
-                                if re.search(r"\[\d+\.\.[1\*]\]", comment.text)
+                                if re.search(r"\[\d+\.\.[1\*]\]", comment["text"])
                                 else "Not alias"
                             ),
+                            "@comment": comment["text"],
                         }
                         for key, value in header_value.items()
                     }
@@ -250,6 +249,7 @@ class SEMD:
         if el is not None:
             el.getparent().remove(el)
 
+    @timer
     def __call__(self) -> _Element:
         """
         Обработать поля SEMD и заполнить их значениями из базы данных.
@@ -258,64 +258,62 @@ class SEMD:
         :raises: ValueError, если валидация одного из полей не удалась.
         """
         for field in self._semd_fields:
-
-            session = sessionmaker(bind=engine)()
-
-            semd_property_type = (
-                session.query(SemdPropertyType)
-                .filter_by(
-                    id=session.query(SemdProperty)
-                    .filter_by(xpath_name=self._decode_name(field.value))
+            with sessionmaker(bind=engine)() as session:
+                semd_property_type = (
+                    session.query(SemdPropertyType)
+                    .filter_by(
+                        id=session.query(SemdProperty)
+                        .filter_by(xpath_name=self._decode_name(field.value))
+                        .first()
+                        .semdPropertyType_id
+                    )
                     .first()
-                    .semdPropertyType_id
-                )
-                .first()
-            )
-
-            if not (
-                semd_property_type.db_name
-                and semd_property_type.sql_query
-                and semd_property_type.alias
-            ) and not (
-                field.req.startswith("[0..0]") or field.req.startswith("[0..*]")
-            ):
-                raise ValueError(
-                    f"Заполните поля db_name, sql_query или alias для семда. \noid = {self.oid} \ncode = {self.code} \nxpath_name = {self._decode_name(field.value)}"
                 )
 
-            if semd_property_type.sql_query is None:
-
-                self._delete_tag(
-                    self._get_first_or_none(
-                        self._decode_name(field.value).split("@"),
+                if not (
+                    semd_property_type.db_name
+                    and semd_property_type.sql_query
+                    and semd_property_type.alias
+                ) and not (
+                    field.req.startswith("[0..0]") or field.req.startswith("[0..*]")
+                ):
+                    raise ValueError(
+                        f"Заполните поля db_name, sql_query или alias для семда. \noid = {self.oid} \ncode = {self.code} \nxpath_name = {self._decode_name(field.value)}"
                     )
-                )
 
-                self._semd_fields.unlink(field)
-                continue
+                if semd_property_type.sql_query is None:
 
-            result = (
-                session.connection()
-                .execute(text(semd_property_type.sql_query))
-                .fetchone()
-            )
-            # TODO: Обработать ошибку что в result может не оказаться атрибута с именем db_name
-            if not field.type(str(result.__getattr__(semd_property_type.db_name))) and (
-                field.req.startswith("[0..0]") or field.req.startswith("[0..*]")
-            ):
-                self._delete_tag(
-                    self._get_first_or_none(
-                        self._decode_name(field.value).split("@"),
+                    self._delete_tag(
+                        self._get_first_or_none(
+                            self._decode_name(field.value).split("@"),
+                        )
                     )
-                )
-                self._semd_fields.unlink(field)
-                continue
 
-            # TODO: Обработать ошибку что в result может не оказаться атрибута с именем db_name
-            if not field.type(str(result.__getattr__(semd_property_type.db_name))):
-                break
-            # TODO: Обработать ошибку что в result может не оказаться атрибута с именем db_name
-            field.__setattr__("in_xml", result.__getattr__(semd_property_type.db_name))
+                    self._semd_fields.unlink(field)
+                    continue
+
+                result = (
+                    session.connection()
+                    .execute(text(semd_property_type.sql_query))
+                    .fetchone()
+                )
+                # TODO: Обработать ошибку что в result может не оказаться атрибута с именем db_name
+                if not field.type(str(result.__getattr__(semd_property_type.db_name))) and (
+                    field.req.startswith("[0..0]") or field.req.startswith("[0..*]")
+                ):
+                    self._delete_tag(
+                        self._get_first_or_none(
+                            self._decode_name(field.value).split("@"),
+                        )
+                    )
+                    self._semd_fields.unlink(field)
+                    continue
+
+                # TODO: Обработать ошибку что в result может не оказаться атрибута с именем db_name
+                if not field.type(str(result.__getattr__(semd_property_type.db_name))):
+                    break
+                # TODO: Обработать ошибку что в result может не оказаться атрибута с именем db_name
+                field.__setattr__("in_xml", result.__getattr__(semd_property_type.db_name))
         else:
             temp_xml_doc = etree.tostring(self.xml_doc, encoding="unicode")
             temp_xml_doc = temp_xml_doc.format(

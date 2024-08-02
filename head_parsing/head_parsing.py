@@ -38,11 +38,12 @@ def main_logic(path):
                     base_headers_values[path]['comment'] = last_comment
 
                     for key in element.attrib:
+                        key = get_tag_or_comment_text(key)
                         # base_headers_values[path].setdefault(key, {'@type': '', 'examples': []})
-                        base_headers_values[path].setdefault(key, {'@type': ''})
+                        base_headers_values[path].setdefault(key, {'@type': '^.+$'})
                         # base_headers_values[path][key]['examples'] += [element.attrib[key]]
                     if element.text:
-                        base_headers_values[path].setdefault('text', {'@type': ''})
+                        base_headers_values[path].setdefault('text', {'@type': '^.+$'})
                     # print(path)
                 # print(' ' * indent, get_tag_or_comment_text(element), sep='')
 

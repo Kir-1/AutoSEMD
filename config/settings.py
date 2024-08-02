@@ -1,3 +1,6 @@
+import json
+import os
+
 DATABASES = {
     "p51vms": {
         "engine": "mysql+mysqldb",
@@ -15,10 +18,15 @@ DATABASES = {
 DATABASE_CONFIG = DATABASES["p51vms"]
 
 namespaces = {
-    "ns": "urn:hl7-org:v3",
-    "identity": "urn:hl7-ru:identity",
-    "address": "urn:hl7-ru:address",
-    "fias": "urn:hl7-ru:fias",
+    'PII': 'urn:hl7-ru:PII',
+    'address': 'urn:hl7-ru:address',
+    'f103': 'urn:f103',
+    'f88': 'urn:f88',
+    'fias': 'urn:hl7-ru:fias',
+    'identity': 'urn:hl7-ru:identity',
+    'medService': 'urn:hl7-ru:medService',
+    'ns': 'urn:hl7-org:v3',
+    'tmk': 'urn:tmk'
 }
 
 xpath_comment = "/preceding-sibling::comment()[1]"
@@ -119,6 +127,8 @@ headers_base_value = {
     },
 }
 
+with open("props/base_headers_values.json", 'r', encoding='utf-8') as f:
+    headers_base_value = json.loads(f.read())
 
 semd_paths = {
     "147": r"props/147.xml",
