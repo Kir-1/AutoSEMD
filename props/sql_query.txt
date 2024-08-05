@@ -5,13 +5,22 @@ CREATE TABLE Semd (
     code INT NOT NULL COMMENT 'Код СЭМДа, может быть одинаковым если СЭМды отличаются только редакцией'
 ) COMMENT='Таблица для хранения информации о СЭМД';
 
+-- Создание таблицы SemdSQL
+CREATE TABLE SemdSQL (
+    id INT AUTO_INCREMENT PRIMARY KEY COMMENT 'Первичный ключ',
+    sql_query TEXT NOT NULL COMMENT 'Запрос, который выполняется для получения поля из базы',
+    is_const BOOLEAN COMMENT 'Является ли запрос константным'
+) COMMENT='Таблица для хранения запросов в базу';
+
+
 -- Создание таблицы SemdPropertyType
 CREATE TABLE SemdPropertyType (
     id INT AUTO_INCREMENT PRIMARY KEY COMMENT 'Первичный ключ',
     db_name VARCHAR(255) COMMENT 'Имя поля, которое получает SQL запрос',
-    sql_query TEXT COMMENT 'Запрос, который выполняется для получения поля из базы',
+    sql_query_id INT COMMENT 'Ссылка на Запрос, который выполняется для получения поля из базы',
     alias TEXT COMMENT 'Человекочитаемое название поля',
     comment TEXT COMMENT 'Описание поля'
+    FOREIGN KEY (sql_query_id) REFERENCES SemdSQL(id)
 ) COMMENT='Таблица для хранения полей необходимых для СЭМД';
 
 -- Создание таблицы SemdProperty

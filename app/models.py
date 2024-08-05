@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, ForeignKey
+from sqlalchemy import Column, Integer, String, Text, ForeignKey, BOOLEAN
 from sqlalchemy.orm import relationship
 
 from app.database import Base
@@ -16,9 +16,9 @@ class SemdPropertyType(Base):
     __tablename__ = "SemdPropertyType"
     id = Column(Integer, primary_key=True, autoincrement=True)
     db_name = Column(String(255), nullable=True)
-    sql_query = Column(Text, nullable=True)
     alias = Column(Text, nullable=True)
     comment = Column(Text, nullable=True)
+    sql_query_id = Column(Integer, ForeignKey("SemdSQL.id"))
 
 
 class SemdProperty(Base):
@@ -33,3 +33,11 @@ class Semd_SemdProperty(Base):
     __tablename__ = "Semd_SemdProperty"
     semd_id = Column(Integer, ForeignKey("Semd.id"), primary_key=True)
     semdProperty_id = Column(Integer, ForeignKey("SemdProperty.id"), primary_key=True)
+
+
+class SemdSQL(Base):
+    __tablename__ = "SemdSQL"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    sql_query = Column(Text, nullable=True)
+    is_const = Column(BOOLEAN, nullable=True)
+

@@ -32,7 +32,7 @@ def main_logic(path):
 
                 path = find_ancestors(element, parent_map)
 
-                if element.attrib or element.text:
+                if element.attrib or element.text and element.text.strip():
 
                     base_headers_values.setdefault(path, {'comment': ''})
                     base_headers_values[path]['comment'] = last_comment
@@ -42,7 +42,7 @@ def main_logic(path):
                         # base_headers_values[path].setdefault(key, {'@type': '', 'examples': []})
                         base_headers_values[path].setdefault(key, {'@type': '^.+$'})
                         # base_headers_values[path][key]['examples'] += [element.attrib[key]]
-                    if element.text:
+                    if element.text and element.text.strip():
                         base_headers_values[path].setdefault('text', {'@type': '^.+$'})
                     # print(path)
                 # print(' ' * indent, get_tag_or_comment_text(element), sep='')

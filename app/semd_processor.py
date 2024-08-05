@@ -6,7 +6,7 @@ from lxml.etree import _Element
 from sqlalchemy import text
 from sqlalchemy.orm import sessionmaker
 
-from app.database import engine
+from app.database import engine, Base
 from app.models import SemdProperty, SemdPropertyType, Semd, Semd_SemdProperty
 from config.settings import semd_paths, headers_base_value, namespaces, xpath_comment
 from head_parsing.utils import timer
@@ -154,7 +154,12 @@ class SEMD:
                 comment = self._get_first_or_none(
                     root.xpath(header_key + xpath_comment, namespaces=namespaces),
                 )
-                comment = {"text": comment.text if comment is not None else header_value["comment"]}
+                comment = {
+                    "text": (
+                        comment.text if comment is not None else header_value["comment"]
+                    )
+                }
+                print(header_value["comment"])
                 del header_value["comment"]
 
                 if comment is not None:
@@ -167,9 +172,9 @@ class SEMD:
                                 else "[0..0]"
                             ),
                             "@alias": (
-                                re.search(r"\[\d+\.\.[1\*]\] (.*)", comment["text"]).group(
-                                    1
-                                )
+                                re.search(
+                                    r"\[\d+\.\.[1-9\*]\](.*)", comment["text"]
+                                ).group(1)
                                 + " -> "
                                 + key
                                 if re.search(r"\[\d+\.\.[1\*]\]", comment["text"])
@@ -249,7 +254,6 @@ class SEMD:
         if el is not None:
             el.getparent().remove(el)
 
-    @timer
     def __call__(self) -> _Element:
         """
         Обработать поля SEMD и заполнить их значениями из базы данных.
@@ -298,7 +302,9 @@ class SEMD:
                     .fetchone()
                 )
                 # TODO: Обработать ошибку что в result может не оказаться атрибута с именем db_name
-                if not field.type(str(result.__getattr__(semd_property_type.db_name))) and (
+                if not field.type(
+                    str(result.__getattr__(semd_property_type.db_name))
+                ) and (
                     field.req.startswith("[0..0]") or field.req.startswith("[0..*]")
                 ):
                     self._delete_tag(
@@ -313,7 +319,9 @@ class SEMD:
                 if not field.type(str(result.__getattr__(semd_property_type.db_name))):
                     break
                 # TODO: Обработать ошибку что в result может не оказаться атрибута с именем db_name
-                field.__setattr__("in_xml", result.__getattr__(semd_property_type.db_name))
+                field.__setattr__(
+                    "in_xml", result.__getattr__(semd_property_type.db_name)
+                )
         else:
             temp_xml_doc = etree.tostring(self.xml_doc, encoding="unicode")
             temp_xml_doc = temp_xml_doc.format(
@@ -327,8 +335,11 @@ class SEMD:
     def create_fields_in_database(self) -> None:
         """
         Создает поля в базе данных на основе информации из семантических полей, если они еще не существуют.
-        Операция выполняется для трех связанных таблиц, обновляя связи для актуализации данных.
+        Операция выполняется для четырёх связанных таблиц, обновляя связи для актуализации данных.
         """
+        # создание таблиц если их нет
+        Base.metadata.create_all(engine)
+
         for field in self._semd_fields:
 
             with sessionmaker(bind=engine)() as session:
@@ -375,7 +386,7 @@ class SEMD:
 
                 else:
                     semd_property_type = SemdPropertyType(
-                        db_name=None, sql_query=None, alias=field.alias, comment=None
+                        db_name=None, sql_query_id=None, alias=field.alias, comment=None
                     )
                     session.add(semd_property_type)
                     session.commit()

@@ -10,7 +10,7 @@ from colorama import Fore, Style
 from lxml.etree import _Element, _Comment
 
 
-USE_TIMER = 1
+USE_TIMER = 0
 
 ACC = 0
 

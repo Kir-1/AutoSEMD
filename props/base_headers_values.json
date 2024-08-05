@@ -1,0 +1,5177 @@
+{
+    "/ns:ClinicalDocument/ns:id[1]": {
+        "comment": " R [1..1] Уникальный идентификатор документа ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:effectiveTime[1]": {
+        "comment": " R [1..1] Дата создания документа ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:setId[1]": {
+        "comment": " R [1..1] Уникальный идентификатор набора версий документа ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:versionNumber[1]": {
+        "comment": " R [1..1] Номер версии документа ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:id[1]": {
+        "comment": " R [1..1] Уникальный идентификатор пациента в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:id[2]": {
+        "comment": " R [1..1] СНИЛС пациента ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        },
+        "assigningAuthorityName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:id[3]": {
+        "comment": " [1..1] Документ, удостоверяющий личность пациента, серия, номер, кем выдан. ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        },
+        "assigningAuthorityName": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]": {
+        "comment": " R [1..2] Адрес пациента ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1]  Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]": {
+        "comment": " [0..1]  Адрес фактического места жительства пациента ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:telecom[1]": {
+        "comment": " [0..*] Контакты пациента ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:telecom[2]": {
+        "comment": " R [1..*] Контакты пациента ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Прочие контакты пациента (электронная почта) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:name[1]/ns:given[2]": {
+        "comment": " R [1..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:administrativeGenderCode[1]": {
+        "comment": " R [1..1] Пол пациента ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:birthTime[1]": {
+        "comment": " R [1..1] Дата рождения пациента ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:id[1]": {
+        "comment": " организации - в атрибуте root по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461), при наличии структурного подразделения атрибут extension заполняется по справочнику «ФРМО. Справочник структурных подразделений» (OID: 1.2.643.5.1.13.13.99.2.114) ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:id[2]": {
+        "comment": " [0..1] Сведения о лицензии на осуществление медицинской деятельности (номер лицензии, выдавший лицензию орган, дата регистрации) ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        },
+        "assigningAuthorityName": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:id[3]": {
+        "comment": " R [1..1] Номер лицензии на осуществление медицинской деятельности ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        },
+        "assigningAuthorityName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:telecom[1]": {
+        "comment": " [0..*] Контакты медицинской организации или индивидуального предпринимателя ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:telecom[2]": {
+        "comment": " [0..*] Прочие контакты ОУЗ или МО-ОМС ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:time[1]": {
+        "comment": " R [1..1] Сведения об авторе документа ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:id[1]": {
+        "comment": " R [1..1] Уникальный идентификатор автора в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:id[2]": {
+        "comment": " R [1..1] СНИЛС автора ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:id[3]": {
+        "comment": " [0..1] Идентификатор автора по Федеральному Регистру Медицинских Работников ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:code[1]": {
+        "comment": " R [1..1] Код должности автора ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:telecom[1]": {
+        "comment": " [0..*] Контакты автора ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:telecom[2]": {
+        "comment": " R [2..2] Контакты автора ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Прочие контакты автора (электронная почта) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:assignedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[2]": {
+        "comment": " R [1..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:id[1]": {
+        "comment": " организации - в атрибуте root по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461), при наличии структурного подразделения атрибут extension заполняется по справочнику «ФРМО. Справочник структурных подразделений» (OID: 1.2.643.5.1.13.13.99.2.114) ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:telecom[1]": {
+        "comment": " [0..*] Контакты медицинской организации или индивидуального предпринимателя ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:telecom[2]": {
+        "comment": " [0..*] Контакты ОУЗ или МО-ОМС ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:id[1]": {
+        "comment": " организации - в атрибуте root по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461), при наличии структурного подразделения атрибут extension заполняется по справочнику «ФРМО. Справочник структурных подразделений» (OID: 1.2.643.5.1.13.13.99.2.114) ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование организации или ФИО индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:telecom[1]": {
+        "comment": " [0..1] Телефон медицинской организации или индивидуального предпринимателя ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:informationRecipient[1]/ns:intendedRecipient[1]/ns:receivedOrganization[1]/ns:id[1]": {
+        "comment": " R [1..1] Идентификатор получающей организации ",
+        "root": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:informationRecipient[1]/ns:intendedRecipient[1]/ns:receivedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование получающей организации ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:time[1]": {
+        "comment": " R [1..1] Сведения о лице, придавшем юридическую силу документу ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:signatureCode[1]": {
+        "comment": " R [1..1] Сведения о лице, придавшем юридическую силу документу ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:id[1]": {
+        "comment": " R [1..1] Уникальный идентификатор лица, придавшего юридическую силу документу, в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:id[2]": {
+        "comment": " R [1..1] СНИЛС лица, придавшего юридическую силу документу ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:id[3]": {
+        "comment": " [0..1] Идентификатор лица, придавшего юридическую силу документу, по Федеральному Регистру Медицинских Работников ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:code[1]": {
+        "comment": " R [1..1] Код должности лица, придавшего юридическую силу документу ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:telecom[1]": {
+        "comment": " [0..*] Контакты лица, придавшего юридическую силу документу ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:telecom[2]": {
+        "comment": " R [2..2] Контакты лица, придавшего юридическую силу документу ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Прочие контакты лица, придавшего юридическую силу документу (электронная почта) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[2]": {
+        "comment": " [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:id[1]": {
+        "comment": " организации - в атрибуте root по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461), при наличии структурного подразделения атрибут extension заполняется по справочнику «ФРМО. Справочник структурных подразделений» (OID: 1.2.643.5.1.13.13.99.2.114) ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[1]": {
+        "comment": " [0..*] Контакты медицинской организации или индивидуального предпринимателя ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[2]": {
+        "comment": " [0..*] Контакты организации (электронная почта) [2] ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:telecom[3]": {
+        "comment": " [0..*] Контакты медицинской организации или ИП ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:telecom[4]": {
+        "comment": " [0..*] Прочие контакты автора (факс) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:telecom[3]": {
+        "comment": " [0..*] Контакты организации (электронная почта) [3] ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:telecom[4]": {
+        "comment": " [0..*] Прочие контакты лица, придавшего юридическую силу документу (факс) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[3]": {
+        "comment": " [0..*] Контакты организации (электронная почта) [3] ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]": {
+        "comment": " R [1..1] Сведения об источнике оплаты ",
+        "typeCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]": {
+        "comment": " R [1..1] ",
+        "classCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:id[1]": {
+        "comment": " R [1..1] Полис ОМС (нового образца) пациента ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:code[1]": {
+        "comment": " R [1..1] Тип источника оплаты ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:id[1]": {
+        "comment": " [1..1] Уникальный идентификатор страховой компании или юридического лица ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование страховой компании ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:telecom[1]": {
+        "comment": " [1..*] Контакты страховой компании или юридического лица ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:telecom[2]": {
+        "comment": " [0..*] Контакты организации (электронная почта) [2] ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:telecom[3]": {
+        "comment": " [0..*] Прочие контакты страховой компании (веб-сайт) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:componentOf[1]/ns:encompassingEncounter[1]/ns:id[1]": {
+        "comment": " R [1..1] Уникальный идентификатор случая оказания медицинской помощи в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:componentOf[1]/ns:encompassingEncounter[1]/ns:effectiveTime[1]/ns:low[1]": {
+        "comment": " R [1..1] Дата начала случая ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:componentOf[1]/ns:encompassingEncounter[1]/ns:effectiveTime[1]/ns:high[1]": {
+        "comment": " [0..1] Дата окончания случая ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:componentOf[1]/ns:encompassingEncounter[1]/ns:dischargeDispositionCode[1]": {
+        "comment": " R [1..1] Исход госпитализации ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:componentOf[1]/ns:encompassingEncounter[1]/ns:location[1]/ns:healthCareFacility[1]/ns:id[1]": {
+        "comment": " [1..1] Идентификатор отделения выписки ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        },
+        "root": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:componentOf[1]/ns:encompassingEncounter[1]/ns:location[1]/ns:healthCareFacility[1]/ns:location[1]/ns:name[1]": {
+        "comment": " [0..1] Наименование отделения выписки ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:IdentityDoc[1]/identity:IdentityCardType[1]": {
+        "comment": " R [1..1] Тип документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:IdentityDoc[1]/identity:Series[1]": {
+        "comment": " [1..1] Серия документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:IdentityDoc[1]/identity:Number[1]": {
+        "comment": " R [1..1] Номер документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:IdentityDoc[1]/identity:IssueOrgName[1]": {
+        "comment": " [1..1] Сведения о том, кем выдан документ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:IdentityDoc[1]/identity:IssueOrgCode[1]": {
+        "comment": " [1..1] Сведения о том, кем выдан документ (код подразделения) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:IdentityDoc[1]/identity:IssueDate[1]": {
+        "comment": " R [1..1] Дата выдачи документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:InsuracePolicy[1]/identity:InsuracePolicyType[1]": {
+        "comment": " R [1..1] Тип полиса ОМС ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:InsuracePolicy[1]/identity:Number[1]": {
+        "comment": " R [1..1] Номер полиса ОМС",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/address:Type[1]": {
+        "comment": " R [1..1] Тип адреса ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/address:residentCode[1]": {
+        "comment": " R [1..1] Признак жителя города или села ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/address:Type[1]": {
+        "comment": " R [1..1] Тип адреса пациента ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/address:stateCode[1]": {
+        "comment": " R [1..1] Субъект РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/address:residentCode[1]": {
+        "comment": " R [1..1] Вид места жительства ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома  ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": " [0..1] Отчество ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:Props[1]/identity:Ogrn[1]": {
+        "comment": " [0..1] Код ОГРН ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:Props[1]/identity:Okpo[1]": {
+        "comment": " [0..1] Код ОКПО ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:Props[1]/identity:Okato[1]": {
+        "comment": " [0..1] Код ОКАТО ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:assignedPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": " [0..1] Отчество ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]": {
+        "comment": " [0..1] Сведения о медицинской организации, где работает автор ",
+        "classCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]": {
+        "comment": " R [1..1] Организация-владелец документа (организация) ",
+        "classCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": " [0..1] Отчество ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]": {
+        "comment": " [0..1] Сведения о медицинской организации, где работает лицо, придавшее юридическую силу документу ",
+        "classCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/identity:DocInfo[1]/identity:IdentityDocType[1]": {
+        "comment": " R [1..1] Тип документа-основания ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/identity:DocInfo[1]/identity:InsurancePolicyType[1]": {
+        "comment": " [1..1] Вид полиса ОМС ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/identity:DocInfo[1]/identity:Series[1]": {
+        "comment": " [1..1] Серия документа-основания ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/identity:DocInfo[1]/identity:Number[1]": {
+        "comment": " [1..1] Номер документа-основания ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/identity:DocInfo[1]/identity:INN[1]": {
+        "comment": " [1..1] ИНН организации или физического лица ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/identity:DocInfo[1]/identity:effectiveTime[1]/identity:low[1]": {
+        "comment": " R [1..1] Дата начала действия ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/identity:DocInfo[1]/identity:effectiveTime[1]/identity:high[1]": {
+        "comment": " [1..1] Дата окончания действия ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:code[1]": {
+        "comment": " R [1..1] Тип документируемого события ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:effectiveTime[1]/ns:low[1]": {
+        "comment": " R [1..1] Дата начала документируемого события ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:effectiveTime[1]/ns:high[1]": {
+        "comment": " [0..1] Дата окончания документируемого события ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/medService:serviceForm[1]": {
+        "comment": " [0..1] Форма оказания медицинской помощи ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/medService:serviceType[1]": {
+        "comment": " [0..1] Вид медицинской помощи ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/medService:serviceCond[1]": {
+        "comment": " [0..1] Условия оказания медицинской помощи ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:componentOf[1]/ns:encompassingEncounter[1]/ns:id[2]": {
+        "comment": " [0..1] Уникальный идентификатор случая оказания медицинской помощи (номер стационарной карты) ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:componentOf[1]/ns:encompassingEncounter[1]/ns:code[1]": {
+        "comment": " [0..1] Тип медицинской карты ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:componentOf[1]/ns:encompassingEncounter[1]/medService:DocType[1]": {
+        "comment": " [0..1] Вид медицинской карты ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:code[1]/ns:translation[1]": {
+        "comment": " R [1..1] Вид структурированного электронного медицинского документа ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:InsurancePolicy[1]/identity:InsurancePolicyType[1]": {
+        "comment": " R [1..1] Тип полиса ОМС ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:InsurancePolicy[1]/identity:Number[1]": {
+        "comment": " R [1..1] Номер полиса ОМС ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:Dept[1]": {
+        "comment": " [0..1] Наименование структурного подразделения (филиала), непосредственно осуществляющего медицинские осмотры ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]": {
+        "comment": " R [1..*] Сведения об участнике документируемого события ",
+        "typeCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:id[1]": {
+        "comment": " R [1..1] Уникальный идентификатор участника документируемого события в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:code[1]": {
+        "comment": " R [1..1] Код должности участника документируемого события ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:telecom[1]": {
+        "comment": " [0..*] Контакты участника документируемого события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": " [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]": {
+        "comment": " R [1..*] Сведения об участнике документируемого события [2] ",
+        "typeCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:id[1]": {
+        "comment": " [1..1] Уникальный идентификатор участника документируемого события в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:code[1]": {
+        "comment": " R [1..1] Код должности участника документируемого события ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:telecom[1]": {
+        "comment": " [0..1] Адрес электронной почты (рабочий) участника документируемого события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": " [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]": {
+        "comment": " R [1..*] Сведения об участнике документируемого события [3] ",
+        "typeCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:id[1]": {
+        "comment": " [1..1] Уникальный идентификатор участника документируемого события в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:code[1]": {
+        "comment": " R [1..1] Код должности участника документируемого события ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:telecom[1]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": " [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]": {
+        "comment": " R [1..*] Сведения об участнике документируемого события [4] ",
+        "typeCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:id[1]": {
+        "comment": " [1..1] Уникальный идентификатор участника документируемого события в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:code[1]": {
+        "comment": " R [1..1] Код должности участника документируемого события ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:telecom[1]": {
+        "comment": " [0..1] Адрес электронной почты (рабочий) участника документируемого события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": " [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]": {
+        "comment": " R [1..*] Сведения об участнике документируемого события [5] ",
+        "typeCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:id[1]": {
+        "comment": " [1..1] Уникальный идентификатор участника документируемого события в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:code[1]": {
+        "comment": " R [1..1] Код должности участника документируемого события ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:telecom[1]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": " [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]": {
+        "comment": " «PPRF» — непосредственный исполнитель, «SPRF» — вспомогательный исполнитель или ассистент ",
+        "typeCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:id[1]": {
+        "comment": " R [1..1] Уникальный идентификатор участника документированного события в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:code[1]": {
+        "comment": " R [1..1] Код должности участника документированного события ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:telecom[1]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": "   [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]": {
+        "comment": " «PPRF» — непосредственный исполнитель, «SPRF» — вспомогательный исполнитель или ассистент ",
+        "typeCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:id[1]": {
+        "comment": " R [1..1] Уникальный идентификатор участника документированного события в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:code[1]": {
+        "comment": " R [1..1] Код должности участника документированного события ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:telecom[1]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": "   [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:InsurancePolicy[1]/identity:Series[1]": {
+        "comment": " [0..1] Серия полиса ОМС ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:administrativeGenderCode[1]/ns:originalText[1]/ns:reference[1]": {
+        "comment": " В пункте 15 \"Пол\" делается отметка о поле ребенка (мальчик или девочка). В случае невозможности визуального определения пола ребенка его записывают по желанию матери ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:birthplace[1]/ns:place[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:birthplace[1]/ns:place[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код региона в ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:birthplace[1]/ns:place[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:birthplace[1]/ns:place[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:birthplace[1]/ns:place[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:time[1]": {
+        "comment": " В пункте 9 корешка делается запись о получателе медицинского свидетельства о рождении, указывается дата получения. ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/f103:IdentityDoc[1]/f103:IdentityCardTypeId[1]": {
+        "comment": " R [1..1] Тип документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/f103:IdentityDoc[1]/f103:Series[1]": {
+        "comment": "   [1..1] Серия документа ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/f103:IdentityDoc[1]/f103:Number[1]": {
+        "comment": " R [1..1] Номер документа ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/f103:IdentityDoc[1]/f103:IssueOrgName[1]": {
+        "comment": "   [1..1] Кем выдан документ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/f103:IdentityDoc[1]/f103:IssueOrgCode[1]": {
+        "comment": "   [1..1] Кем выдан документ, код подразделения ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/f103:IdentityDoc[1]/f103:IssueDate[1]": {
+        "comment": " R [1..1] Дата выдачи документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:associatedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия получателя",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:associatedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя получателя",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:associatedPerson[1]/ns:name[1]/ns:given[2]": {
+        "comment": " [0..1] Отчество получателя",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:functionCode[1]": {
+        "comment": " [0..1] Специальность автора ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:componentOf[1]/ns:encompassingEncounter[1]/ns:effectiveTime[1]": {
+        "comment": " R [1..1] Дата и время оказания медицинской помощи ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]": {
+        "comment": " [0..1] Сведения о законном (уполномоченном) представителе гражданина ",
+        "classCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:id[1]": {
+        "comment": " [0..1] СНИЛС представителя ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/identity:IdentityDoc[1]/identity:IdentityCardType[1]": {
+        "comment": " R [1..1] Тип документа ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/identity:IdentityDoc[1]/identity:Series[1]": {
+        "comment": " [1..1] Серия документа ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/identity:IdentityDoc[1]/identity:Number[1]": {
+        "comment": " R [1..1] Номер документа ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/identity:IdentityDoc[1]/identity:IssueOrgName[1]": {
+        "comment": " [1..1] Сведения о том, кем выдан документ ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/identity:IdentityDoc[1]/identity:IssueOrgCode[1]": {
+        "comment": " [1..1] Сведения о том, кем выдан документ (код подразделения) ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/identity:IdentityDoc[1]/identity:IssueDate[1]": {
+        "comment": " R [1..1] Дата выдачи документа ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/identity:AuthorityDoc[1]/identity:IdentityCardType[1]": {
+        "comment": " R [1..1] Тип документа ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/identity:AuthorityDoc[1]/identity:Series[1]": {
+        "comment": " [1..1] Серия документа ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/identity:AuthorityDoc[1]/identity:Number[1]": {
+        "comment": " R [1..1] Номер документа ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/identity:AuthorityDoc[1]/identity:IssueOrgName[1]": {
+        "comment": " [1..1] Сведения о том, кем выдан документ ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/identity:AuthorityDoc[1]/identity:IssueDate[1]": {
+        "comment": " R [1..1] Дата выдачи документа ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:code[1]": {
+        "comment": " [0..1] Тип связи между представителем (физическое лицо) и гражданином ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:telecom[1]": {
+        "comment": " [0..*] Контакты представителя ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:guardianPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:guardianPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:guardianPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": " [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:informationRecipient[2]/ns:intendedRecipient[1]/ns:receivedOrganization[1]/ns:id[1]": {
+        "comment": " [1..1] Идентификатор получающей организации ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:informationRecipient[2]/ns:intendedRecipient[1]/ns:receivedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование получающей организации ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:functionCode[1]": {
+        "comment": " R [1..1] ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:id[2]": {
+        "comment": " R [1..1] СНИЛС участника документируемого события ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]": {
+        "comment": " [0..1] Сведения об организации, где работает участник документируемого события ",
+        "classCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:id[1]": {
+        "comment": " организации - в атрибуте root по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461), при наличии структурного подразделения атрибут extension заполняется по справочнику «ФРМО. Справочник структурных подразделений» (OID: 1.2.643.5.1.13.13.99.2.114) ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[1]": {
+        "comment": " [0..*] Контакты медицинской организации или индивидуального предпринимателя ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:addr[1]": {
+        "comment": " R [1..1] Адрес медицинской организации или ИП ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:addr[1]": {
+        "comment": " [1..1] Адрес автора документа ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/ns:addr[1]": {
+        "comment": " [0..1] Адрес медицинской организации или ИП ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:addr[1]": {
+        "comment": " [1..1] Адрес организации ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:addr[1]": {
+        "comment": " [1..1] Адрес лица, придавшего юридическую силу документу ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]": {
+        "comment": " [0..1] Адрес медицинской организации или ИП ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:addr[1]": {
+        "comment": " [1..1] Адрес основного консультанта ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[2]": {
+        "comment": " [0..1] Контакты организации исполнителя (телефон) [2] ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]": {
+        "comment": " [0..1] Адрес медицинской организации или ИП ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:functionCode[1]": {
+        "comment": " R [1..1] Роль участника документируемого события ",
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:id[2]": {
+        "comment": " R [1..1] СНИЛС участника документированного события ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:addr[1]": {
+        "comment": " [0..1] Адрес места работы участника документируемого события ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]": {
+        "comment": " [0..1] Место работы исполнителя ",
+        "classCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:id[1]": {
+        "comment": " организации - по справочнику \"Реестр медицинских организаций Российской Федерации\" (OID: 1.2.643.5.1.13.13.11.1461) ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО Индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[1]": {
+        "comment": "   [0..*] Телефон организации ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[2]": {
+        "comment": " [0..*] Контакты организации (веб-сайт) [2] ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]": {
+        "comment": " [0..1] Адрес медицинской организации или ИП ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома  ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:functionCode[1]": {
+        "comment": " R [1..1] Роль участника документируемого события ",
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:id[2]": {
+        "comment": " R [1..1] СНИЛС участника документированного события ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:addr[1]": {
+        "comment": " [0..1] Адрес места работы участника документируемого события ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:representedOrganization[1]": {
+        "comment": " [0..1] Место работы члена врачебной комиссии ",
+        "classCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:id[1]": {
+        "comment": " организации - по справочнику \"Реестр медицинских организаций Российской Федерации\" (OID: 1.2.643.5.1.13.13.11.1461) ",
+        "root": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО Индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[1]": {
+        "comment": "   [0..*] Телефон организации ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[2]": {
+        "comment": " [0..*] Прочие контакты организации (электронная почта) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]": {
+        "comment": " [0..1] Адрес медицинской организации или ИП ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:functionCode[1]": {
+        "comment": " R [1..1] Роль участника документируемого события ",
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:id[2]": {
+        "comment": " R [1..1] СНИЛС участника документированного события ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:addr[1]": {
+        "comment": " [0..1] Адрес места работы участника документируемого события ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:representedOrganization[1]": {
+        "comment": " R [1..1] Сведения об организации, где работает участник документируемого события ",
+        "classCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:id[1]": {
+        "comment": " организации - по справочнику \"Реестр медицинских организаций Российской Федерации\" (OID: 1.2.643.5.1.13.13.11.1461) ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО Индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[1]": {
+        "comment": "   [0..*] Телефон организации ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[2]": {
+        "comment": " [0..*] Контакты медицинской организации или ИП ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]": {
+        "comment": " [0..1] Адрес медицинской организации или ИП ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:effectiveTime[1]": {
+        "comment": " R [1..1] Дата формирования протокола лабораторного исследования ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:telecom[2]": {
+        "comment": " [0..1] Контакты организации (телефон) [2] ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:telecom[3]": {
+        "comment": " [0..*] Контакты организации (электронная почта) [3] ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:informationRecipient[1]/ns:intendedRecipient[1]/ns:receivedOrganization[2]/ns:id[1]": {
+        "comment": " [1..1] Идентификатор получающей организации ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:informationRecipient[1]/ns:intendedRecipient[1]/ns:receivedOrganization[2]/ns:name[1]": {
+        "comment": " R [1..1] Наименование получающей организации ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/identity:DocInfo[1]/identity:effectivetime[1]/identity:low[1]": {
+        "comment": " R [1..1] Дата начала действия документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/identity:DocInfo[1]/identity:effectivetime[1]/identity:high[1]": {
+        "comment": " [1..1] Дата конца действия документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:Props[1]/identity:INN[1]": {
+        "comment": " R [1..1] ИНН медицинской организации ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]": {
+        "comment": " [1..1] Адрес страховой компании или юридического лица ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]": {
+        "comment": " [0..1] Сведения о направившем лице, направившей организации ",
+        "typeCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]": {
+        "comment": " R [1..1]",
+        "classCode": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:id[1]": {
+        "comment": " [1..1] Уникальный идентификатор направившего лица в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:id[2]": {
+        "comment": " [1..1] СНИЛС направившего лица ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:code[1]": {
+        "comment": " R [1..1] Код должности направившего лица ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " [1..1] Регион РФ ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:telecom[1]": {
+        "comment": " [0..*] Контакты направившего лица ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:associatedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:associatedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:associatedPerson[1]/ns:name[1]/ns:given[2]": {
+        "comment": " [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:id[1]": {
+        "comment": " R [1..1] Уникальный идентификатор медицинской организации и (при наличии) уникальный идентификатор структурного подразделения ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО ИП ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:telecom[1]": {
+        "comment": " [0..*] Контакты медицинской организации или ИП ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:inFulfillmentOf[1]/ns:order[1]/ns:id[1]": {
+        "comment": " [1..1] Уникальный идентификатор направления в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[2]": {
+        "comment": " [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/medService:serviceRemote[1]": {
+        "comment": " R [1..1] Признак дистанционного присутствия ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/medService:serviceRemote[1]": {
+        "comment": " R [1..1] Признак дистанционного присутствия ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/PII:Qualification[1]": {
+        "comment": " [0..1] Сведения о квалификации ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/medService:serviceRemote[1]": {
+        "comment": " R [1..1] Признак дистанционного присутствия ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/PII:Qualification[1]": {
+        "comment": " [0..1] Сведения о квалификации ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/medService:serviceRemote[1]": {
+        "comment": " R [1..1] Признак дистанционного присутствия ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:functionCode[1]": {
+        "comment": " R [1..1] Роль участника документируемого события ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:id[2]": {
+        "comment": " R [1..1] СНИЛС участника документированного события ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/medService:serviceRemote[1]": {
+        "comment": " R [1..1] Признак дистанционного присутствия ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/PII:Qualification[1]": {
+        "comment": " [0..1] Сведения о квалификации ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:associatedPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": " [0..1] Отчество ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:inFulfillmentOf[1]/ns:order[1]/ns:code[1]": {
+        "comment": " R [1..1] Вид медицинского направления ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:telecom[2]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:inFulfillmentOf[1]/ns:order[1]/ns:id[2]": {
+        "comment": " [1..1] Уникальный идентификатор направления в РЭМД ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:InsuracePolicy[1]/identity:Series[1]": {
+        "comment": "   [0..1] Серия документа ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        },
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/identity:DocInfo[1]/identity:effectivetime[1]": {
+        "comment": " В случае, когда оплата идет по ОМС, но нет соответствующего документа, то указывается атрибут @nullFlavor со значением “NAV” ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:telecom[2]": {
+        "comment": " [0..*] Контакты направившего лица [2] ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:telecom[3]": {
+        "comment": " [0..*] Контакты направившего лица [3] ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:telecom[2]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:IdentityDoc[1]/identity:IdentityCardTypeId[1]": {
+        "comment": " R [1..1] Тип документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:Okpo[1]": {
+        "comment": " [0..1] ОКПО",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:time[1]": {
+        "comment": " R [1..1] Дата подписи документа ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:signatureCode[1]": {
+        "comment": " R [1..1] Факт наличия подписи на документе ",
+        "code": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:id[1]": {
+        "comment": " R [1..1] Уникальный идентификатор лица, подписавшего документ в МИС ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:id[2]": {
+        "comment": " R [1..1] СНИЛС лица, придавшего юридическую силу документу ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:code[1]": {
+        "comment": " R [1..1] Код должности лица, подписавшего документ ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код региона в ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": " Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:telecom[1]": {
+        "comment": " [1..1] Телефон лица, подписавшего документ ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:telecom[2]": {
+        "comment": "   [0..*] Прочие контакты лица, проверившего документ (мобильный телефон) ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Прочие контакты лица, проверившего документ (электронная почта) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:telecom[4]": {
+        "comment": " [0..*] Прочие контакты врача, ответственного за правильность заполнения медицинских свидетельств (факс) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:family[1]": {
+        "comment": " R [1..1] Фамилия ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[1]": {
+        "comment": " R [1..1] Имя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[2]": {
+        "comment": " [1..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:id[1]": {
+        "comment": " организации - по справочнику \"Реестр медицинских организаций Российской Федерации\" (OID: 1.2.643.5.1.13.13.11.1461) ",
+        "root": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО Индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[1]": {
+        "comment": "   [0..*] Телефон организации ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[2]": {
+        "comment": " [0..*] Прочие контакты организации (факс) ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[3]": {
+        "comment": " [0..*] Прочие контакты организации (веб-сайт) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/PII:birthTime[1]": {
+        "comment": " [0..1] Дата рождения представителя ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:birthplace[1]/ns:place[1]/ns:addr[1]/fias:Address[1]": {
+        "comment": " [1..1] Идентификатор адреса по ФИАС ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/f88:IdentityDoc[1]/f88:IdentityCardTypeId[1]": {
+        "comment": " R [1..1] Тип документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/f88:IdentityDoc[1]/f88:Series[1]": {
+        "comment": "   [1..1] Серия документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/f88:IdentityDoc[1]/f88:Number[1]": {
+        "comment": " R [1..1] Номер документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/f88:IdentityDoc[1]/f88:IssueOrgName[1]": {
+        "comment": "   [1..1] Кем выдан документ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/f88:IdentityDoc[1]/f88:IssueOrgCode[1]": {
+        "comment": "   [1..1] Кем выдан документ, код подразделения ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/f88:IdentityDoc[1]/f88:IssueDate[1]": {
+        "comment": " R [1..1] Дата выдачи документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/ns:country[1]": {
+        "comment": " R [1..1] государство ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/ns:county[1]": {
+        "comment": "   [1..1] район ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/ns:city[1]": {
+        "comment": "   [1..1] наименование населённого пункта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/ns:houseNumber[1]": {
+        "comment": "   [1..1] дом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/ns:streetName[1]": {
+        "comment": "   [1..1] улица ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[1]/ns:unitID[1]": {
+        "comment": "   [1..1] квартира ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/ns:country[1]": {
+        "comment": " R [1..1] государство ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/ns:county[1]": {
+        "comment": "   [1..1] округ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/ns:city[1]": {
+        "comment": "   [1..1] наименование населённого пункта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/ns:houseNumber[1]": {
+        "comment": "   [1..1] дом(корпус, строение) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/ns:streetName[1]": {
+        "comment": "   [1..1] улица ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/ns:unitID[1]": {
+        "comment": "   [1..1] квартира ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/f88:IdentityDoc[1]/f88:IdentityCardTypeId[1]": {
+        "comment": " R [1..1] Тип документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/f88:IdentityDoc[1]/f88:Series[1]": {
+        "comment": "   [1..1] Серия документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/f88:IdentityDoc[1]/f88:Number[1]": {
+        "comment": " R [1..1] Номер документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/f88:IdentityDoc[1]/f88:IssueOrgName[1]": {
+        "comment": "   [1..1] Кем выдан документ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/f88:IdentityDoc[1]/f88:IssueOrgCode[1]": {
+        "comment": "   [1..1] Кем выдан документ, код подразделения ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/f88:IdentityDoc[1]/f88:IssueDate[1]": {
+        "comment": " R [1..1] Дата выдачи документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/f88:AuthorityDoc[1]/f88:IdentityCardTypeId[1]": {
+        "comment": " R [1..1] Тип документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/f88:AuthorityDoc[1]/f88:Series[1]": {
+        "comment": "   [1..1] Серия документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/f88:AuthorityDoc[1]/f88:Number[1]": {
+        "comment": " R [1..1] Номер документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/f88:AuthorityDoc[1]/f88:IssueOrgName[1]": {
+        "comment": "   [1..1] Кем выдан документ ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/f88:AuthorityDoc[1]/f88:IssueDate[1]": {
+        "comment": " R [1..1] Дата выдачи документа ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:addr[1]": {
+        "comment": " [0..1] Адрес фактического места жительства представителя ",
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:telecom[2]": {
+        "comment": " [0..*] Контакты представителя ",
+        "use": {
+            "@type": "^.+$"
+        },
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:telecom[3]": {
+        "comment": " [0..*] Контакты представителя ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:guardianPerson[1]/ns:name[1]/ns:given[2]": {
+        "comment": " [1..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:guardianOrganization[1]/f88:Ogrn[1]": {
+        "comment": " [0..1] Законный представитель (юридическое лицо) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:guardianOrganization[1]/ns:name[1]": {
+        "comment": " [0..1] Законный представитель (юридическое лицо) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:guardianOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " [0..1] Законный представитель (юридическое лицо) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:patient[1]/ns:guardian[1]/ns:guardianOrganization[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " [0..1] Законный представитель (юридическое лицо) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/f88:Ogrn[1]": {
+        "comment": " R [1..1] ОГРН ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/f88:Ogrn[1]": {
+        "comment": " R [1..1] ОГРН ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:telecom[4]": {
+        "comment": " [0..*] Контакты председателя врачебной комиссии (факс) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Контакты организации (веб-сайт) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " [0..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        },
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:telecom[4]": {
+        "comment": " [0..*] Контакты члена врачебной комиссии (факс) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/ns:given[2]": {
+        "comment": " [0..1] Отчество ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Прочие контакты организации (веб-сайт) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[2]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:state[1]": {
+        "comment": " R [1..1] Регион РФ ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:Props[1]/identity:Ogrnip[1]": {
+        "comment": " [1..1] Код ОГРНИП ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/identity:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код региона в ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:telecom[2]": {
+        "comment": "   [0..*] Контакты организации (факс) ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[2]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Контакты организации (веб-сайт) ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:telecom[2]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[3]/ns:assignedEntity[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:addrDept[1]/address:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес (текстом) ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:addrDept[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Код субъекта РФ ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:addrDept[1]/address:postalCode[1]": {
+        "comment": " [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:addrDept[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:addrDept[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": " [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:Ogrn[1]": {
+        "comment": " R [1..1] ОГРН ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:Ogrnip[1]": {
+        "comment": " [1..1] ОГРНИП",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/fias:Address[1]": {
+        "comment": " [1..1] Кодирование адреса по ФИАС ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:representedOrganization[1]/identity:Ogrn[1]": {
+        "comment": " R [1..1] Код ОГРН организации ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:representedOrganization[1]/identity:Ogrn[1]": {
+        "comment": " R [1..1] Код ОГРН организации ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:IdentityDoc[1]": {
+        "comment": " [1..1] Сведения о документе, удостоверяющем личность пациента ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/identity:InsurancePolicy[1]": {
+        "comment": " [1..1] Сведения о полисе ОМС пациента ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/ns:addr[1]/fias:Address[1]": {
+        "comment": " [1..1] Идентификатор адреса по ФИАС ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:addr[2]/address:AddressType[1]": {
+        "comment": "   [0..1] Тип адреса пациента ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:author[1]/ns:assignedAuthor[1]/ns:addr[1]/ns:postalCode[2]": {
+        "comment": " Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:informationRecipient[3]/ns:intendedRecipient[1]/ns:receivedOrganization[1]/ns:id[1]": {
+        "comment": "   [1..1] Идентификатор получающей организации ",
+        "root": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:informationRecipient[3]/ns:intendedRecipient[1]/ns:receivedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование получающей организации ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:legalAuthenticator[1]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[2]": {
+        "comment": " Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[2]": {
+        "comment": " Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:assignedPerson[1]/ns:name[1]/identity:Patronymic[1]": {
+        "comment": "   [0..1] Отчество ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:participant[1]/ns:associatedEntity[1]/ns:scopingOrganization[1]/ns:addr[1]/ns:postalCode[2]": {
+        "comment": " Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[1]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[2]": {
+        "comment": " Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:telecom[2]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[4]/ns:assignedEntity[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:telecom[2]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:id[1]": {
+        "comment": " организации - по справочнику \"Реестр медицинских организаций Российской Федерации\" (OID: 1.2.643.5.1.13.13.11.1461) ",
+        "root": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО Индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[1]": {
+        "comment": "   [0..*] Телефон организации ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[5]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:functionCode[1]": {
+        "comment": " R [1..1] ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:id[2]": {
+        "comment": " R [1..1] СНИЛС участника документированного события ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:telecom[2]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:id[1]": {
+        "comment": " организации - по справочнику \"Реестр медицинских организаций Российской Федерации\" (OID: 1.2.643.5.1.13.13.11.1461) ",
+        "root": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО Индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[1]": {
+        "comment": "   [0..*] Телефон организации ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[6]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:functionCode[1]": {
+        "comment": " R [1..1] ",
+        "code": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:id[2]": {
+        "comment": " R [1..1] СНИЛС участника документированного события ",
+        "root": {
+            "@type": "^.+$"
+        },
+        "extension": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:telecom[2]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:telecom[3]": {
+        "comment": "   [0..*] Контакты участника документированного события ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:id[1]": {
+        "comment": " организации - по справочнику \"Реестр медицинских организаций Российской Федерации\" (OID: 1.2.643.5.1.13.13.11.1461) ",
+        "root": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:name[1]": {
+        "comment": " R [1..1] Наименование медицинской организации или ФИО Индивидуального предпринимателя ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:telecom[1]": {
+        "comment": "   [0..*] Телефон организации ",
+        "value": {
+            "@type": "^.+$"
+        },
+        "use": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:streetAddressLine[1]": {
+        "comment": " R [1..1] Адрес текстом ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/address:stateCode[1]": {
+        "comment": " R [1..1] Кодирование субъекта РФ (Код ФНС по справочнику \"Субъекты Российской Федерации\" (OID:1.2.643.5.1.13.13.99.2.206)) ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "code": {
+            "@type": "^.+$"
+        },
+        "codeSystem": {
+            "@type": "^.+$"
+        },
+        "codeSystemVersion": {
+            "@type": "^.+$"
+        },
+        "codeSystemName": {
+            "@type": "^.+$"
+        },
+        "displayName": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/ns:postalCode[1]": {
+        "comment": "   [1..1] Почтовый индекс ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:AOGUID[1]": {
+        "comment": " R [1..1] Глобальный уникальный идентификатор адресного объекта  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:documentationOf[1]/ns:serviceEvent[1]/ns:performer[7]/ns:assignedEntity[1]/ns:representedOrganization[1]/ns:addr[1]/fias:Address[1]/fias:HOUSEGUID[1]": {
+        "comment": "   [1..1] Глобальный уникальный идентификатор дома  ",
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/ns:telecom[4]": {
+        "comment": " [0..*] Контакты медицинской организации или ИП ",
+        "value": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/tmk:ogrn[1]": {
+        "comment": " R [1..1] ОГРН ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:custodian[1]/ns:assignedCustodian[1]/ns:representedCustodianOrganization[1]/tmk:inn[1]": {
+        "comment": " R [1..1] ИНН ",
+        "xsi:type": {
+            "@type": "^.+$"
+        },
+        "text": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:authenticator[1]/ns:assignedEntity[1]/ns:addr[1]": {
+        "comment": " [1..1] Адрес лица, подписавшего документ ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    },
+    "/ns:ClinicalDocument/ns:recordTarget[1]/ns:patientRole[1]/ns:providerOrganization[1]/identity:Props[1]": {
+        "comment": " [1..1] Реквизиты организации ",
+        "nullFlavor": {
+            "@type": "^.+$"
+        }
+    }
+}
